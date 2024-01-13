@@ -1,9 +1,9 @@
-import { LandingPage } from '@/components/landing-page'
+import { L2 } from '@/components/l2'
 import Image from 'next/image'
 
 export default function Home() {
   return (
 
-    <LandingPage />
+    <L2 />
   )
 }
