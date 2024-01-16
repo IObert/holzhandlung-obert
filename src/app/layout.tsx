@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Holzhandlung Obert",
   description: "Holzhandlung Obert - Qualität gibt Sicherheit",
-  keywords: "Holzhandlung Obert, Holz, Holzhandlung, Obert, Regional, Schwarzwald, Pellets, Familienunternehmen, Qualität, Sicherheit",
+  keywords:
+    "Holzhandlung Obert, Holz, Holzhandlung, Obert, Regional, Schwarzwald, Pellets, Familienunternehmen, Qualität, Sicherheit",
 };
 
 export default function RootLayout({
@@ -29,31 +30,37 @@ export default function RootLayout({
             <nav className="ml-auto flex gap-4 sm:gap-6">
               <Link
                 className="text-sm font-medium hover:underline underline-offset-4"
-                href="#"
+                href="/#lieferprogramm"
+                // onClick={(e) => {
+                //   e.preventDefault();
+                //   document
+                //     .getElementById("lieferprogramm")
+                //     ?.scrollIntoView({ behavior: "smooth" });
+                // }}
               >
                 Lieferprogramm
               </Link>
               <Link
                 className="text-sm font-medium hover:underline underline-offset-4"
-                href="#"
+                href="/#galerie"
               >
                 Galerie
               </Link>
               <Link
                 className="text-sm font-medium hover:underline underline-offset-4"
-                href="#"
+                href="/#umwelt"
               >
                 Umwelt
               </Link>
               <Link
                 className="text-sm font-medium hover:underline underline-offset-4"
-                href="#"
+                href="/#holzarten"
               >
                 Holzarten
               </Link>
               <Link
                 className="text-sm font-medium hover:underline underline-offset-4"
-                href="#"
+                href="/#service"
               >
                 Service
               </Link>
@@ -85,7 +92,19 @@ export default function RootLayout({
               </Link>
               <Link
                 className="text-xs hover:underline underline-offset-4"
-                href="#"
+                href="/haftungsausschluss"
+              >
+                Haftungsausschluss
+              </Link>
+              <Link
+                className="text-xs hover:underline underline-offset-4"
+                href="/datenschutz"
+              >
+                Datenschutz
+              </Link>
+              <Link
+                className="text-xs hover:underline underline-offset-4"
+                href="/impressum"
               >
                 Impressum
               </Link>

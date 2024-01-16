@@ -10,7 +10,7 @@ export default function AGB() {
 
       <section id="Allgemeines" className="my-6">
         <Link href="#Allgemeines">
-          <h2 className="text-lg my-4 my-4">§ 1 Allgemeines</h2>
+          <h2 className="text-lg my-4">§ 1 Allgemeines</h2>
         </Link>
         <ol start={1} type="1">
           <li>
