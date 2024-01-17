@@ -22,12 +22,27 @@ export default function RootLayout({
     <html lang="de">
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
-          <header className="px-4 lg:px-6 h-14 flex items-center">
+          <header className="px-4 lg:px-6 h-14 flex items-center w-full fixed bg-white">
             <Link className="flex items-center justify-center" href="/">
               <TreePineIcon className="h-6 w-6" />
-              <span className="text-lg font-semibold">Holzhandlung Obert</span>
+              <span className="text-lg font-semibold hidden md:block">
+                Holzhandlung Obert
+              </span>
             </Link>
-            <nav className="ml-auto flex gap-4 sm:gap-6">
+            <nav className="ml-auto flex gap-2 md:gap-6">
+              <Link
+                className="text-sm font-medium hover:underline underline-offset-4"
+                href="/#umwelt"
+              >
+                Umwelt
+              </Link>
+              <Link
+                className="text-sm font-medium hover:underline underline-offset-4"
+                href="/#regional"
+              >
+                Regional
+              </Link>
+
               <Link
                 className="text-sm font-medium hover:underline underline-offset-4"
                 href="/#lieferprogramm"
@@ -40,6 +55,7 @@ export default function RootLayout({
               >
                 Lieferprogramm
               </Link>
+
               <Link
                 className="text-sm font-medium hover:underline underline-offset-4"
                 href="/#galerie"
@@ -48,30 +64,18 @@ export default function RootLayout({
               </Link>
               <Link
                 className="text-sm font-medium hover:underline underline-offset-4"
-                href="/#umwelt"
-              >
-                Umwelt
-              </Link>
-              <Link
-                className="text-sm font-medium hover:underline underline-offset-4"
                 href="/#holzarten"
               >
                 Holzarten
               </Link>
-              <Link
-                className="text-sm font-medium hover:underline underline-offset-4"
-                href="/#service"
-              >
-                Service
-              </Link>
             </nav>
           </header>
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 mt-2 md:mt-6">{children}</main>
           <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
             <p className="text-xs text-gray-500 dark:text-gray-400">
               © 2024 Holzhandlung Obert. Alle Rechte vorbehalten.
             </p>
-            <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+            <nav className="sm:ml-auto flex gap-2 md:gap-6">
               <Link
                 className="text-xs hover:underline underline-offset-4"
                 href="#"
