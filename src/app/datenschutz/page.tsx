@@ -1,11 +1,9 @@
 import NavUpIcon from "@/components/nav-up-icon";
-import { ArrowUpToLineIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Datenschutz() {
   return (
-    <div id="top" className="max-w-6/10 my-20 mx-8 md:mx-40">
+    <div id="top" className="max-w-xs md:max-w-xl mx-auto">
       <h1 className="text-2xl mb-12">Datenschutzerklärung</h1>
 
       <p>
@@ -150,7 +148,7 @@ export default function Datenschutz() {
           <li>Dritter</li>
           <p className="my-2">Dritter ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle außer der betroffenen Person, dem Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter der unmittelbaren Verantwortung des Verantwortlichen oder des Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu verarbeiten.</p>
           <li>Einwilligung</li>
-          <p className="my-2">Einwilligung ist jede von der betroffenen Person freiwillig für den bestimmten Fall in informierter Weise und unmissverständlich abgegebene Willensbekundung in Form einer Erklärung oder einer sonstigen eindeutigen bestätigenden Handlung, mit der die betroffene Person zu verstehen gibt, dass sie mit der Verarbeitung der sie betreffenden personenbezogenen Daten einverstanden ist.></p>
+          <p className="my-2">Einwilligung ist jede von der betroffenen Person freiwillig für den bestimmten Fall in informierter Weise und unmissverständlich abgegebene Willensbekundung in Form einer Erklärung oder einer sonstigen eindeutigen bestätigenden Handlung, mit der die betroffene Person zu verstehen gibt, dass sie mit der Verarbeitung der sie betreffenden personenbezogenen Daten einverstanden ist.</p>
         </ol>
         <NavUpIcon />
       </section>

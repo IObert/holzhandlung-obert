@@ -1,11 +1,9 @@
 import NavUpIcon from "@/components/nav-up-icon";
-import { ArrowUpToLineIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function AGB() {
   return (
-    <div id="top" className="max-w-6/10 my-20 mx-8 md:mx-40">
+    <div id="top" className="max-w-xs md:max-w-xl mx-auto">
       <h1 className="text-2xl mb-12">Allgemeine Geschäftsbedingungen</h1>
 
       <section id="Allgemeines" className="my-6">
