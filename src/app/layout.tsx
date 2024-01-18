@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="de">
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
-          <header className="px-4 lg:px-6 h-14 flex items-center w-full fixed bg-white">
+          <header className="px-4 lg:px-6 h-14 flex items-center w-full fixed bg-white z-10">
             <Link className="flex items-center justify-center" href="/">
               <TreePineIcon className="h-6 w-6" />
               <span className="text-lg font-semibold hidden md:block">

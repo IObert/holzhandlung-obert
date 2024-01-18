@@ -5,7 +5,42 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 export default function Home() {
+  const images = [
+    {
+      path: "/static/galerie/Gesamt.jpeg",
+      alt: "Gesamtansicht",
+    },
+    {
+      path: "/static/galerie/Hinten.jpeg",
+      alt: "Hinten",
+    },
+    {
+      path: "/static/galerie/Innen.jpeg",
+      alt: "Innen",
+    },
+    {
+      path: "/static/galerie/Regal1.jpeg",
+      alt: "Regal1",
+    },
+    {
+      path: "/static/galerie/Regal2.jpeg",
+      alt: "Regal2",
+    },
+    {
+      path: "/static/galerie/Vorne.jpeg",
+      alt: "Vorne",
+    },
+  ];
+
   return (
     <main className="flex-1">
       <section className="w-full py-12 md:py-24 lg:py-32 ">
@@ -138,15 +173,30 @@ export default function Home() {
         title="Galerie"
         darkBackground={true}
       >
-        <p>
-          Für uns und unsere Partner steht der verantwortungsvolle und
-          ressourcenschonende Umgang mit dem einzigartigen Naturwerkstoff Holz
-          im Vordergrund.
-        </p>
-        <p>
-          Selbst anfallende Sägewerksresthölzer (Schwarten, Spreissel und
-          Hackschnitzel) werden sinnvoll bis zur letzten Faser genutzt.
-        </p>
+        <Carousel className="w-full">
+          <CarouselContent>
+            {images.map((image, index) => (
+              <CarouselItem key={index}>
+                <Link
+                  href={image.path}
+                  target="_blank"
+                  className="flex flex-col items-center justify-center cursor-zoom-in"
+                >
+                  <img
+                    alt={image.alt}
+                    className=" overflow-hidden rounded-lg w-10/12"
+                    src={image.path}
+                  />
+                  <span className="">
+                    {image.alt}
+                  </span>
+                </Link>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </Section>
       <Section
         id="holzarten"

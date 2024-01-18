@@ -16,7 +16,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`w-full py-32 text-gray-400 md:py-50 lg:py-32 ${
+      className={`w-full py-24 text-gray-400 md:py-50 lg:py-32 ${
         darkBackground ? "bg-gray-800" : "bg-gray-100"
       }`}
     >
