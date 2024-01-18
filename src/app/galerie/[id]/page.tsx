@@ -1,0 +1,20 @@
+export async function generateStaticParams() {
+  const images = JSON.parse(process.env.images || "[]") as [];
+  return images.map((image: any) => ({
+    id: image.path.replace("/static/galerie/", "").replace(".jpeg", ""),
+  }));
+}
+
+
+export default function Galerie({
+  params: { id: id },
+}: {
+  params: { id: string };
+}) {
+  return (
+    <img
+      src={`/static/galerie/${id}.jpeg`}
+      className="w-10/12 md:w-8/12 mx-auto rounded-lg"
+    />
+  );
+}

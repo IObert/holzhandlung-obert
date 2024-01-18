@@ -14,32 +14,7 @@ import {
 } from "@/components/ui/carousel";
 
 export default function Home() {
-  const images = [
-    {
-      path: "/static/galerie/Gesamt.jpeg",
-      alt: "Gesamtansicht",
-    },
-    {
-      path: "/static/galerie/Hinten.jpeg",
-      alt: "Hinten",
-    },
-    {
-      path: "/static/galerie/Innen.jpeg",
-      alt: "Innen",
-    },
-    {
-      path: "/static/galerie/Regal1.jpeg",
-      alt: "Regal1",
-    },
-    {
-      path: "/static/galerie/Regal2.jpeg",
-      alt: "Regal2",
-    },
-    {
-      path: "/static/galerie/Vorne.jpeg",
-      alt: "Vorne",
-    },
-  ];
+  const images = JSON.parse(process.env.images || "[]") as [];
 
   return (
     <main className="flex-1">
@@ -175,21 +150,19 @@ export default function Home() {
       >
         <Carousel className="w-full">
           <CarouselContent>
-            {images.map((image, index) => (
+            {images.map((image: any, index) => (
               <CarouselItem key={index}>
                 <Link
-                  href={image.path}
+                  href={image.path.replace("/static", "").replace(".jpeg", "")}
                   target="_blank"
                   className="flex flex-col items-center justify-center cursor-zoom-in"
                 >
                   <img
                     alt={image.alt}
-                    className=" overflow-hidden rounded-lg w-10/12"
+                    className="overflow-hidden rounded-lg w-10/12"
                     src={image.path}
                   />
-                  <span className="">
-                    {image.alt}
-                  </span>
+                  <span className="">{image.alt}</span>
                 </Link>
               </CarouselItem>
             ))}
