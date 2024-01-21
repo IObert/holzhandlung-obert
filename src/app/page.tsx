@@ -66,65 +66,56 @@ export default function Home() {
       <Section
         id="lieferprogramm"
         title="Unser Lieferprogramm"
-        subtitle="Klicken Sie auf die jeweilige Kategorie um mehr zu erfahren"
+        subtitle="Klicken Sie auf das jeweilige Produkt um mehr zu erfahren"
       >
-        <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
-          <div className="flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="105"
-              src="static/pellets.jpeg"
-              width="200"
-            />
-          </div>
-          <div className="flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="105"
-              src="static/profilbretter.jpeg"
-              width="200"
-            />
-          </div>
-          <div className="mx-auto flex w-full items-center justify-center p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="105"
-              src="static/pellets.jpeg"
-              width="200"
-            />
-          </div>
-        </div>
-        <div className="mx-auto grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
-          <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="105"
-              src="static/profilbretter.jpeg"
-              width="200"
-            />
-          </div>
-          <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="105"
-              src="static/pellets.jpeg"
-              width="200"
-            />
-          </div>
-          <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="105"
-              src="static/profilbretter.jpeg"
-              width="200"
-            />
-          </div>
+        <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center divide-y divide-x">
+          <ImageFlipCard
+            title="Dämmstoffe"
+            description="Unverzichtbar für effiziente Isolierung, bieten Wärme- und Schallschutz."
+            src="/static/produkte/damm.jpeg"
+          />
+          <ImageFlipCard
+            title="Holzwerkstoff-Platten"
+            description="Vielseitig einsetzbar, dienen als stabile Basis in Möbeln und Konstruktionen."
+            src="/static/produkte/osb.png"
+          />
+          <ImageFlipCard
+            title="Konstruktionsvollholz"
+            description="Überzeugt als robustes Baumaterial, besonders in tragenden Elementen."
+            src="/static/produkte/kvh.jpeg"
+          />
+          <ImageFlipCard
+            title="Duo-/Trio- Balken"
+            description="Durch ihre Schichtbauweise stabil, sind ideal für Decken und Dächer."
+            src="/static/produkte/duo-trio.jpeg"
+          />
+          <ImageFlipCard
+            title="Brettschichtholz"
+            description="Stark und formstabil, eignet sich für anspruchsvolle Tragstrukturen."
+            src="/static/produkte/bsh.jpeg"
+          />
+          <ImageFlipCard
+            title="Brettstapelelemente"
+            description="Als innovative Baukomponenten, ermöglichen schnellen Aufbau."
+            src="/static/produkte/Brettstapel.png"
+          />
+          <ImageFlipCard
+            title="Profilbretter"
+            description="Verschönern Fassaden und Decken."
+            src="/static/produkte/profilbretter.jpeg"
+          />
+
+          <ImageFlipCard
+            title="Schnittholz"
+            description="Vielseitig einsetzbar, bildet die Basis für diverse Bauvorhaben."
+            src="/static/produkte/Schnittholz.jpeg"
+          />
+
+          <ImageFlipCard
+            title="Pellets"
+            description="Dienen als nachhaltige Energiequelle."
+            src="/static/produkte/pellets.jpeg"
+          />
         </div>
       </Section>
       <Section
@@ -161,44 +152,42 @@ export default function Home() {
         title="Holzarten"
         subtitle="Fahren Sie mit der Maus über die jeweilige Holzart um mehr zu  erfahren"
       >
-        <div className="divide-y ">
-          <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center divide-x">
-            <ImageFlipCard
-              title="Fichtenholz"
-              description="Die Fichte, als Konstruktionsholz bekannt, eignet sich für Profile, massive Fußböden und Instrumentenbau. "
-              src="/static/Fichtenholz.webp"
-            />
-            <ImageFlipCard
-              title="Kiefernholz"
-              description="Kiefer eignet sich für Konstruktionshölzer, Fenster und Möbel."
-              src="/static/Kiefernholz.webp"
-            />
-            <ImageFlipCard
-              title="Douglasienholz"
-              description="Die Douglasie, beliebt für Fassaden und Balkone, dient auch im Schiffbau. "
-              src="/static/douglasienholz.jpg"
-            />
-            <ImageFlipCard
-              src="/static/Eichenholz.jpeg"
-              title="Eichenholz"
-              description="Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau."
-            />
-            <ImageFlipCard
-              src="/static/laerchenholz.jpeg"
-              title="Lärchenholz"
-              description="Lärche überzeugt als Konstruktionsholz, für Fassaden und Möbel, während die sibirische Variante für Fassaden, Balkone und Terrassen geeignet ist. "
-            />
-            <ImageFlipCard
-              src="/static/weisstanne.jpeg"
-              title="Weisstanne"
-              description="Die Tanne, ideal für Konstruktionshölzer und Innenausbauten, findet Anwendung im Saunabau und Fensterbau."
-            />
-            <ImageFlipCard
-              src="/static/redcedar.jpeg"
-              title="Red Cedar"
-              description="Red Cedar glänzt in Profilbrettern für Fassadenverkleidungen."
-            />
-          </div>
+        <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center divide-y divide-x">
+          <ImageFlipCard
+            title="Fichtenholz"
+            description="Die Fichte, als Konstruktionsholz bekannt, eignet sich für Profile, massive Fußböden und Instrumentenbau. "
+            src="/static/holz/Fichtenholz.webp"
+          />
+          <ImageFlipCard
+            title="Kiefernholz"
+            description="Kiefer eignet sich für Konstruktionshölzer, Fenster und Möbel."
+            src="/static/holz/Kiefernholz.webp"
+          />
+          <ImageFlipCard
+            title="Douglasienholz"
+            description="Die Douglasie, beliebt für Fassaden und Balkone, dient auch im Schiffbau. "
+            src="/static/holz/douglasienholz.jpg"
+          />
+          <ImageFlipCard
+            src="/static/holz/Eichenholz.jpeg"
+            title="Eichenholz"
+            description="Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau."
+          />
+          <ImageFlipCard
+            src="/static/holz/laerchenholz.jpeg"
+            title="Lärchenholz"
+            description="Lärche überzeugt als Konstruktionsholz, für Fassaden und Möbel, während die sibirische Variante für Fassaden, Balkone und Terrassen geeignet ist. "
+          />
+          <ImageFlipCard
+            src="/static/holz/weisstanne.jpeg"
+            title="Weisstanne"
+            description="Die Tanne, ideal für Konstruktionshölzer und Innenausbauten, findet Anwendung im Saunabau und Fensterbau."
+          />
+          <ImageFlipCard
+            src="/static/holz/redcedar.jpeg"
+            title="Red Cedar"
+            description="Red Cedar glänzt in Profilbrettern für Fassadenverkleidungen."
+          />
         </div>
       </Section>
 

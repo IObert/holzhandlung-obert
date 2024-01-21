@@ -1,8 +1,3 @@
-import NavUpIcon from "@/components/nav-up-icon";
-import { ArrowUpToLineIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-
 export default function Partner() {
   return (
     <section className="flex justify-center w-full h-full py-12 md:py-24 lg:py-32">
@@ -21,7 +16,7 @@ export default function Partner() {
               alt="Egger Logo"
               className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               height="70"
-              src="/static/egger.svg"
+              src="/static/partner/egger.svg"
               width="140"
             />
           </div>
@@ -30,7 +25,7 @@ export default function Partner() {
               alt="Pavatex Logo"
               className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               height="70"
-              src="/static/pavatex.png"
+              src="/static/partner/pavatex.png"
               width="140"
             />
           </div>
@@ -39,7 +34,7 @@ export default function Partner() {
               alt="Logo"
               className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               height="70"
-              src="/static/egger.svg"
+              src="/static/partner/egger.svg"
               width="140"
             />
           </div>
@@ -50,7 +45,7 @@ export default function Partner() {
               alt="Logo"
               className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               height="70"
-              src="/static/pavatex.png"
+              src="/static/partner/pavatex.png"
               width="140"
             />
           </div>
@@ -59,7 +54,7 @@ export default function Partner() {
               alt="Logo"
               className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               height="70"
-              src="/static/egger.svg"
+              src="/static/partner/egger.svg"
               width="140"
             />
           </div>
@@ -68,7 +63,7 @@ export default function Partner() {
               alt="Logo"
               className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
               height="70"
-              src="/static/pavatex.png"
+              src="/static/partner/pavatex.png"
               width="140"
             />
           </div>
