@@ -71,11 +71,15 @@ export default function RootLayout({
             </nav>
           </header>
           <main className="flex items-center flex-1 my-20">{children}</main>
-          <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              © 2024 Holzhandlung Obert. Alle Rechte vorbehalten.
-            </p>
-            <nav className="sm:ml-auto flex gap-2 md:gap-6">
+          <footer className="flex flex-col gap-2 sm:flex-row pb-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+            <div className="flex flex-col">
+              <img src="/static/holzhandlung-obert.png" className="h-20 my-4 object-contain" />
+
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                © 2024 Holzhandlung Obert. Alle Rechte vorbehalten.
+              </p>
+            </div>
+            <nav className="sm:ml-auto mt-auto flex gap-2 md:gap-6">
               <Link
                 className="text-xs hover:underline underline-offset-4"
                 href="#"

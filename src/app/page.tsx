@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import ImageFlipCard from "@/components/image-flip-card";
 
 export default function Home() {
   const images = JSON.parse(process.env.images || "[]") as [];
@@ -27,22 +28,6 @@ export default function Home() {
               </h1>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Qualität Gibt Sicherheit!
-              </p>
-            </div>
-            <div className="mx-auto w-full max-w-sm space-y-2">
-              <form className="flex space-x-2">
-                <Input
-                  className="max-w-lg flex-1"
-                  placeholder="Enter your email"
-                  type="email"
-                />
-                <Button type="submit">Sign Up</Button>
-              </form>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Sign up to get notified when we launch.
-                <Link className="underline underline-offset-2" href="#">
-                  Terms & Conditions
-                </Link>
               </p>
             </div>
           </div>
@@ -148,7 +133,7 @@ export default function Home() {
         title="Galerie"
         darkBackground={true}
       >
-        <Carousel className="w-full">
+        <Carousel className="mx-auto w-8/12 md:w-full">
           <CarouselContent>
             {images.map((image: any, index) => (
               <CarouselItem key={index}>
@@ -159,16 +144,16 @@ export default function Home() {
                 >
                   <img
                     alt={image.alt}
-                    className="overflow-hidden rounded-lg w-10/12"
+                    className="overflow-hidden rounded-lg w-full"
                     src={image.path}
                   />
-                  <span className="">{image.alt}</span>
+                  <span className="pt-2">{image.alt}</span>
                 </Link>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className=" md:flex" />
+          <CarouselNext className=" md:flex" />
         </Carousel>
       </Section>
       <Section
@@ -176,64 +161,43 @@ export default function Home() {
         title="Holzarten"
         subtitle="Fahren Sie mit der Maus über die jeweilige Holzart um mehr zu  erfahren"
       >
-        <div className="divide-y rounded-lg border">
-          <div className="mx-auto grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
-            <div className="mx-auto flex w-full items-center justify-center ">
-              <img
-                alt="Logo"
-                className="overflow-hidden object-contain object-center"
-                height="200"
-                width="400"
-                src="/static/Fichtenholz.webp"
-              />
-            </div>
-            <div className="mx-auto flex w-full items-center justify-center">
-              <img
-                alt="Logo"
-                className="overflow-hidden object-contain object-center"
-                height="200"
-                width="400"
-                src="/static/Kiefernholz.webp"
-              />
-            </div>
-            <div className="mx-auto flex w-full items-center justify-center">
-              <img
-                alt="Logo"
-                className="overflow-hidden object-contain object-center"
-                height="200"
-                width="400"
-                src="/static/douglasienholz.jpg"
-              />
-            </div>
-          </div>
-          <div className="mx-auto grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-              <img
-                alt="Logo"
-                className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-                height="105"
-                src="/placeholder.svg"
-                width="200"
-              />
-            </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-              <img
-                alt="Logo"
-                className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-                height="105"
-                src="/placeholder.svg"
-                width="200"
-              />
-            </div>
-            <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-              <img
-                alt="Logo"
-                className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-                height="105"
-                src="/placeholder.svg"
-                width="200"
-              />
-            </div>
+        <div className="divide-y ">
+          <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center divide-x">
+            <ImageFlipCard
+              title="Fichtenholz"
+              description="Die Fichte, als Konstruktionsholz bekannt, eignet sich für Profile, massive Fußböden und Instrumentenbau. "
+              src="/static/Fichtenholz.webp"
+            />
+            <ImageFlipCard
+              title="Kiefernholz"
+              description="Kiefer eignet sich für Konstruktionshölzer, Fenster und Möbel."
+              src="/static/Kiefernholz.webp"
+            />
+            <ImageFlipCard
+              title="Douglasienholz"
+              description="Die Douglasie, beliebt für Fassaden und Balkone, dient auch im Schiffbau. "
+              src="/static/douglasienholz.jpg"
+            />
+            <ImageFlipCard
+              src="/static/Eichenholz.jpeg"
+              title="Eichenholz"
+              description="Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau."
+            />
+            <ImageFlipCard
+              src="/static/laerchenholz.jpeg"
+              title="Lärchenholz"
+              description="Lärche überzeugt als Konstruktionsholz, für Fassaden und Möbel, während die sibirische Variante für Fassaden, Balkone und Terrassen geeignet ist. "
+            />
+            <ImageFlipCard
+              src="/static/weisstanne.jpeg"
+              title="Weisstanne"
+              description="Die Tanne, ideal für Konstruktionshölzer und Innenausbauten, findet Anwendung im Saunabau und Fensterbau."
+            />
+            <ImageFlipCard
+              src="/static/redcedar.jpeg"
+              title="Red Cedar"
+              description="Red Cedar glänzt in Profilbrettern für Fassadenverkleidungen."
+            />
           </div>
         </div>
       </Section>
@@ -261,6 +225,24 @@ export default function Home() {
             >
               Learn more
             </Link>
+          </div>
+          <div className="mx-auto w-full max-w-sm space-y-2">
+            <form className="flex space-x-2">
+              <Input
+                className="max-w-md flex-1"
+                placeholder="Enter your email"
+                type="email"
+              />
+              <Button type="submit">Sign Up</Button>
+            </form>
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              <Link
+                className="underline underline-offset-2"
+                href="/datenschutz"
+              >
+                Datenschutzhinweis
+              </Link>
+            </p>
           </div>
         </div>
       </section>
