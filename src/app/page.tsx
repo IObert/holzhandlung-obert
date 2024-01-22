@@ -1,8 +1,4 @@
-import Image from "next/image";
-
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
 import { generateStaticParams } from "./produkte/[id]/page";
 
@@ -27,7 +23,7 @@ export default async function Home() {
         <div className="mx-auto container px-4 md:px-6">
           <img
             src="/static/holzhandlung-obert.png"
-            className="w-1/2 my-4 mx-auto object-contain"
+            className="w-1/2 max-w-[500px] my-4 mx-auto object-contain"
           />
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2 mb-4">
