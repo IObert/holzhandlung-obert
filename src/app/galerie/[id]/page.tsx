@@ -14,7 +14,7 @@ export default function Galerie({
   return (
     <img
       src={`/static/galerie/${id}.jpeg`}
-      className="w-10/12 md:w-8/12 mx-auto rounded-lg"
+      className="w-10/12 md:mx-2 md:w-full mx-auto rounded-lg"
     />
   );
 }

@@ -23,7 +23,7 @@ export default async function Home() {
   return (
     <main className="flex-1">
       <section className="w-full py-12 md:py-24 lg:py-32 ">
-        <div className="container px-4 md:px-6">
+        <div className="mx-auto container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2 mb-4">
               <h1 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
@@ -86,7 +86,7 @@ export default async function Home() {
         title="Unser Lieferprogramm"
         subtitle="Klicken Sie auf das jeweilige Produkt um mehr zu erfahren"
       >
-        <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center divide-y divide-x">
+        <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center gap-4">
           {produkte.map((produkt: any) => (
             <ImageFlipCard
               key={produkt.id}
@@ -110,7 +110,6 @@ export default async function Home() {
               <CarouselItem key={index}>
                 <Link
                   href={image.path.replace("/static", "").replace(".jpeg", "")}
-                  target="_blank"
                   className="flex flex-col items-center justify-center cursor-zoom-in"
                 >
                   <img
@@ -130,9 +129,9 @@ export default async function Home() {
       <Section
         id="holzarten"
         title="Holzarten"
-        subtitle="Fahren Sie mit der Maus über die jeweilige Holzart um mehr zu  erfahren"
+        subtitle="Wählen Sie eine Holzart aus, um mehr zu erfahren"
       >
-        <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center divide-y divide-x">
+        <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center gap-4">
           <ImageFlipCard
             title="Fichtenholz"
             description="Die Fichte, als Konstruktionsholz bekannt, eignet sich für Profile, massive Fußböden und Instrumentenbau. "
