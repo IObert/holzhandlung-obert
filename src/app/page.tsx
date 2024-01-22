@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
+import { generateStaticParams } from "./produkte/[id]/page";
 
 import {
   Carousel,
@@ -14,20 +15,37 @@ import {
 } from "@/components/ui/carousel";
 import ImageFlipCard from "@/components/image-flip-card";
 
-export default function Home() {
+export default async function Home() {
   const images = JSON.parse(process.env.images || "[]") as [];
+
+  const produkte = (await generateStaticParams()) as any[];
 
   return (
     <main className="flex-1">
       <section className="w-full py-12 md:py-24 lg:py-32 ">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
+            <div className="space-y-2 mb-4">
               <h1 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Holzhandlung Heidi Obert
               </h1>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Qualität Gibt Sicherheit!
+              </p>
+            </div>
+            <div className="text-block  max-w-[900px] space-y-1">
+              <p>
+                Wir sind ein junges Unternehmen, das sich auf den Vertrieb von
+                ökologischen Baumaterialien spezialisiert hat.
+              </p>
+              <p>
+                Die Mehrheit unserer Kunden sind moderne Holzbaubetriebe,
+                Dachdeckereien und Baustoffhandlungen, in letzter Zeit jedoch
+                auch immer mehr Heimwerker.
+              </p>
+              <p>
+                Erstklassiger Service und innovative Produkte machen uns zu
+                einem attraktiven Partner.
               </p>
             </div>
           </div>
@@ -69,53 +87,15 @@ export default function Home() {
         subtitle="Klicken Sie auf das jeweilige Produkt um mehr zu erfahren"
       >
         <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center divide-y divide-x">
-          <ImageFlipCard
-            title="Dämmstoffe"
-            description="Unverzichtbar für effiziente Isolierung, bieten Wärme- und Schallschutz."
-            src="/static/produkte/damm.jpeg"
-          />
-          <ImageFlipCard
-            title="Holzwerkstoff-Platten"
-            description="Vielseitig einsetzbar, dienen als stabile Basis in Möbeln und Konstruktionen."
-            src="/static/produkte/osb.png"
-          />
-          <ImageFlipCard
-            title="Konstruktionsvollholz"
-            description="Überzeugt als robustes Baumaterial, besonders in tragenden Elementen."
-            src="/static/produkte/kvh.jpeg"
-          />
-          <ImageFlipCard
-            title="Duo-/Trio- Balken"
-            description="Durch ihre Schichtbauweise stabil, sind ideal für Decken und Dächer."
-            src="/static/produkte/duo-trio.jpeg"
-          />
-          <ImageFlipCard
-            title="Brettschichtholz"
-            description="Stark und formstabil, eignet sich für anspruchsvolle Tragstrukturen."
-            src="/static/produkte/bsh.jpeg"
-          />
-          <ImageFlipCard
-            title="Brettstapelelemente"
-            description="Als innovative Baukomponenten, ermöglichen schnellen Aufbau."
-            src="/static/produkte/Brettstapel.png"
-          />
-          <ImageFlipCard
-            title="Profilbretter"
-            description="Verschönern Fassaden und Decken."
-            src="/static/produkte/profilbretter.jpeg"
-          />
-
-          <ImageFlipCard
-            title="Schnittholz"
-            description="Vielseitig einsetzbar, bildet die Basis für diverse Bauvorhaben."
-            src="/static/produkte/Schnittholz.jpeg"
-          />
-
-          <ImageFlipCard
-            title="Pellets"
-            description="Dienen als nachhaltige Energiequelle."
-            src="/static/produkte/pellets.jpeg"
-          />
+          {produkte.map((produkt: any) => (
+            <ImageFlipCard
+              key={produkt.id}
+              title={produkt.title}
+              description={produkt.description}
+              src={produkt.image}
+              link={`/produkte/${produkt.id}`}
+            />
+          ))}
         </div>
       </Section>
       <Section
