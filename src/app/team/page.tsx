@@ -12,67 +12,61 @@ export default function Impressum() {
             title="Heidi Obert"
             description="Geschäftsführende Inhaberin"
             src="/static/holz/Fichtenholz.webp"
-            children={
-              <>
-                <div className="flex mt-4">
-                  <TreePineIcon className="text-xl mr-4" />
-                  Verkauf
-                </div>
-                <Link
-                  href="tel:497834869640"
-                  className="flex mt-2 hover:underline"
-                >
-                  <PhoneIcon className="text-xl mr-4" />
-                  07834 / 86 96 40
-                </Link>
-                <Link
-                  href="mailto:obert@holzhandlung-obert.de"
-                  className="flex mt-2 hover:underline"
-                >
-                  <MailIcon className="text-xl mr-4" />
-                  Email schreiben
-                </Link>
-              </>
-            }
-          />
-          <ImageFlipCard
-            title="Wolf Roth"
-            src="/static/holz/Fichtenholz.webp"
-            children={
-              <>
-                <div className="flex mt-4">
-                  <TreePineIcon className="text-xl mr-4" />
-                  Verkauf & Außendienst
-                </div>
-                <Link
-                  href="tel:497834869640"
-                  className="flex mt-2 hover:underline"
-                >
-                  <PhoneIcon className="text-xl mr-4" />
-                  07834 / 86 96 40
-                </Link>
-                <Link
-                  href="mailto:roth@holzhandlung-obert.de"
-                  className="flex mt-2 hover:underline"
-                >
-                  <MailIcon className="text-xl mr-4" />
-                  Email schreiben
-                </Link>
-              </>
-            }
-          />
+          >
+            <>
+              <div className="flex mt-4">
+                <TreePineIcon className="text-xl mr-4" />
+                Verkauf
+              </div>
+              <Link
+                href="tel:497834869640"
+                className="flex mt-2 hover:underline"
+              >
+                <PhoneIcon className="text-xl mr-4" />
+                07834 / 86 96 40
+              </Link>
+              <Link
+                href="mailto:obert@holzhandlung-obert.de"
+                className="flex mt-2 hover:underline"
+              >
+                <MailIcon className="text-xl mr-4" />
+                Email schreiben
+              </Link>
+            </>
+          </ImageFlipCard>
+          <ImageFlipCard title="Wolf Roth" src="/static/holz/Fichtenholz.webp">
+            <>
+              <div className="flex mt-4">
+                <TreePineIcon className="text-xl mr-4" />
+                Verkauf & Außendienst
+              </div>
+              <Link
+                href="tel:497834869640"
+                className="flex mt-2 hover:underline"
+              >
+                <PhoneIcon className="text-xl mr-4" />
+                07834 / 86 96 40
+              </Link>
+              <Link
+                href="mailto:roth@holzhandlung-obert.de"
+                className="flex mt-2 hover:underline"
+              >
+                <MailIcon className="text-xl mr-4" />
+                Email schreiben
+              </Link>
+            </>
+          </ImageFlipCard>
           <ImageFlipCard
             title="Bruno Günter"
-            children={
-              <>
-                <div className="flex mt-4">
-                  <Truck className="text-xl mr-4" />
-                  LKW Fahrer
-                </div>
-              </>
-            }
             src="/static/holz/Fichtenholz.webp"
-          />
+          >
+            <>
+              <div className="flex mt-4">
+                <Truck className="text-xl mr-4" />
+                LKW Fahrer
+              </div>
+            </>
+          </ImageFlipCard>
         </div>
       </div>
     </div>
