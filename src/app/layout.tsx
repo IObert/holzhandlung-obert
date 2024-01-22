@@ -106,7 +106,7 @@ export default async function RootLayout({
             <nav className="text-gray-600 flex-1 pt-6 mt-auto flex-wrap flex gap-2 mx-auto justify-items-center md:gap-6">
               <Link
                 className="text-sm hover:underline underline-offset-4"
-                href="/impressum"
+                href="/#kontakt"
               >
                 Kontakt
               </Link>
