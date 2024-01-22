@@ -29,7 +29,7 @@ export default async function RootLayout({
   const produktLinks = produkte.map((produkt: any) => (
     <div key={produkt.id} className="">
       <Link
-        className="text-xs font-medium hover:underline underline-offset-4"
+        className="text-sm font-medium hover:underline underline-offset-4"
         href={`/produkte/${produkt.id}`}
       >
         <div className="space-y-2">
@@ -81,7 +81,9 @@ export default async function RootLayout({
                   </Link>
                 </PopoverTrigger>
                 <PopoverContent align="start" className="w-80">
-                  <div className="grid grid-cols-2 gap-2 md:gap-6">{produktLinks}</div>
+                  <div className="grid grid-cols-2 gap-2 md:gap-6">
+                    {produktLinks}
+                  </div>
                 </PopoverContent>
               </Popover>
 
@@ -101,54 +103,62 @@ export default async function RootLayout({
           </header>
           <main className="flex items-center flex-1 my-20">{children}</main>
           <footer className="flex flex-col gap-2 sm:flex-row pb-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+            <nav className="text-gray-600 flex-1 pt-6 mt-auto flex-wrap flex gap-2 mx-auto justify-items-center md:gap-6">
+              <Link
+                className="text-sm hover:underline underline-offset-4"
+                href="#"
+              >
+                Kontakt
+              </Link>
+              <Link
+                className="text-sm hover:underline underline-offset-4"
+                href="/partner"
+              >
+                Partner
+              </Link>
+              <Link
+                className="text-sm hover:underline underline-offset-4 "
+                href="/team"
+              >
+                Team
+              </Link>
+              <Link
+                className="text-sm hover:underline underline-offset-4"
+                href="/agb"
+              >
+                AGB
+              </Link>
+
+              <Link
+                className="text-sm hover:underline underline-offset-4"
+                href="/datenschutz"
+              >
+                Datenschutz
+              </Link>
+              <Link
+                className="text-sm hover:underline underline-offset-4"
+                href="/impressum"
+              >
+                Impressum
+              </Link>
+              <Link
+                className="text-sm hover:underline underline-offset-4 md:text-left flex-1 text-center"
+                href="/haftungsausschluss"
+              >
+                Haftungsausschluss
+              </Link>
+            </nav>
             <div className="flex flex-col">
               <img
                 src="/static/holzhandlung-obert.png"
                 className="h-20 my-4 object-contain"
               />
 
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                © 2024 Holzhandlung Obert. Alle Rechte vorbehalten.
+              <p className="text-sm text-center text-gray-400 dark:text-gray-400">
+                © 2024 Holzhandlung Obert. <br />
+                Alle Rechte vorbehalten.
               </p>
             </div>
-            <nav className="sm:ml-auto mt-auto flex gap-2 md:gap-6">
-              <Link
-                className="text-xs hover:underline underline-offset-4"
-                href="#"
-              >
-                Kontakt
-              </Link>
-              <Link
-                className="text-xs hover:underline underline-offset-4"
-                href="/partner"
-              >
-                Partner
-              </Link>
-              <Link
-                className="text-xs hover:underline underline-offset-4"
-                href="/agb"
-              >
-                AGB
-              </Link>
-              <Link
-                className="text-xs hover:underline underline-offset-4"
-                href="/haftungsausschluss"
-              >
-                Haftungsausschluss
-              </Link>
-              <Link
-                className="text-xs hover:underline underline-offset-4"
-                href="/datenschutz"
-              >
-                Datenschutz
-              </Link>
-              <Link
-                className="text-xs hover:underline underline-offset-4"
-                href="/impressum"
-              >
-                Impressum
-              </Link>
-            </nav>
           </footer>
         </div>
       </body>

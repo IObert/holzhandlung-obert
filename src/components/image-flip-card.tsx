@@ -6,11 +6,13 @@ export default function ImageFlipCard({
   title,
   description,
   link,
+  children
 }: {
   src: string;
   title: string;
-  description: string;
+  description?: string;
   link?: string;
+  children?: React.ReactNode;
 }) {
   //the card flips on hover
 
@@ -30,7 +32,7 @@ export default function ImageFlipCard({
           <CardHeader>
             <CardTitle>{title}</CardTitle>
           </CardHeader>
-          <CardContent>{description}</CardContent>
+          <CardContent>{description}{children}</CardContent>
         </Card>
       </div>
     </div>
