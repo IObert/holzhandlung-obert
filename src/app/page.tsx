@@ -14,6 +14,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import ImageFlipCard from "@/components/image-flip-card";
+import ContactBar from "@/components/contact-bar";
 
 export default async function Home() {
   const images = JSON.parse(process.env.images || "[]") as [];
@@ -22,7 +23,7 @@ export default async function Home() {
 
   return (
     <main className="flex-1">
-      <section className="w-full pb-12 md:pb-24 lg:pb-32 ">
+      <section className="w-full ">
         <div className="mx-auto container px-4 md:px-6">
           <img
             src="/static/holzhandlung-obert.png"
@@ -54,6 +55,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
+        <ContactBar />
       </section>
       <Section id="umwelt">
         <div className="inline-block mb-2 rounded-lg bg-gray-600 text-gray-100 px-2 py-1 text-xs">
@@ -174,50 +176,14 @@ export default async function Home() {
         </div>
       </Section>
 
-      <section
-        id=""
-        className="w-full py-12 md:py-24 lg:py-32 text-gray-500 bg-gray-100 dark:bg-gray-800"
+      <Section
+        id="kontakt"
+        title="Kontakt"
+        tag="Wir freuen uns auf Ihre Anfrage"
+        darkBackground={true}
       >
-        <div className="mx-auto container grid items-center justify-center gap-6 px-4 md:px-6 lg:gap-10">
-          <div className="space-y-3">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"></h2>
-            <p className="mx-auto max-w-[600px]  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"></p>
-          </div>
-
-          <div className="flex justify-center space-x-4">
-            <Link
-              className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-              href="#"
-            >
-              Contact Sales
-            </Link>
-            <Link
-              className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300 dark:border-gray-800"
-              href="#"
-            >
-              Learn more
-            </Link>
-          </div>
-          <div className="mx-auto w-full max-w-sm space-y-2">
-            <form className="flex space-x-2">
-              <Input
-                className="max-w-md flex-1"
-                placeholder="Enter your email"
-                type="email"
-              />
-              <Button type="submit">Sign Up</Button>
-            </form>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              <Link
-                className="underline underline-offset-2"
-                href="/datenschutz"
-              >
-                Datenschutzhinweis
-              </Link>
-            </p>
-          </div>
-        </div>
-      </section>
+        <ContactBar />
+      </Section>
     </main>
   );
 }
