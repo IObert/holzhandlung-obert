@@ -22,14 +22,18 @@ export default async function Home() {
 
   return (
     <main className="flex-1">
-      <section className="w-full py-12 md:py-24 lg:py-32 ">
+      <section className="w-full pb-12 md:pb-24 lg:pb-32 ">
         <div className="mx-auto container px-4 md:px-6">
+          <img
+            src="/static/holzhandlung-obert.png"
+            className="w-1/2 my-4 mx-auto object-contain"
+          />
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2 mb-4">
               <h1 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Holzhandlung Heidi Obert
               </h1>
-              <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <p className="mx-auto max-w-[600px] text-[#0aac0b] font-bold md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Qualität Gibt Sicherheit!
               </p>
             </div>

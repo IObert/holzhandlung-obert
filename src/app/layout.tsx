@@ -43,14 +43,14 @@ export default async function RootLayout({
     <html lang="de">
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
-          <header className="px-4 top-0 lg:px-6 h-14 flex items-center w-full fixed bg-white z-10">
+          <header className="px-2 top-0 pt-2 h-14 flex items-center w-screen fixed bg-white z-10">
             <Link className="flex items-center justify-center" href="/">
-              <TreePineIcon className="h-6 w-6" />
+              <TreePineIcon className="h-6 w-6 mr-2" />
               <span className="text-lg font-semibold hidden md:block">
                 Holzhandlung Obert
               </span>
             </Link>
-            <nav className="ml-auto flex gap-2 md:gap-6">
+            <nav className="md:ml-auto flex gap-2 md:gap-6">
               <Link
                 className="text-sm font-medium hover:underline underline-offset-4"
                 href="/#umwelt"
