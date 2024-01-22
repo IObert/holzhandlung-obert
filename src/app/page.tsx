@@ -150,7 +150,7 @@ export default async function Home() {
             src="/static/holz/douglasienholz.jpg"
           />
           <ImageFlipCard
-            src="/static/holz/Eichenholz.jpeg"
+            src="/static/holz/eichenholz.jpeg"
             title="Eichenholz"
             description="Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau."
           />

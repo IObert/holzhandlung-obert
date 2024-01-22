@@ -29,11 +29,11 @@ export default async function RootLayout({
   const produktLinks = produkte.map((produkt: any) => (
     <div key={produkt.id} className="">
       <Link
-        className="text-sm font-medium hover:underline underline-offset-4"
+        className="text-xs hover:underline underline-offset-4"
         href={`/produkte/${produkt.id}`}
       >
         <div className="space-y-2">
-          <h4 className="font-medium "> {produkt.title}</h4>
+          <h4 className=""> {produkt.title}</h4>
         </div>
       </Link>
     </div>
@@ -50,15 +50,15 @@ export default async function RootLayout({
                 Holzhandlung Obert
               </span>
             </Link>
-            <nav className="md:ml-auto flex gap-2 md:gap-6">
+            <nav className="ml-auto text-xs md:text-sm font-semibold flex gap-2 md:gap-6">
               <Link
-                className="text-sm font-medium hover:underline underline-offset-4"
+                className=" hover:underline underline-offset-4"
                 href="/#umwelt"
               >
                 Umwelt
               </Link>
               <Link
-                className="text-sm font-medium hover:underline underline-offset-4"
+                className=" hover:underline underline-offset-4"
                 href="/#regional"
               >
                 Regional
@@ -67,7 +67,7 @@ export default async function RootLayout({
               <Popover>
                 <PopoverTrigger asChild>
                   <Link
-                    className="text-sm font-medium hover:underline underline-offset-4"
+                    className=" hover:underline underline-offset-4"
                     href="/#lieferprogramm"
 
                     // onClick={(e) => {
@@ -88,13 +88,13 @@ export default async function RootLayout({
               </Popover>
 
               <Link
-                className="text-sm font-medium hover:underline underline-offset-4"
+                className=" hover:underline underline-offset-4"
                 href="/#galerie"
               >
                 Galerie
               </Link>
               <Link
-                className="text-sm font-medium hover:underline underline-offset-4"
+                className=" hover:underline underline-offset-4"
                 href="/#holzarten"
               >
                 Holzarten
