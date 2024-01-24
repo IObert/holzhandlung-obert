@@ -19,7 +19,7 @@ export default async function Home() {
 
   return (
     <main className="flex-1">
-      <section className="w-full ">
+      <section className="w-full bg-gray-50">
         <div className="mx-auto container px-4 md:px-6">
           <img
             src="/static/holzhandlung-obert.png"

@@ -101,7 +101,7 @@ export default async function RootLayout({
               </Link>
             </nav>
           </header>
-          <main className="flex items-center flex-1 my-20">{children}</main>
+          <main className="flex items-center flex-1 mt-14">{children}</main>
           <footer className="flex flex-col sm:flex-row pb-6 w-full shrink-0 items-center px-4 gap-2 md:px-6 border-t">
             <nav className="text-gray-600 flex-1 pt-6 mt-auto flex-wrap flex gap-0.5 mx-auto justify-items-center md:gap-4">
               <Link
