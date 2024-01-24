@@ -34,7 +34,7 @@ export default async function Home() {
                 Qualität Gibt Sicherheit!
               </p>
             </div>
-            <div className="text-block  max-w-[900px] space-y-1">
+            <div className="text-block text-sm md:text-base max-w-[900px] space-y-1">
               <p>
                 Wir sind ein junges Unternehmen, das sich auf den Vertrieb von
                 ökologischen Baumaterialien spezialisiert hat.
