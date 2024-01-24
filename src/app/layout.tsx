@@ -102,47 +102,47 @@ export default async function RootLayout({
             </nav>
           </header>
           <main className="flex items-center flex-1 my-20">{children}</main>
-          <footer className="flex flex-col gap-2 sm:flex-row pb-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-            <nav className="text-gray-600 flex-1 pt-6 mt-auto flex-wrap flex gap-2 mx-auto justify-items-center md:gap-6">
+          <footer className="flex flex-col sm:flex-row pb-6 w-full shrink-0 items-center px-4 gap-2 md:px-6 border-t">
+            <nav className="text-gray-600 flex-1 pt-6 mt-auto flex-wrap flex gap-0.5 mx-auto justify-items-center md:gap-4">
               <Link
-                className="text-sm hover:underline underline-offset-4"
+                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
                 href="/#kontakt"
               >
                 Kontakt
               </Link>
               <Link
-                className="text-sm hover:underline underline-offset-4"
+                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
                 href="/partner"
               >
                 Partner
               </Link>
               <Link
-                className="text-sm hover:underline underline-offset-4 "
+                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
                 href="/team"
               >
                 Team
               </Link>
               <Link
-                className="text-sm hover:underline underline-offset-4"
+                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
                 href="/agb"
               >
                 AGB
               </Link>
 
               <Link
-                className="text-sm hover:underline underline-offset-4"
+                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
                 href="/datenschutz"
               >
                 Datenschutz
               </Link>
               <Link
-                className="text-sm hover:underline underline-offset-4"
+                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
                 href="/impressum"
               >
                 Impressum
               </Link>
               <Link
-                className="text-sm hover:underline underline-offset-4 md:text-left flex-1 text-center"
+                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
                 href="/haftungsausschluss"
               >
                 Haftungsausschluss
