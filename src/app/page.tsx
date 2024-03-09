@@ -31,18 +31,14 @@ export default async function Home() {
                 Holzhandlung Heidi Obert
               </h1>
               <p className="mx-auto max-w-[600px] text-[#0aac0b] font-bold md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Qualität Gibt Sicherheit!
+                Qualität gibt Sicherheit!
               </p>
             </div>
-            <div className="text-block text-sm md:text-base max-w-[900px] space-y-1">
+            <div className="text-left text-sm md:text-base max-w-[900px] space-y-1">
               <p>
-                Wir sind ein junges Unternehmen, das sich auf den Vertrieb von
-                ökologischen Baumaterialien spezialisiert hat.
-              </p>
-              <p>
-                Die Mehrheit unserer Kunden sind moderne Holzbaubetriebe,
-                Dachdeckereien und Baustoffhandlungen, in letzter Zeit jedoch
-                auch immer mehr Heimwerker.
+                Wir haben uns auf den Vertrieb von
+                ökologischen Baumaterialien spezialisiert. Die Mehrheit unserer Kunden sind moderne Holzbaubetriebe,
+                Dachdeckereien und Heimwerker.
               </p>
               <p>
                 Erstklassiger Service und innovative Produkte machen uns zu
@@ -58,7 +54,7 @@ export default async function Home() {
           Umwelt
         </div>
         <h2 className="lg:leading-tighter text-3xl text-black font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-          Für einen verantwortungsvolle und ressourcenschonende Umgang mit dem
+          Für einen verantwortungsvollen und ressourcenschonenden Umgang mit dem
           einzigartigen Naturwerkstoff Holz.
         </h2>
       </Section>
@@ -146,7 +142,7 @@ export default async function Home() {
           />
           <ImageFlipCard
             title="Douglasienholz"
-            description="Die Douglasie, beliebt für Fassaden und Balkone, dient auch im Schiffbau. "
+            description="Die Douglasie, beliebt für Fassaden, Balkone und sichtbare Konstruktionen. "
             src="/static/holz/douglasienholz.jpg"
           />
           <ImageFlipCard

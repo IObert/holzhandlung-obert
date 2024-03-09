@@ -17,13 +17,6 @@ export default function ContactBar() {
         <span className="mt-0 ml-2">07834 / 869640</span>
       </Link>
       <Link
-        href="fax:497834869640"
-        className="flex flex-row mt-2 text-center hover:underline hover:bg-gray-400 p-2 rounded-lg hover:text-gray-900"
-      >
-        <PrinterIcon className=" mx-auto" />
-        <span className="mt-0 ml-2">07834 / 9071</span>
-      </Link>
-      <Link
         href="mailto:info@holzhandlung-obert.de"
         className="flex flex-row mt-2 text-center hover:underline hover:bg-gray-400 p-2 rounded-lg hover:text-gray-900"
       >

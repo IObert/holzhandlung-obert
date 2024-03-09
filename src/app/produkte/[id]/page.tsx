@@ -4,7 +4,7 @@ export async function generateStaticParams() {
       id: "daemmstoffe",
       title: "Dämmstoffe",
       description:
-        "Unverzichtbar für effiziente Isolierung, bieten Wärme- und Schallschutz.",
+        "Unverzichtbar für effizienten Hitze- und Schallschutz.",
       image: "/static/produkte/damm.jpeg",
     },
     {
@@ -45,7 +45,7 @@ export async function generateStaticParams() {
     {
       id: "profilbretter",
       title: "Profilbretter",
-      description: "Verschönern Fassaden und Decken.",
+      description: "Verschönern Fassaden, Fußböden und Decken.",
       image: "/static/produkte/profilbretter.jpeg",
     },
     {
@@ -60,6 +60,12 @@ export async function generateStaticParams() {
       title: "Pellets",
       description: "Dienen als nachhaltige Energiequelle.",
       image: "/static/produkte/pellets.jpeg",
+    },
+    {
+      id: "rauspund",
+      title: "Rauspund",
+      description: "Stabile und diffusionsoffene ???",
+      image: "/static/produkte/rauspund.jpeg",
     },
   ];
 }
