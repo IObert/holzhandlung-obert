@@ -12,60 +12,72 @@ export default function Partner() {
         </div>
         <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Egger Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="70"
-              src="/static/partner/egger.svg"
-              width="140"
-            />
+            <a href="https://haeussermann.de/" target="_blank">
+              <img
+                alt="haeussermann Logo"
+                className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                height="70"
+                src="/static/partner/haeussermann.jpg"
+                width="140"
+              />
+            </a>
           </div>
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Pavatex Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="70"
-              src="/static/partner/pavatex.png"
-              width="140"
-            />
+            <a href="https://www.pavatex.de/" target="_blank">
+              <img
+                alt="Pavatex Logo"
+                className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                height="70"
+                src="/static/partner/pavatex.jpg"
+                width="140"
+              />
+            </a>
           </div>
-          <div className="mx-auto flex w-full items-center justify-center p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="70"
-              src="/static/partner/egger.svg"
-              width="140"
-            />
+          <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
+            <a href="https://www.egger.com/de/" target="_blank">
+              <img
+                alt="Egger Logo"
+                className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                height="70"
+                src="/static/partner/egger.svg"
+                width="140"
+              />
+            </a>
           </div>
         </div>
         <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="70"
-              src="/static/partner/pavatex.png"
-              width="140"
-            />
+            <a href="https://www.mocopinus.com/de/" target="_blank">
+              <img
+                alt="Mocopinus Logo"
+                className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                height="70"
+                src="/static/partner/mocopinus.bmp"
+                width="140"
+              />
+            </a>
+          </div>
+          <div className="mx-auto flex w-full items-center justify-center p-8">
+            <a href="https://www.mm-holz.com/" target="_blank">
+              <img
+                alt="MM Holz Logo"
+                className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                height="70"
+                src="/static/partner/mm-holz.png"
+                width="140"
+              />
+            </a>
           </div>
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="70"
-              src="/static/partner/egger.svg"
-              width="140"
-            />
-          </div>
-          <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <img
-              alt="Logo"
-              className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
-              height="70"
-              src="/static/partner/pavatex.png"
-              width="140"
-            />
+            <a href="https://hwpan.de/" target="_blank">
+              <img
+                alt="Holzwerke Pfarrkirchen Logo"
+                className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
+                height="70"
+                src="/static/partner/HP-Logo.bmp"
+                width="140"
+              />
+            </a>
           </div>
         </div>
       </div>
