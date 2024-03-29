@@ -14,8 +14,7 @@ export default function Impressum() {
 
         <p className="">
           Tel: 0 78 34 / 86 96 40 <br />
-          Fax: 0 78 34 / 90 71 <br />
-          Email:{" "}
+          Email:
           <Link
             href="mailto:info@holzhandlung-obert.de"
             className="hover:underline underline-offset-4"
