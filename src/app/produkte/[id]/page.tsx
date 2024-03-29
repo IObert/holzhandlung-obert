@@ -3,8 +3,7 @@ export async function generateStaticParams() {
     {
       id: "daemmstoffe",
       title: "Dämmstoffe",
-      description:
-        "Unverzichtbar für effizienten Hitze- und Schallschutz.",
+      description: "Unverzichtbar für effizienten Hitze- und Schallschutz.",
       image: "/static/produkte/damm.jpeg",
     },
     {
@@ -64,7 +63,7 @@ export async function generateStaticParams() {
     {
       id: "rauspund",
       title: "Rauspund",
-      description: "Stabile und diffusionsoffene ???",
+      description: "Stabile und diffusionsoffene Beplankung.",
       image: "/static/produkte/rauspund.jpeg",
     },
   ];

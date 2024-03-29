@@ -153,7 +153,7 @@ export default async function Home() {
           <ImageFlipCard
             src="/static/holz/laerchenholz.jpeg"
             title="Lärchenholz"
-            description="Lärche überzeugt als Konstruktionsholz, für Fassaden und Möbel, während die sibirische Variante für Fassaden, Balkone und Terrassen geeignet ist. "
+            description="Das Nadelholz mit der höchsten Resistenzklasse in unserem Lieferprogramm. Die Lärche überzeugt als Konstruktionsholz, für Fassaden und Möbel, während die sibirische Variante für Fassaden, Balkone und Terrassen geeignet ist. "
           />
           <ImageFlipCard
             src="/static/holz/weisstanne.jpeg"
