@@ -146,29 +146,29 @@ export default async function Home() {
             showTitleOnFront={true}
             title="Douglasienholz"
             description="Die Douglasie, beliebt für Fassaden, Balkone und sichtbare Konstruktionen. "
-            src="/static/holz/douglasienholz.jpg"
+            src="/static/holz/douglasienholz.webp"
           />
           <ImageFlipCard
             showTitleOnFront={true}
-            src="/static/holz/eichenholz.jpeg"
+            src="/static/holz/eichenholz.webp"
             title="Eichenholz"
             description="Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau."
           />
           <ImageFlipCard
             showTitleOnFront={true}
-            src="/static/holz/laerchenholz.jpeg"
+            src="/static/holz/laerchenholz.webp"
             title="Lärchenholz"
             description="Das Nadelholz mit der höchsten Resistenzklasse in unserem Lieferprogramm. Die Lärche überzeugt als Konstruktionsholz, für Fassaden und Möbel. "
           />
           <ImageFlipCard
             showTitleOnFront={true}
-            src="/static/holz/weisstanne.jpeg"
+            src="/static/holz/weisstanne.webp"
             title="Weisstanne"
             description="Die Tanne, ideal für Konstruktionshölzer und Innenausbauten, findet Anwendung im Saunabau und Fensterbau."
           />
           <ImageFlipCard
             showTitleOnFront={true}
-            src="/static/holz/redcedar.jpeg"
+            src="/static/holz/redcedar.webp"
             title="Red Cedar"
             description="Red Cedar glänzt in Profilbrettern für Fassadenverkleidungen."
           />
