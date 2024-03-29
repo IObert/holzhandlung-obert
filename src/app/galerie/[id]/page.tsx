@@ -13,7 +13,7 @@ export default function Galerie({
 }) {
   return (
     <img
-      src={`/static/galerie/${id}.webp`}
+      src={`/static/galerie/${id}`}
       className="w-10/12 md:mx-2 md:w-full mx-auto rounded-lg"
     />
   );
