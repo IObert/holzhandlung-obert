@@ -4,12 +4,14 @@ import { Card, CardHeader, CardContent, CardTitle } from "./ui/card";
 export default function ImageFlipCard({
   src,
   title,
+  showTitleOnFront,
   description,
   link,
-  children
+  children,
 }: {
   src: string;
   title: string;
+  showTitleOnFront?: boolean;
   description?: string;
   link?: string;
   children?: React.ReactNode;
@@ -20,6 +22,11 @@ export default function ImageFlipCard({
     <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
       <div className="absolute backface-hidden w-full h-full">
         <Card className="w-full h-full rounded-lg shadow-md overflow-hidden">
+          {showTitleOnFront && (
+            <h1 className="absolute w-full h-full text-center align-middle top-6 capitalize text-2xl font-semibold">
+              {title}
+            </h1>
+          )}
           <img
             alt={title}
             className="overflow-hidden w-full h-full"
@@ -32,7 +39,10 @@ export default function ImageFlipCard({
           <CardHeader>
             <CardTitle>{title}</CardTitle>
           </CardHeader>
-          <CardContent>{description}{children}</CardContent>
+          <CardContent>
+            {description}
+            {children}
+          </CardContent>
         </Card>
       </div>
     </div>

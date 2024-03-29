@@ -36,9 +36,9 @@ export default async function Home() {
             </div>
             <div className="text-left text-sm md:text-base max-w-[900px] space-y-1">
               <p>
-                Wir haben uns auf den Vertrieb von
-                ökologischen Baumaterialien spezialisiert. Die Mehrheit unserer Kunden sind moderne Holzbaubetriebe,
-                Dachdeckereien und Heimwerker.
+                Wir haben uns auf den Vertrieb von ökologischen Baumaterialien
+                spezialisiert. Die Mehrheit unserer Kunden sind moderne
+                Holzbaubetriebe, Dachdeckereien und Heimwerker.
               </p>
               <p>
                 Erstklassiger Service und innovative Produkte machen uns zu
@@ -131,36 +131,43 @@ export default async function Home() {
       >
         <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center gap-4">
           <ImageFlipCard
+            showTitleOnFront={true}
             title="Fichtenholz"
             description="Die Fichte, als Konstruktionsholz bekannt, eignet sich für Profile, massive Fußböden und Instrumentenbau. "
             src="/static/holz/Fichtenholz.webp"
           />
           <ImageFlipCard
+            showTitleOnFront={true}
             title="Kiefernholz"
             description="Kiefer eignet sich für Konstruktionshölzer, Fenster und Möbel."
             src="/static/holz/Kiefernholz.webp"
           />
           <ImageFlipCard
+            showTitleOnFront={true}
             title="Douglasienholz"
             description="Die Douglasie, beliebt für Fassaden, Balkone und sichtbare Konstruktionen. "
             src="/static/holz/douglasienholz.jpg"
           />
           <ImageFlipCard
+            showTitleOnFront={true}
             src="/static/holz/eichenholz.jpeg"
             title="Eichenholz"
             description="Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau."
           />
           <ImageFlipCard
+            showTitleOnFront={true}
             src="/static/holz/laerchenholz.jpeg"
             title="Lärchenholz"
-            description="Das Nadelholz mit der höchsten Resistenzklasse in unserem Lieferprogramm. Die Lärche überzeugt als Konstruktionsholz, für Fassaden und Möbel, während die sibirische Variante für Fassaden, Balkone und Terrassen geeignet ist. "
+            description="Das Nadelholz mit der höchsten Resistenzklasse in unserem Lieferprogramm. Die Lärche überzeugt als Konstruktionsholz, für Fassaden und Möbel. "
           />
           <ImageFlipCard
+            showTitleOnFront={true}
             src="/static/holz/weisstanne.jpeg"
             title="Weisstanne"
             description="Die Tanne, ideal für Konstruktionshölzer und Innenausbauten, findet Anwendung im Saunabau und Fensterbau."
           />
           <ImageFlipCard
+            showTitleOnFront={true}
             src="/static/holz/redcedar.jpeg"
             title="Red Cedar"
             description="Red Cedar glänzt in Profilbrettern für Fassadenverkleidungen."
