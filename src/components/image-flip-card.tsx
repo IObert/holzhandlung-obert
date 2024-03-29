@@ -23,7 +23,7 @@ export default function ImageFlipCard({
       <div className="absolute backface-hidden w-full h-full">
         <Card className="w-full h-full rounded-lg shadow-md overflow-hidden">
           {showTitleOnFront && (
-            <h1 className="absolute w-full h-full text-center align-middle top-6 capitalize text-2xl font-semibold">
+            <h1 className="absolute w-full h-full text-center flex justify-center items-center capitalize text-2xl font-semibold">
               {title}
             </h1>
           )}
