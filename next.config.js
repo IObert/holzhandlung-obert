@@ -4,28 +4,28 @@ const nextConfig = {
     env: {
         images: JSON.stringify([
             {
-                path: "/static/galerie/Gesamt.jpeg",
+                path: "/static/galerie/Weit.webp",
                 alt: "Gesamtansicht",
             },
             {
-                path: "/static/galerie/Hinten.jpeg",
-                alt: "Hinten",
+                path: "/static/galerie/Straße.webp",
+                alt: "Straßenansicht",
             },
             {
-                path: "/static/galerie/Innen.jpeg",
-                alt: "Innen",
+                path: "/static/galerie/Vorne.webp",
+                alt: "Vorderansicht",
             },
             {
-                path: "/static/galerie/Regal1.jpeg",
-                alt: "Regal1",
+                path: "/static/galerie/Regale.webp",
+                alt: "Regale",
             },
             {
-                path: "/static/galerie/Regal2.jpeg",
-                alt: "Regal2",
+                path: "/static/galerie/Hinten.webp",
+                alt: "Halle Hinten",
             },
             {
-                path: "/static/galerie/Vorne.jpeg",
-                alt: "Vorne",
+                path: "/static/galerie/Stapler.webp",
+                alt: "Stapler",
             },
         ])
     }
