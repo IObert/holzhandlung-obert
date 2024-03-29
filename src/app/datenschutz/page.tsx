@@ -144,11 +144,33 @@ export default function Datenschutz() {
             im Auftrag des Verantwortlichen verarbeitet.
           </p>
           <li>Empfänger</li>
-          <p className="my-2">Empfänger ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, der personenbezogene Daten offengelegt werden, unabhängig davon, ob es sich bei ihr um einen Dritten handelt oder nicht. Behörden, die im Rahmen eines bestimmten Untersuchungsauftrags nach dem Unionsrecht oder dem Recht der Mitgliedstaaten möglicherweise personenbezogene Daten erhalten, gelten jedoch nicht als Empfänger.</p>
+          <p className="my-2">
+            Empfänger ist eine natürliche oder juristische Person, Behörde,
+            Einrichtung oder andere Stelle, der personenbezogene Daten
+            offengelegt werden, unabhängig davon, ob es sich bei ihr um einen
+            Dritten handelt oder nicht. Behörden, die im Rahmen eines bestimmten
+            Untersuchungsauftrags nach dem Unionsrecht oder dem Recht der
+            Mitgliedstaaten möglicherweise personenbezogene Daten erhalten,
+            gelten jedoch nicht als Empfänger.
+          </p>
           <li>Dritter</li>
-          <p className="my-2">Dritter ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle außer der betroffenen Person, dem Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter der unmittelbaren Verantwortung des Verantwortlichen oder des Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu verarbeiten.</p>
+          <p className="my-2">
+            Dritter ist eine natürliche oder juristische Person, Behörde,
+            Einrichtung oder andere Stelle außer der betroffenen Person, dem
+            Verantwortlichen, dem Auftragsverarbeiter und den Personen, die
+            unter der unmittelbaren Verantwortung des Verantwortlichen oder des
+            Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu
+            verarbeiten.
+          </p>
           <li>Einwilligung</li>
-          <p className="my-2">Einwilligung ist jede von der betroffenen Person freiwillig für den bestimmten Fall in informierter Weise und unmissverständlich abgegebene Willensbekundung in Form einer Erklärung oder einer sonstigen eindeutigen bestätigenden Handlung, mit der die betroffene Person zu verstehen gibt, dass sie mit der Verarbeitung der sie betreffenden personenbezogenen Daten einverstanden ist.</p>
+          <p className="my-2">
+            Einwilligung ist jede von der betroffenen Person freiwillig für den
+            bestimmten Fall in informierter Weise und unmissverständlich
+            abgegebene Willensbekundung in Form einer Erklärung oder einer
+            sonstigen eindeutigen bestätigenden Handlung, mit der die betroffene
+            Person zu verstehen gibt, dass sie mit der Verarbeitung der sie
+            betreffenden personenbezogenen Daten einverstanden ist.
+          </p>
         </ol>
         <NavUpIcon />
       </section>

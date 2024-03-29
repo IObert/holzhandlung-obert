@@ -21,9 +21,7 @@ export default function ContactBar() {
         className="flex flex-row mt-2 text-center hover:underline hover:bg-gray-400 p-2 rounded-lg hover:text-gray-900"
       >
         <MailIcon className="mx-auto" />
-        <span className="mt-0 ml-2">
-          info@holzhandlung-obert.de
-        </span>
+        <span className="mt-0 ml-2">info@holzhandlung-obert.de</span>
       </Link>
     </div>
   );

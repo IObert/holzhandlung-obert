@@ -19,8 +19,8 @@ export default function AGB() {
           <li>
             Ergänzend gelten - sofern sie unseren Bedingungen nicht
             widersprechen - die Gebräuche im holzwirtschaftlichen Verkehr,
-            insbesondere die &quot;Tegernseer Gebräuche&quot; in der jeweils gültigen
-            Fasssung mit ihren Anlagen und ihrem Anhang.
+            insbesondere die &quot;Tegernseer Gebräuche&quot; in der jeweils
+            gültigen Fasssung mit ihren Anlagen und ihrem Anhang.
           </li>
           <li>
             Abweichende Vereinbarungen und Bedingungen, insbesondere
