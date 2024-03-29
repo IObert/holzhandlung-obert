@@ -151,6 +151,7 @@ export default async function RootLayout({
             <div className="flex flex-col">
               <img
                 src="/static/holzhandlung-obert.png"
+                alt="Holzhandlung Obert"
                 className="h-20 my-4 object-contain"
               />
 

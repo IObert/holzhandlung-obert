@@ -23,6 +23,7 @@ export default async function Home() {
         <div className="mx-auto container px-4 md:px-6">
           <img
             src="/static/holzhandlung-obert.png"
+            alt="Holzhandlung Heidi Obert"
             className="w-1/2 max-w-[500px] my-4 mx-auto object-contain"
           />
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
