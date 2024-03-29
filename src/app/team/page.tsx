@@ -53,11 +53,11 @@ export default function Impressum() {
                     Verkauf & Außendienst
                   </div>
                   <Link
-                    href="tel:497834869640"
+                    href="tel:491702845408"
                     className="flex mt-2 hover:underline"
                   >
                     <PhoneIcon className="text-xl mr-4" />
-                    07834 / 86 96 40
+                    0170 / 28 454 08
                   </Link>
                   <Link
                     href="mailto:roth@holzhandlung-obert.de"
@@ -80,6 +80,13 @@ export default function Impressum() {
                 <Truck className="text-xl mr-4" />
                 LKW Fahrer
               </div>
+              <Link
+                href="tel:491702840017"
+                className="flex mt-2 hover:underline"
+              >
+                <PhoneIcon className="text-xl mr-4" />
+                0170 / 28 400 17
+              </Link>
             </CardContent>
           </Card>
         </div>
