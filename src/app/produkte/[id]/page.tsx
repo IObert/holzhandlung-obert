@@ -18,6 +18,23 @@ export async function generateStaticParams() {
       title: "Konstruktionsvollholz",
       description:
         "Überzeugt als robustes Baumaterial, besonders in tragenden Elementen.",
+      details: (
+        <div>
+          <ul className="list-disc pl-6">
+            <li>Ausschließlich aus güteüberwachter Produktion</li>
+            <li>Individuell und vielseitig einsetzbar</li>
+          </ul>
+          <p className="my-6">
+            <h3 className="text-xl font-bold">KVH NSi</h3>
+            für <span className="font-bold">n</span>icht{" "}
+            <span className="font-bold">si</span>chtbare Verwendung
+          </p>
+          <p className="my-6">
+            <h3 className="text-xl font-bold">KVH Si</h3>
+            für <span className="font-bold">si</span>chtbare Verwendung
+          </p>
+        </div>
+      ),
       image: "/static/produkte/kvh.webp",
     },
     {
@@ -25,6 +42,23 @@ export async function generateStaticParams() {
       title: "Duo-/Trio- Balken",
       description:
         "Durch ihre Schichtbauweise stabil, sind ideal für Decken und Dächer.",
+      details: (
+        <div>
+          <ul className="list-disc pl-6">
+            <li>Ausschließlich aus güteüberwachter Produktion</li>
+            <li>Für Stabilität und Ästhetik</li>
+          </ul>
+          <p className="my-6">
+            <h3 className="text-xl font-bold">Duo-/Trio- Balken NSi</h3>
+            für <span className="font-bold">n</span>icht{" "}
+            <span className="font-bold">si</span>chtbare Verwendung
+          </p>
+          <p className="my-6">
+            <h3 className="text-xl font-bold">Duo-/Trio- Balken Si</h3>
+            für <span className="font-bold">si</span>chtbare Verwendung
+          </p>
+        </div>
+      ),
       image: "/static/produkte/duo.webp",
     },
     {
@@ -39,12 +73,35 @@ export async function generateStaticParams() {
       title: "Brettstapelelemente",
       description:
         "Als innovative Baukomponenten, ermöglichen schnellen Aufbau.",
+      details: (
+        <div>
+          <p>In verschiedenen Oberflächenqualitäten:</p>
+          <ul className="list-disc pl-10">
+            <li>Unterseite sichtbar</li>
+            <li>Beidseitig nicht sichtbar</li>
+          </ul>
+        </div>
+      ),
       image: "/static/produkte/Brettstapel.webp",
     },
     {
       id: "profilbretter",
       title: "Profilbretter",
       description: "Verschönern Fassaden, Fußböden und Decken.",
+      details: (
+        <div>
+          <p>In verschiedenen Qualitäten und Holzarten:</p>
+          <ul className="list-disc pl-10">
+            <li>Fasebretter</li>
+            <li>Rundprofilbretter</li>
+            <li>Glattkantbretter</li>
+            <li>Fußbodenbretter</li>
+            <li>Rauhspund</li>
+            <li>Stülpschalung</li>
+            <li>Sonderprofile</li>
+          </ul>
+        </div>
+      ),
       image: "/static/produkte/profilbretter.webp",
     },
     {
@@ -52,6 +109,25 @@ export async function generateStaticParams() {
       title: "Schnittholz",
       description:
         "Vielseitig einsetzbar, bildet die Basis für diverse Bauvorhaben.",
+      details: (
+        <div>
+          <p>In verschiedenen Qualitäten:</p>
+          <ul className="list-disc pl-10">
+            <li>Listen-Bauholz</li>
+            <li>Latten</li>
+            <li>Kreuzrahmen</li>
+            <li>Bretter</li>
+            <li>Dielen</li>
+            <li>Kanthölzer</li>
+            <li>Kanthölzer</li>
+            <li>Kanthölzer</li>
+            <li>Rauhspund</li>
+            <li>Palettenhölzer</li>
+            <li>Blockware</li>
+            <li>Rohhobler</li>
+          </ul>
+        </div>
+      ),
       image: "/static/produkte/schnittholz.webp",
     },
     {
@@ -94,9 +170,10 @@ export default async function Galerie({
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 {produkt?.title}
               </h1>
-              <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 mb-20">
                 {produkt?.description}
               </p>
+              {produkt?.details}
             </div>
           </div>
         </div>
