@@ -4,67 +4,67 @@ export async function generateStaticParams() {
       id: "daemmstoffe",
       title: "Dämmstoffe",
       description: "Unverzichtbar für effizienten Hitze- und Schallschutz.",
-      image: "/static/produkte/damm.jpeg",
+      image: "/static/produkte/daemm.webp",
     },
     {
       id: "holzwerkstoffplatten",
       title: "Holzwerkstoff-Platten",
       description:
         "Vielseitig einsetzbar, dienen als stabile Basis in Möbeln und Konstruktionen.",
-      image: "/static/produkte/osb.png",
+      image: "/static/produkte/osb.webp",
     },
     {
       id: "konstruktionsvollholz",
       title: "Konstruktionsvollholz",
       description:
         "Überzeugt als robustes Baumaterial, besonders in tragenden Elementen.",
-      image: "/static/produkte/kvh.jpeg",
+      image: "/static/produkte/kvh.webp",
     },
     {
       id: "duo-trio-balken",
       title: "Duo-/Trio- Balken",
       description:
         "Durch ihre Schichtbauweise stabil, sind ideal für Decken und Dächer.",
-      image: "/static/produkte/duo-trio.jpeg",
+      image: "/static/produkte/duo.webp",
     },
     {
       id: "brettschichtholz",
       title: "Brettschichtholz",
       description:
         "Stark und formstabil, eignet sich für anspruchsvolle Tragstrukturen.",
-      image: "/static/produkte/bsh.jpeg",
+      image: "/static/produkte/bsh.webp",
     },
     {
       id: "brettstapelelemente",
       title: "Brettstapelelemente",
       description:
         "Als innovative Baukomponenten, ermöglichen schnellen Aufbau.",
-      image: "/static/produkte/Brettstapel.png",
+      image: "/static/produkte/Brettstapel.webp",
     },
     {
       id: "profilbretter",
       title: "Profilbretter",
       description: "Verschönern Fassaden, Fußböden und Decken.",
-      image: "/static/produkte/profilbretter.jpeg",
+      image: "/static/produkte/profilbretter.webp",
     },
     {
       id: "schnittholz",
       title: "Schnittholz",
       description:
         "Vielseitig einsetzbar, bildet die Basis für diverse Bauvorhaben.",
-      image: "/static/produkte/Schnittholz.jpeg",
+      image: "/static/produkte/schnittholz.webp",
     },
     {
       id: "pellets",
       title: "Pellets",
       description: "Dienen als nachhaltige Energiequelle.",
-      image: "/static/produkte/pellets.jpeg",
+      image: "/static/produkte/pellets.webp",
     },
     {
       id: "rauspund",
       title: "Rauspund",
       description: "Stabile und diffusionsoffene Beplankung.",
-      image: "/static/produkte/rauspund.jpeg",
+      image: "/static/produkte/rauspund.webp",
     },
   ];
 }
