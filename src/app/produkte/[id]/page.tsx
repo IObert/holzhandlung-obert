@@ -71,7 +71,9 @@ export async function generateStaticParams() {
       details: (
         <div>
           <ul className="list-disc pl-10">
-            <li>Brettstapelelemente</li>
+            <li>Gerade Binder</li>
+            <li>Bogenbinder</li>
+            <li>Brettschichtelemente aus Brettschichtholz</li>
           </ul>
         </div>
       ),
@@ -90,6 +92,7 @@ export async function generateStaticParams() {
             <li>Konterlatten</li>
             <li>Bretter</li>
             <li>Dielen</li>
+            <li>Traufkeile</li>
           </ul>
         </div>
       ),
@@ -104,9 +107,9 @@ export async function generateStaticParams() {
         <div>
           <p>3 Stärken am Lager</p>
           <ul className="list-disc pl-10">
-            <li>ToDo</li>
-            <li>ToDo</li>
-            <li>ToDo</li>
+            <li>21 x 146 mm in 5,00 m Länge</li>
+            <li>23,5 x 146 mm in 5,00 m Länge</li>
+            <li>27 x 156 mm in 5,00 m Länge</li>
           </ul>
         </div>
       ),
