@@ -1,19 +1,6 @@
 export async function generateStaticParams() {
   return [
     {
-      id: "daemmstoffe",
-      title: "Dämmstoffe",
-      description: "Unverzichtbar für effizienten Hitze- und Schallschutz.",
-      image: "/static/produkte/daemm.webp",
-    },
-    {
-      id: "holzwerkstoffplatten",
-      title: "Holzwerkstoff-Platten",
-      description:
-        "Vielseitig einsetzbar, dienen als stabile Basis in Möbeln und Konstruktionen.",
-      image: "/static/produkte/osb.webp",
-    },
-    {
       id: "konstruktionsvollholz",
       title: "Konstruktionsvollholz",
       description:
@@ -37,9 +24,24 @@ export async function generateStaticParams() {
       ),
       image: "/static/produkte/kvh.webp",
     },
+
+    {
+      id: "osbplatten",
+      title: "OSB- und DHF-Platten",
+      description:
+        "OSB- und DHF-Platten sind eine stabile Basis in Wänden, Böden und Decken.",
+      image: "/static/produkte/osb.webp",
+    },
+    {
+      id: "daemmstoffe",
+      title: "Dämmplatten aus Holzweichfasern",
+      description:
+        "Dämmplatten bieten ökologische Wärmedämmung, hervorragenden sommerlichen Hitze- und Schallschutz, sind diffusionsoffen und speichern Feuchtigkeit und Wärme.",
+      image: "/static/produkte/daemm.webp",
+    },
     {
       id: "duo-trio-balken",
-      title: "Duo-/Trio- Balken",
+      title: "Duo-/Trio-Balken",
       description:
         "Durch ihre Schichtbauweise stabil, sind ideal für Decken und Dächer.",
       details: (
@@ -49,12 +51,12 @@ export async function generateStaticParams() {
             <li>Für Stabilität und Ästhetik</li>
           </ul>
           <p className="my-6">
-            <h3 className="text-xl font-bold">Duo-/Trio- Balken NSi</h3>
+            <h3 className="text-xl font-bold">Duo-/Trio-Balken NSi</h3>
             für <span className="font-bold">n</span>icht{" "}
             <span className="font-bold">si</span>chtbare Verwendung
           </p>
           <p className="my-6">
-            <h3 className="text-xl font-bold">Duo-/Trio- Balken Si</h3>
+            <h3 className="text-xl font-bold">Duo-/Trio-Balken Si</h3>
             für <span className="font-bold">si</span>chtbare Verwendung
           </p>
         </div>
@@ -66,28 +68,55 @@ export async function generateStaticParams() {
       title: "Brettschichtholz",
       description:
         "Stark und formstabil, eignet sich für anspruchsvolle Tragstrukturen.",
-      image: "/static/produkte/bsh.webp",
-    },
-    {
-      id: "brettstapelelemente",
-      title: "Brettstapelelemente",
-      description:
-        "Als innovative Baukomponenten, ermöglichen schnellen Aufbau.",
       details: (
         <div>
-          <p>In verschiedenen Oberflächenqualitäten:</p>
           <ul className="list-disc pl-10">
-            <li>Unterseite sichtbar</li>
-            <li>Beidseitig nicht sichtbar</li>
+            <li>Brettstapelelemente</li>
           </ul>
         </div>
       ),
-      image: "/static/produkte/Brettstapel.webp",
+      image: "/static/produkte/bsh.webp",
+    },
+    {
+      id: "schnittholz",
+      title: "Schnittholz",
+      description:
+        "Stammt überwiegend von schwarzwälder Sägewerken und ist vielseitig einsetzbar.",
+      details: (
+        <div>
+          <p>In verschiedenen Qualitäten:</p>
+          <ul className="list-disc pl-10">
+            <li>Dachlatten</li>
+            <li>Konterlatten</li>
+            <li>Bretter</li>
+            <li>Dielen</li>
+          </ul>
+        </div>
+      ),
+      image: "/static/produkte/schnittholz.webp",
+    },
+
+    {
+      id: "rauspund",
+      title: "Rauspund",
+      description: "Diffussionsoffene Beplankungen in Wänden und auf Böden.",
+      details: (
+        <div>
+          <p>3 Stärken am Lager</p>
+          <ul className="list-disc pl-10">
+            <li>ToDo</li>
+            <li>ToDo</li>
+            <li>ToDo</li>
+          </ul>
+        </div>
+      ),
+      image: "/static/produkte/rauspund.webp",
     },
     {
       id: "profilbretter",
       title: "Profilbretter",
-      description: "Verschönern Fassaden, Fußböden und Decken.",
+      description:
+        "Mit oder ohne Farbbehandlung. Vielseitig einsetzbar in Fassaden, Decken und Fußböden.",
       details: (
         <div>
           <p>In verschiedenen Qualitäten und Holzarten:</p>
@@ -104,43 +133,12 @@ export async function generateStaticParams() {
       ),
       image: "/static/produkte/profilbretter.webp",
     },
-    {
-      id: "schnittholz",
-      title: "Schnittholz",
-      description:
-        "Vielseitig einsetzbar, bildet die Basis für diverse Bauvorhaben.",
-      details: (
-        <div>
-          <p>In verschiedenen Qualitäten:</p>
-          <ul className="list-disc pl-10">
-            <li>Listen-Bauholz</li>
-            <li>Latten</li>
-            <li>Kreuzrahmen</li>
-            <li>Bretter</li>
-            <li>Dielen</li>
-            <li>Kanthölzer</li>
-            <li>Kanthölzer</li>
-            <li>Kanthölzer</li>
-            <li>Rauhspund</li>
-            <li>Palettenhölzer</li>
-            <li>Blockware</li>
-            <li>Rohhobler</li>
-          </ul>
-        </div>
-      ),
-      image: "/static/produkte/schnittholz.webp",
-    },
+
     {
       id: "pellets",
-      title: "Pellets",
+      title: "Pellets aus Baden-Württemberg",
       description: "Dienen als nachhaltige Energiequelle.",
       image: "/static/produkte/pellets.webp",
-    },
-    {
-      id: "rauspund",
-      title: "Rauspund",
-      description: "Stabile und diffusionsoffene Beplankung.",
-      image: "/static/produkte/rauspund.webp",
     },
   ];
 }

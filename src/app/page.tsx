@@ -38,8 +38,8 @@ export default async function Home() {
             <div className="text-left text-sm md:text-base max-w-[900px] space-y-1">
               <p>
                 Wir haben uns auf den Vertrieb von ökologischen Baumaterialien
-                spezialisiert. Die Mehrheit unserer Kunden sind moderne
-                Holzbaubetriebe, Dachdeckereien und Heimwerker.
+                spezialisiert. Die Mehrheit unserer Kunden sind Holzbaubetriebe,
+                Dachdeckereien und Heimwerker.
               </p>
               <p>
                 Erstklassiger Service und innovative Produkte machen uns zu
@@ -70,9 +70,8 @@ export default async function Home() {
           uns selbstverständlich. Darüber hinaus profitieren Sie von:
         </p>
         <ul className="ml-4" style={{ listStyleType: "circle" }}>
-          <li>Einem gut sortiertem Lager</li>
+          <li>Unserem gut sortiertem Lager</li>
           <li>Kommissionierung</li>
-          <li>Vollmaßigem Einschnitt</li>
           <li>Kurzen Lieferzeiten</li>
           <li>Hoher Flexibilität durch eigenen LKW</li>
           <li>
@@ -133,34 +132,11 @@ export default async function Home() {
         <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center gap-4">
           <ImageFlipCard
             showTitleOnFront={true}
-            title="Fichtenholz"
-            description="Die Fichte, als Konstruktionsholz bekannt, eignet sich für Profile, massive Fußböden und Instrumentenbau. "
+            title="Fichte"
+            description="Die Fichte, als Konstruktionsholz bekannt, eignet sich für Profile, massive Fußböden, Bauholz und Profilbretter. "
             src="/static/holz/Fichtenholz.webp"
           />
-          <ImageFlipCard
-            showTitleOnFront={true}
-            title="Kiefernholz"
-            description="Kiefer eignet sich für Konstruktionshölzer, Fenster und Möbel."
-            src="/static/holz/Kiefernholz.webp"
-          />
-          <ImageFlipCard
-            showTitleOnFront={true}
-            title="Douglasienholz"
-            description="Die Douglasie, beliebt für Fassaden, Balkone und sichtbare Konstruktionen. "
-            src="/static/holz/douglasienholz.webp"
-          />
-          <ImageFlipCard
-            showTitleOnFront={true}
-            src="/static/holz/eichenholz.webp"
-            title="Eichenholz"
-            description="Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau."
-          />
-          <ImageFlipCard
-            showTitleOnFront={true}
-            src="/static/holz/laerchenholz.webp"
-            title="Lärchenholz"
-            description="Das Nadelholz mit der höchsten Resistenzklasse in unserem Lieferprogramm. Die Lärche überzeugt als Konstruktionsholz, für Fassaden und Möbel. "
-          />
+
           <ImageFlipCard
             showTitleOnFront={true}
             src="/static/holz/weisstanne.webp"
@@ -169,9 +145,28 @@ export default async function Home() {
           />
           <ImageFlipCard
             showTitleOnFront={true}
-            src="/static/holz/redcedar.webp"
-            title="Red Cedar"
-            description="Red Cedar glänzt in Profilbrettern für Fassadenverkleidungen."
+            title="Douglasie"
+            description="Die Douglasie, beliebt für Fassaden, Balkone und sichtbare Konstruktionen. "
+            src="/static/holz/douglasienholz.webp"
+          />
+
+          <ImageFlipCard
+            showTitleOnFront={true}
+            src="/static/holz/laerchenholz.webp"
+            title="Lärche"
+            description="Das Nadelholz mit der höchsten Resistenzklasse in unserem Lieferprogramm. Die Lärche überzeugt als Konstruktionsholz für Fassaden. "
+          />
+          <ImageFlipCard
+            showTitleOnFront={true}
+            title="Kiefer"
+            description="Kiefer eignet sich für Konstruktionshölzer und Fenster."
+            src="/static/holz/Kiefernholz.webp"
+          />
+          <ImageFlipCard
+            showTitleOnFront={true}
+            src="/static/holz/eichenholz.webp"
+            title="Eiche"
+            description="Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau und für Altbaurestaurierungen."
           />
         </div>
       </Section>
