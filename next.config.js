@@ -8,7 +8,7 @@ const nextConfig = {
         alt: "Gesamtansicht",
       },
       {
-        path: "/static/galerie/Straße.webp",
+        path: "/static/galerie/Straßenansicht.webp",
         alt: "Straßenansicht",
       },
       {
@@ -26,6 +26,18 @@ const nextConfig = {
       {
         path: "/static/galerie/Stapler.webp",
         alt: "Stapler",
+      },
+      {
+        path: "/static/galerie/LKW.webp",
+        alt: "LKW",
+      },
+      {
+        path: "/static/galerie/Außen.webp",
+        alt: "Außenseite",
+      },
+      {
+        path: "/static/galerie/Pavatex.webp",
+        alt: "Pavatex",
       },
     ]),
   },
