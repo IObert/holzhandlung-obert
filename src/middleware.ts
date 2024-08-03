@@ -5,12 +5,12 @@ const [AUTH_USER, AUTH_PASS] = ["admin", "Wintergarten123"];
 
 // Step 1. HTTP Basic Auth Middleware for Challenge
 export function middleware(req: NextRequest) {
-  if (!isAuthenticated(req)) {
-    return new NextResponse("Authentication required", {
-      status: 401,
-      headers: { "WWW-Authenticate": "Basic" },
-    });
-  }
+  // if (!isAuthenticated(req)) {
+  //   return new NextResponse("Authentication required", {
+  //     status: 401,
+  //     headers: { "WWW-Authenticate": "Basic" },
+  //   });
+  // }
 
   return NextResponse.next();
 }
