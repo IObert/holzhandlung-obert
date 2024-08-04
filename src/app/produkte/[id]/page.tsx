@@ -68,12 +68,12 @@ export async function generateStaticParams() {
             <li>Für Stabilität und Ästhetik</li>
           </ul>
           <p className="my-6">
-            <h3 className="text-xl font-bold">Duo-/Trio-Balken NSi</h3>
+            <h3 className="text-xl font-bold">Duo-/Trio-Balken® NSi</h3>
             für <span className="font-bold">n</span>icht{" "}
             <span className="font-bold">si</span>chtbare Verwendung
           </p>
           <p className="my-6">
-            <h3 className="text-xl font-bold">Duo-/Trio-Balken Si</h3>
+            <h3 className="text-xl font-bold">Duo-/Trio-Balken® Si</h3>
             für <span className="font-bold">si</span>chtbare Verwendung
           </p>
         </div>
