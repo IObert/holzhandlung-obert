@@ -12,10 +12,6 @@ const nextConfig = {
         alt: "Straßenansicht",
       },
       {
-        path: "/static/galerie/Vorne.webp",
-        alt: "Vorderansicht",
-      },
-      {
         path: "/static/galerie/Regale.webp",
         alt: "Regale",
       },
@@ -26,10 +22,6 @@ const nextConfig = {
       {
         path: "/static/galerie/Stapler.webp",
         alt: "Stapler",
-      },
-      {
-        path: "/static/galerie/LKW.webp",
-        alt: "LKW",
       },
       {
         path: "/static/galerie/Außen.webp",

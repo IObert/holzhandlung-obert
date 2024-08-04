@@ -57,7 +57,7 @@ export default function Impressum() {
                     className="flex mt-2 hover:underline"
                   >
                     <PhoneIcon className="text-xl mr-4" />
-                    0170 / 28 454 08
+                    0170 / 28 45 408
                   </Link>
                   <Link
                     href="mailto:roth@holzhandlung-obert.de"
@@ -85,7 +85,7 @@ export default function Impressum() {
                 className="flex mt-2 hover:underline"
               >
                 <PhoneIcon className="text-xl mr-4" />
-                0170 / 28 400 17
+                0170 / 28 40 017
               </Link>
             </CardContent>
           </Card>

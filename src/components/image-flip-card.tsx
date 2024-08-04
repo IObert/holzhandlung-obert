@@ -19,7 +19,7 @@ export default function ImageFlipCard({
   //the card flips on hover
 
   const content = (
-    <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+    <div className="relative preserve-3d group-hover:my-rotate-y-180 group-hover:bg-gray-50  w-full h-full duration-1000">
       <div className="absolute backface-hidden w-full h-full">
         <Card className="w-full h-full rounded-lg shadow-md overflow-hidden">
           {showTitleOnFront && (
@@ -29,7 +29,7 @@ export default function ImageFlipCard({
           )}
           <img
             alt={title}
-            className="overflow-hidden w-full h-full"
+            className="overflow-hidden w-full h-full hover:hidden"
             src={src}
           />
         </Card>

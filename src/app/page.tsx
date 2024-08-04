@@ -38,8 +38,11 @@ export default async function Home() {
             <div className="text-left text-sm md:text-base max-w-[900px] space-y-1">
               <p>
                 Wir haben uns auf den Vertrieb von ökologischen Baumaterialien
-                spezialisiert. Die Mehrheit unserer Kunden sind Holzbaubetriebe,
-                Dachdeckereien und Heimwerker.
+                spezialisiert.
+              </p>
+              <p>
+                Die Mehrheit unserer Kunden sind Holzbaubetriebe, Dachdeckereien
+                und Heimwerker.
               </p>
               <p>
                 Erstklassiger Service und innovative Produkte machen uns zu
@@ -65,18 +68,18 @@ export default async function Home() {
         title="Regionaler Kontakt"
         tag="Wir sind für Sie da!"
       >
-        <p className="mb-2">
-          Zuverlässigkeit, hohe Produktqualität und optimale Beratung sind bei
-          uns selbstverständlich. Darüber hinaus profitieren Sie von:
+        <p className="">
+          Zuverlässigkeit, hohe Produktqualität und fachgerechte Beratung sind
+          bei uns selbstverständlich.
         </p>
+        <p className="mb-2">Darüber hinaus profitieren Sie von:</p>
         <ul className="ml-4" style={{ listStyleType: "circle" }}>
           <li>Unserem gut sortiertem Lager</li>
           <li>Kommissionierung</li>
           <li>Kurzen Lieferzeiten</li>
           <li>Hoher Flexibilität durch eigenen LKW</li>
-          <li>
-            Lange Geschäftszeiten - überdurchschnittlich gute Erreichbarkeit
-          </li>
+          <li>Lange Geschäftszeiten</li>
+          <li>Überdurchschnittlich gute Erreichbarkeit</li>
         </ul>
       </Section>
       <Section
