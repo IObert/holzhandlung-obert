@@ -40,8 +40,8 @@ export default async function RootLayout({
   ));
 
   return (
-    <html lang="de">
-      <body className={inter.className}>
+    <html lang="de" className="w-full overflow-x-hidden">
+      <body className={inter.className + "w-full overflow-x-hidden"}>
         <div className="flex flex-col min-h-screen">
           <header className="px-2 top-0 pt-2 h-14 flex items-center w-screen fixed bg-white z-10">
             <Link className="flex items-center justify-center" href="/">
