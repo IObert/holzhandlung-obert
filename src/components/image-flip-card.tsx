@@ -34,7 +34,7 @@ export default function ImageFlipCard({
           />
         </Card>
       </div>
-      <div className="absolute my-rotate-y-180 backface-hidden w-full h-full overflow-hidden">
+      <div className="absolute my-rotate-y-180 backface-hidden w-full h-full overflow-hidden bg-gray-50">
         <Card className=" h-full">
           <CardHeader>
             <CardTitle>{title}</CardTitle>
