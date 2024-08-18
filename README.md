@@ -2,7 +2,6 @@
 
 [Live Website](https://www.holzhandlung-obert.de/) of Holzhandlung Obert
 
-
 ## Getting Started
 
 First, run the development server:

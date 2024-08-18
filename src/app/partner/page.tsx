@@ -82,7 +82,10 @@ export default function Partner() {
         </div>
         <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <a href="https://www.storaenso.com/de-de/products/wood-products/sawn-and-planed-wood" target="_blank">
+            <a
+              href="https://www.storaenso.com/de-de/products/wood-products/sawn-and-planed-wood"
+              target="_blank"
+            >
               <img
                 alt="Stora Enso Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
