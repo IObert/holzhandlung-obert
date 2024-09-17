@@ -8,7 +8,7 @@ const nextConfig = {
         alt: "Gesamtansicht",
       },
       {
-        path: "/static/galerie/Straßenansicht.webp",
+        path: "/static/galerie/Strassenansicht.webp",
         alt: "Straßenansicht",
       },
       {
@@ -24,7 +24,7 @@ const nextConfig = {
         alt: "Stapler",
       },
       {
-        path: "/static/galerie/Außen.webp",
+        path: "/static/galerie/Aussen.webp",
         alt: "Außenseite",
       },
       {
