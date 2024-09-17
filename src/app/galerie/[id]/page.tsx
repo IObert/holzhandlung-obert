@@ -17,7 +17,6 @@ export default function Galerie({
   const alt = images.find((image: any) => image.path.includes(id))?.alt;
   // @ts-ignore
   const filename = images.find((image: any) => image.path.includes(id))?.path;
-  console.log(filename);
   return (
     <img
       src={`${filename}`}
