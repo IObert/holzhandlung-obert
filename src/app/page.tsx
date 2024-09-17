@@ -110,7 +110,7 @@ export default async function Home() {
             {images.map((image: any, index) => (
               <CarouselItem key={index}>
                 <Link
-                  href={image.path.replace("/static", "").replace(".jpeg", "")}
+                  href={image.path.replace("/static", "").split(".")[0]}
                   className="flex flex-col items-center justify-center cursor-zoom-in"
                 >
                   <img

@@ -58,7 +58,7 @@ export default async function RootLayout({
                 Umwelt
               </Link>
               <Link
-                className=" hover:underline underline-offset-4"
+                className="hover:underline underline-offset-4"
                 href="/#regional"
               >
                 Regional
@@ -70,12 +70,6 @@ export default async function RootLayout({
                     className=" hover:underline underline-offset-4"
                     href="/#lieferprogramm"
 
-                    // onClick={(e) => {
-                    //   e.preventDefault();
-                    //   document
-                    //     .getElementById("lieferprogramm")
-                    //     ?.scrollIntoView({ behavior: "smooth" });
-                    // }}
                   >
                     Lieferprogramm
                   </Link>
