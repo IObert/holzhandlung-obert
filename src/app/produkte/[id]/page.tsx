@@ -97,6 +97,21 @@ export async function generateStaticParams() {
       image: "/static/produkte/bsh.webp",
     },
     {
+      id: "ecobox",
+      title: "EGGER EcoBox",
+      description:
+        "Die ressourcenschonende Stütze für den modernen Holzbau",
+      image: "/static/produkte/ecobox.webp",
+      details: (
+        <div>
+          <ul className="list-disc pl-10">
+            <li>verringert den Holzverbrauch bis zu 38%</li>
+            <li>reduziert die Wärmebrücken</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
       id: "schnittholz",
       title: "Schnittholz",
       description:
