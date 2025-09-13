@@ -94,7 +94,7 @@ export default function Haftungsausschluss() {
       </section>
 
       <br />
-      <span className="text-small">Stand: 1. Januar 2024</span>
+      <span className="text-small">Stand: 1. Januar 2025</span>
       <br />
     </div>
   );
