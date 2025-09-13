@@ -27,23 +27,23 @@ export async function generateStaticParams() {
 
     {
       id: "osbplatten",
-      title: "OSB- und DHF-Platten",
+      title: "EGGER OSB- und DHF-Platten",
       description:
         "OSB- und DHF-Platten sind eine stabile Basis in Wänden, Böden und Decken",
       image: "/static/produkte/osb.webp",
       details: (
         <div>
           <p className="my-6">
-            <h3 className="text-xl font-bold">OSB 3</h3>
-            Die umweltfreundliche Standardplatte für Holzbau und Innenausbau
-          </p>
-          <p className="my-6">
-            <h3 className="text-xl font-bold">OSB 4 Top</h3>
+            <h3 className="text-xl font-bold">EGGER OSB 3 Top</h3>
             Bietet drei wichtige Funktionen: Luftdichtheit, Dampfbremse,
             Aussteifung
           </p>
           <p className="my-6">
-            <h3 className="text-xl font-bold">DHF Platte</h3>
+            <h3 className="text-xl font-bold">EGGER OSB Flammex</h3>
+            Innovativ Brandschutzlösung für vielseitige Anwendungen
+          </p>
+          <p className="my-6">
+            <h3 className="text-xl font-bold">EGGER DHF Platte</h3>
             Kann als Außenbeplankung eingesetzt werden
           </p>
         </div>
@@ -51,7 +51,7 @@ export async function generateStaticParams() {
     },
     {
       id: "daemmstoffe",
-      title: "Dämmplatten aus Holzweichfasern",
+      title: "PAVATEX Dämmplatten aus Holzweichfasern",
       description:
         "Dämmplatten bieten ökologische Wärmedämmung, hervorragenden sommerlichen Hitze- und Schallschutz, sind diffusionsoffen und speichern Feuchtigkeit und Wärme",
       image: "/static/produkte/daemm.webp",
