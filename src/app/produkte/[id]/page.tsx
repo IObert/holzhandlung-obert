@@ -40,7 +40,7 @@ export async function generateStaticParams() {
           </p>
           <p className="my-6">
             <h3 className="text-xl font-bold">EGGER OSB Flammex</h3>
-            Innovativ Brandschutzlösung für vielseitige Anwendungen
+            Innovative Brandschutzlösung für vielseitige Anwendungen
           </p>
           <p className="my-6">
             <h3 className="text-xl font-bold">EGGER DHF Platte</h3>
