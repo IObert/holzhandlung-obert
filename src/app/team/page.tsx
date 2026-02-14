@@ -1,15 +1,20 @@
-import ImageFlipCard from "@/components/image-flip-card";
 import Link from "next/link";
 import { MailIcon, PhoneIcon, TreePineIcon, Truck } from "lucide-react";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Team",
+  description: "Unser Team - Holzhandlung Heidi Obert",
+};
 
 export default function Team() {
   return (
     <div className="w-10/12 mx-auto">
       <div className="space-y-6">
         <h1 className="text-2xl mb-12">Team</h1>
-        <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center gap-4">
-          <Card className="h-[250px] w-[300px]">
+        <div className="mx-auto grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch justify-center gap-4">
+          <Card className="min-h-[250px] w-full max-w-[300px] mx-auto">
             <CardHeader>
               <CardTitle>Heidi Obert</CardTitle>
             </CardHeader>
@@ -22,7 +27,7 @@ export default function Team() {
                     Verkauf
                   </div>
                   <Link
-                    href="tel:497834869640"
+                    href="tel:+497834869640"
                     className="flex mt-2 hover:underline"
                   >
                     <PhoneIcon className="text-xl mr-4" />
@@ -40,7 +45,7 @@ export default function Team() {
             </CardContent>
           </Card>
 
-          <Card className="h-[250px] w-[300px]">
+          <Card className="min-h-[250px] w-full max-w-[300px] mx-auto">
             <CardHeader>
               <CardTitle>Wolf Roth</CardTitle>
             </CardHeader>
@@ -52,7 +57,7 @@ export default function Team() {
                     Verkauf & Außendienst
                   </div>
                   <Link
-                    href="tel:491702845408"
+                    href="tel:+491702845408"
                     className="flex mt-2 hover:underline"
                   >
                     <PhoneIcon className="text-xl mr-4" />
@@ -70,7 +75,7 @@ export default function Team() {
             </CardContent>
           </Card>
 
-          <Card className="h-[250px] w-[300px]">
+          <Card className="min-h-[250px] w-full max-w-[300px] mx-auto">
             <CardHeader>
               <CardTitle>Bruno Günter</CardTitle>
             </CardHeader>
@@ -80,7 +85,7 @@ export default function Team() {
                 LKW Fahrer
               </div>
               <Link
-                href="tel:491702840017"
+                href="tel:+491702840017"
                 className="flex mt-2 hover:underline"
               >
                 <PhoneIcon className="text-xl mr-4" />

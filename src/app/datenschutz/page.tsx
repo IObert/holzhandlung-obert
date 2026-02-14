@@ -1,5 +1,11 @@
 import NavUpIcon from "@/components/nav-up-icon";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Datenschutz",
+  description: "Datenschutzerklärung der Holzhandlung Heidi Obert",
+};
 
 export default function Datenschutz() {
   return (

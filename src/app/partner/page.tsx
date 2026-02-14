@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Partner",
+  description: "Unsere Partner - Holzhandlung Heidi Obert",
+};
+
 export default function Partner() {
   return (
     <section className="flex justify-center w-full h-full py-6 md:py-12 lg:py-24">
@@ -6,7 +13,7 @@ export default function Partner() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Lernen Sie Unsere Partner Kennen
           </h2>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Zusammen mit unseren Partnern bieten wir Ihnen ein breites Angebot
           </p>
         </div>
@@ -52,7 +59,7 @@ export default function Partner() {
                 alt="Mocopinus Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
                 height="70"
-                src="/static/partner/mocopinus.bmp"
+                src="/static/partner/mocopinus.png"
                 width="140"
               />
             </a>
@@ -74,7 +81,7 @@ export default function Partner() {
                 alt="Holzwerke Pfarrkirchen Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
                 height="70"
-                src="/static/partner/HP-Logo.bmp"
+                src="/static/partner/HP-Logo.png"
                 width="140"
               />
             </a>

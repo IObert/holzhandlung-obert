@@ -10,6 +10,14 @@ export interface Product {
   image: string;
 }
 
+export interface WoodType {
+  title: string;
+  description: string;
+  image: string;
+}
+
+export const BASE_URL = "https://holzhandlung-obert.de";
+
 export const galleryImages: GalleryImage[] = [
   { path: "/static/galerie/Weit.webp", alt: "Gesamtansicht" },
   { path: "/static/galerie/Strassenansicht.webp", alt: "Straßenansicht" },
@@ -87,5 +95,44 @@ export const products: Product[] = [
     title: "Pellets aus Baden-Württemberg",
     description: "Dienen als nachhaltige Energiequelle",
     image: "/static/produkte/pellets.webp",
+  },
+];
+
+export const woodTypes: WoodType[] = [
+  {
+    title: "Fichte",
+    description:
+      "Die Fichte, als Konstruktionsholz bekannt, eignet sich für Profile, massive Fußböden, Bauholz und Profilbretter.",
+    image: "/static/holz/Fichtenholz.webp",
+  },
+  {
+    title: "Weisstanne",
+    description:
+      "Die Tanne, ideal für Konstruktionshölzer und Innenausbauten, findet Anwendung im Saunabau und Fensterbau.",
+    image: "/static/holz/weisstanne.webp",
+  },
+  {
+    title: "Douglasie",
+    description:
+      "Die Douglasie, beliebt für Fassaden, Balkone und sichtbare Konstruktionen.",
+    image: "/static/holz/douglasienholz.webp",
+  },
+  {
+    title: "Lärche",
+    description:
+      "Das Nadelholz mit der höchsten Resistenzklasse in unserem Lieferprogramm. Die Lärche überzeugt als Konstruktionsholz für Fassaden.",
+    image: "/static/holz/laerchenholz.webp",
+  },
+  {
+    title: "Kiefer",
+    description:
+      "Kiefer eignet sich für Konstruktionshölzer und Fenster.",
+    image: "/static/holz/Kiefernholz.webp",
+  },
+  {
+    title: "Eiche",
+    description:
+      "Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau und für Altbaurestaurierungen.",
+    image: "/static/holz/eichenholz.webp",
   },
 ];

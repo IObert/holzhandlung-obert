@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Section from "@/components/section";
-import { products, galleryImages } from "@/lib/data";
+import { products, galleryImages, woodTypes } from "@/lib/data";
 
 import {
   Carousel,
@@ -65,7 +65,7 @@ export default function Home() {
         title="Regionaler Kontakt"
         tag="Wir sind für Sie da!"
       >
-        <p className="">
+        <p>
           Zuverlässigkeit, hohe Produktqualität und fachgerechte Beratung sind
           bei uns selbstverständlich.
         </p>
@@ -84,7 +84,7 @@ export default function Home() {
         title="Unser Lieferprogramm"
         subtitle="Klicken Sie auf das jeweilige Produkt um mehr zu erfahren"
       >
-        <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center gap-4">
+        <div className="mx-auto grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch justify-center gap-4">
           {products.map((produkt) => (
             <ImageFlipCard
               key={produkt.id}
@@ -120,8 +120,8 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className=" md:flex" />
-          <CarouselNext className=" md:flex" />
+          <CarouselPrevious className="md:flex" />
+          <CarouselNext className="md:flex" />
         </Carousel>
       </Section>
       <Section
@@ -129,45 +129,16 @@ export default function Home() {
         title="Holzarten"
         subtitle="Wählen Sie eine Holzart aus, um mehr zu erfahren"
       >
-        <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center gap-4">
-          <ImageFlipCard
-            showTitleOnFront={true}
-            title="Fichte"
-            description="Die Fichte, als Konstruktionsholz bekannt, eignet sich für Profile, massive Fußböden, Bauholz und Profilbretter. "
-            src="/static/holz/Fichtenholz.webp"
-          />
-
-          <ImageFlipCard
-            showTitleOnFront={true}
-            src="/static/holz/weisstanne.webp"
-            title="Weisstanne"
-            description="Die Tanne, ideal für Konstruktionshölzer und Innenausbauten, findet Anwendung im Saunabau und Fensterbau."
-          />
-          <ImageFlipCard
-            showTitleOnFront={true}
-            title="Douglasie"
-            description="Die Douglasie, beliebt für Fassaden, Balkone und sichtbare Konstruktionen. "
-            src="/static/holz/douglasienholz.webp"
-          />
-
-          <ImageFlipCard
-            showTitleOnFront={true}
-            src="/static/holz/laerchenholz.webp"
-            title="Lärche"
-            description="Das Nadelholz mit der höchsten Resistenzklasse in unserem Lieferprogramm. Die Lärche überzeugt als Konstruktionsholz für Fassaden. "
-          />
-          <ImageFlipCard
-            showTitleOnFront={true}
-            title="Kiefer"
-            description="Kiefer eignet sich für Konstruktionshölzer und Fenster."
-            src="/static/holz/Kiefernholz.webp"
-          />
-          <ImageFlipCard
-            showTitleOnFront={true}
-            src="/static/holz/eichenholz.webp"
-            title="Eiche"
-            description="Die Eiche, für Furniere und robuste Konstruktionshölzer, ist ideal im Fußboden- und Brückenbau und für Altbaurestaurierungen."
-          />
+        <div className="mx-auto grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch justify-center gap-4">
+          {woodTypes.map((wood) => (
+            <ImageFlipCard
+              key={wood.title}
+              showTitleOnFront={true}
+              title={wood.title}
+              description={wood.description}
+              src={wood.image}
+            />
+          ))}
         </div>
       </Section>
 

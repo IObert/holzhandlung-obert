@@ -22,7 +22,7 @@ export default function Section({
     >
       <div className="mx-auto container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="">
+          <div>
             {tag && (
               <div className="inline-block mb-2 rounded-lg bg-gray-600 text-gray-100 px-2 py-1 text-xs">
                 {tag}
@@ -31,14 +31,14 @@ export default function Section({
             {title && (
               <h2
                 className={`text-4xl mb-6 font-bold tracking-tighter ${
-                  darkBackground ? "text-gray-500" : "text-black"
+                  darkBackground ? "text-gray-100" : "text-black"
                 }`}
               >
                 {title}
               </h2>
             )}
             {subtitle && (
-              <h3 className="mx-auto mb-6 max-w-[700px] text-gray-600  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <h3 className="mx-auto mb-6 max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 {subtitle}
               </h3>
             )}

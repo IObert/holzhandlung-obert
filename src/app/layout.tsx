@@ -9,11 +9,25 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import MobileMenu from "@/components/mobile-menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const footerLinks = [
+  { href: "/#kontakt", label: "Kontakt" },
+  { href: "/partner", label: "Partner" },
+  { href: "/team", label: "Team" },
+  { href: "/agb", label: "AGB" },
+  { href: "/datenschutz", label: "Datenschutz" },
+  { href: "/impressum", label: "Impressum" },
+  { href: "/haftungsausschluss", label: "Haftungsausschluss" },
+];
+
 export const metadata: Metadata = {
-  title: "Holzhandlung Obert",
+  title: {
+    default: "Holzhandlung Obert",
+    template: "%s | Holzhandlung Obert",
+  },
   description: "Holzhandlung Obert - Qualität gibt Sicherheit",
   keywords:
     "Holzhandlung Obert, Holz, Holzhandlung, Obert, Regional, Schwarzwald, Pellets, Familienunternehmen, Qualität, Sicherheit",
@@ -62,97 +76,65 @@ export default function RootLayout({
                 Holzhandlung Obert
               </span>
             </Link>
-            <nav className="ml-auto text-xs md:text-sm font-semibold flex gap-2 md:gap-6">
-              <Link
-                className=" hover:underline underline-offset-4"
-                href="/#umwelt"
-              >
-                Umwelt
-              </Link>
-              <Link
-                className="hover:underline underline-offset-4"
-                href="/#regional"
-              >
-                Regional
-              </Link>
-
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Link
-                    className=" hover:underline underline-offset-4"
-                    href="/#lieferprogramm"
-
-                  >
-                    Lieferprogramm
-                  </Link>
-                </PopoverTrigger>
-                <PopoverContent align="start" className="w-80">
-                  <div className="grid grid-cols-2 gap-2 md:gap-6">
-                    {produktLinks}
-                  </div>
-                </PopoverContent>
-              </Popover>
-
-              <Link
-                className=" hover:underline underline-offset-4"
-                href="/#galerie"
-              >
-                Galerie
-              </Link>
-              <Link
-                className=" hover:underline underline-offset-4"
-                href="/#holzarten"
-              >
-                Holzarten
-              </Link>
-            </nav>
+            <div className="ml-auto">
+              <nav className="hidden md:flex text-sm font-semibold gap-6">
+                <Link
+                  className="hover:underline underline-offset-4"
+                  href="/#umwelt"
+                >
+                  Umwelt
+                </Link>
+                <Link
+                  className="hover:underline underline-offset-4"
+                  href="/#regional"
+                >
+                  Regional
+                </Link>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Link
+                      className="hover:underline underline-offset-4"
+                      href="/#lieferprogramm"
+                    >
+                      Lieferprogramm
+                    </Link>
+                  </PopoverTrigger>
+                  <PopoverContent align="start" className="w-80">
+                    <div className="grid grid-cols-2 gap-2 md:gap-6">
+                      {produktLinks}
+                    </div>
+                  </PopoverContent>
+                </Popover>
+                <Link
+                  className="hover:underline underline-offset-4"
+                  href="/#galerie"
+                >
+                  Galerie
+                </Link>
+                <Link
+                  className="hover:underline underline-offset-4"
+                  href="/#holzarten"
+                >
+                  Holzarten
+                </Link>
+              </nav>
+              <MobileMenu products={products} />
+            </div>
           </header>
-          <main id="main-content" className="flex items-center flex-1 mt-14">{children}</main>
+          <main id="main-content" className="flex items-center flex-1 mt-14">
+            {children}
+          </main>
           <footer className="flex flex-col sm:flex-row pb-6 w-full shrink-0 items-center px-4 gap-2 md:px-6 border-t">
             <nav className="text-gray-600 flex-1 pt-6 mt-auto flex-wrap flex gap-0.5 mx-auto justify-items-center md:gap-4">
-              <Link
-                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
-                href="/#kontakt"
-              >
-                Kontakt
-              </Link>
-              <Link
-                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
-                href="/partner"
-              >
-                Partner
-              </Link>
-              <Link
-                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
-                href="/team"
-              >
-                Team
-              </Link>
-              <Link
-                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
-                href="/agb"
-              >
-                AGB
-              </Link>
-
-              <Link
-                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
-                href="/datenschutz"
-              >
-                Datenschutz
-              </Link>
-              <Link
-                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
-                href="/impressum"
-              >
-                Impressum
-              </Link>
-              <Link
-                className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
-                href="/haftungsausschluss"
-              >
-                Haftungsausschluss
-              </Link>
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
+                  href={link.href}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
             <div className="flex flex-col">
               <img
@@ -160,8 +142,7 @@ export default function RootLayout({
                 alt="Holzhandlung Obert"
                 className="h-20 my-4 object-contain"
               />
-
-              <p className="text-sm text-center text-gray-400 dark:text-gray-400">
+              <p className="text-sm text-center text-gray-400">
                 © 2026 Holzhandlung Obert. <br />
                 Alle Rechte vorbehalten.
               </p>

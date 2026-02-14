@@ -1,5 +1,18 @@
 import { products } from "@/lib/data";
+import type { Metadata } from "next";
 import { ReactNode } from "react";
+
+export function generateMetadata({
+  params: { id },
+}: {
+  params: { id: string };
+}): Metadata {
+  const produkt = products.find((p) => p.id === id);
+  return {
+    title: produkt?.title,
+    description: produkt?.description,
+  };
+}
 
 const productDetails: Record<string, ReactNode> = {
   konstruktionsvollholz: (

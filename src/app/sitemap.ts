@@ -1,99 +1,62 @@
 import { MetadataRoute } from "next";
+import { products, galleryImages, BASE_URL } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const productEntries: MetadataRoute.Sitemap = products.map((product) => ({
+    url: `${BASE_URL}/produkte/${product.id}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  const galleryEntries: MetadataRoute.Sitemap = galleryImages.map((image) => ({
+    url: `${BASE_URL}/galerie/${image.path.replace("/static/galerie/", "").split(".")[0]}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.5,
+  }));
+
   return [
     {
-      url: "https://holzhandlung-obert.de/",
+      url: `${BASE_URL}/`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
     },
+    ...productEntries,
+    ...galleryEntries,
     {
-      url: "https://holzhandlung-obert.de/produkte/konstruktionsvollholz",
+      url: `${BASE_URL}/partner`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://holzhandlung-obert.de/produkte/daemmstoffe",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://holzhandlung-obert.de/produkte/osbplatten",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://holzhandlung-obert.de/produkte/duo-trio-balken",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://holzhandlung-obert.de/produkte/brettschichtholz",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://holzhandlung-obert.de/produkte/schnittholz",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://holzhandlung-obert.de/produkte/rauspund",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://holzhandlung-obert.de/produkte/profilbretter",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://holzhandlung-obert.de/produkte/pellets",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://holzhandlung-obert.de/partner",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://holzhandlung-obert.de/team",
+      url: `${BASE_URL}/team`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
-      url: "https://holzhandlung-obert.de/datenschutz",
+      url: `${BASE_URL}/datenschutz`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.1,
     },
     {
-      url: "https://holzhandlung-obert.de/haftungsausschluss",
+      url: `${BASE_URL}/haftungsausschluss`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.1,
     },
     {
-      url: "https://holzhandlung-obert.de/impressum",
+      url: `${BASE_URL}/impressum`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.1,
     },
     {
-      url: "https://holzhandlung-obert.de/agb",
+      url: `${BASE_URL}/agb`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.1,
