@@ -2,11 +2,17 @@ import { products } from "@/lib/data";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 
-export function generateMetadata({
-  params: { id },
-}: {
-  params: { id: string };
-}): Metadata {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ id: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    id
+  } = params;
+
   const produkt = products.find((p) => p.id === id);
   return {
     title: produkt?.title,
@@ -134,11 +140,17 @@ export function generateStaticParams() {
   return products.map((product) => ({ id: product.id }));
 }
 
-export default function Produkt({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
+export default async function Produkt(
+  props: {
+    params: Promise<{ id: string }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    id
+  } = params;
+
   const produkt = products.find((p) => p.id === id);
   const details = productDetails[id];
 

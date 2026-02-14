@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { products, galleryImages, BASE_URL } from "@/lib/data";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const productEntries: MetadataRoute.Sitemap = products.map((product) => ({
     url: `${BASE_URL}/produkte/${product.id}`,
