@@ -394,7 +394,7 @@ export default function AGB() {
       </section>
 
       <br />
-      <span className="text-small">Stand: 1. Januar 2025</span>
+      <span className="text-small">Stand: 1. Januar 2026</span>
       <br />
     </div>
   );

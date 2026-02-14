@@ -150,7 +150,7 @@ export default async function RootLayout({
               />
 
               <p className="text-sm text-center text-gray-400 dark:text-gray-400">
-                © 2025 Holzhandlung Obert. <br />
+                © 2026 Holzhandlung Obert. <br />
                 Alle Rechte vorbehalten.
               </p>
             </div>
