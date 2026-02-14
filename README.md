@@ -2,7 +2,7 @@
 
 Website for [Holzhandlung Obert](https://www.holzhandlung-obert.de/) — a family-run timber business in Oberwolfach, Black Forest.
 
-Built with **Next.js 14**, **Tailwind CSS**, and **TypeScript**. Statically exported (`output: "export"`).
+Built with **Next.js**, **Tailwind CSS**, and **TypeScript**. Statically exported (`output: "export"`).
 
 ## Getting Started
 
