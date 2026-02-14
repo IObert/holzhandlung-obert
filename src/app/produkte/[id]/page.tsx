@@ -1,200 +1,133 @@
-export async function generateStaticParams() {
-  return [
-    {
-      id: "konstruktionsvollholz",
-      title: "Konstruktionsvollholz",
-      description:
-        "Überzeugt als robustes Baumaterial, besonders in tragenden Elementen",
-      details: (
-        <div>
-          <ul className="list-disc pl-6">
-            <li>Ausschließlich aus güteüberwachter Produktion</li>
-            <li>Individuell und vielseitig einsetzbar</li>
-          </ul>
-          <p className="my-6">
-            <h3 className="text-xl font-bold">KVH® NSi</h3>
-            für <span className="font-bold">n</span>icht{" "}
-            <span className="font-bold">si</span>chtbare Verwendung
-          </p>
-          <p className="my-6">
-            <h3 className="text-xl font-bold">KVH® Si</h3>
-            für <span className="font-bold">si</span>chtbare Verwendung
-          </p>
-        </div>
-      ),
-      image: "/static/produkte/kvh.webp",
-    },
+import { products } from "@/lib/data";
+import { ReactNode } from "react";
 
-    {
-      id: "osbplatten",
-      title: "EGGER OSB- und DHF-Platten",
-      description:
-        "OSB- und DHF-Platten sind eine stabile Basis in Wänden, Böden und Decken",
-      image: "/static/produkte/osb.webp",
-      details: (
-        <div>
-          <p className="my-6">
-            <h3 className="text-xl font-bold">EGGER OSB 3 Top</h3>
-            Bietet drei wichtige Funktionen: Luftdichtheit, Dampfbremse,
-            Aussteifung
-          </p>
-          <p className="my-6">
-            <h3 className="text-xl font-bold">EGGER OSB Flammex</h3>
-            Innovative Brandschutzlösung für vielseitige Anwendungen
-          </p>
-          <p className="my-6">
-            <h3 className="text-xl font-bold">EGGER DHF Platte</h3>
-            Kann als Außenbeplankung eingesetzt werden
-          </p>
-        </div>
-      ),
-    },
-    {
-      id: "daemmstoffe",
-      title: "PAVATEX Dämmplatten aus Holzweichfasern",
-      description:
-        "Dämmplatten bieten ökologische Wärmedämmung, hervorragenden sommerlichen Hitze- und Schallschutz, sind diffusionsoffen und speichern Feuchtigkeit und Wärme",
-      image: "/static/produkte/daemm.webp",
-    },
-    {
-      id: "duo-trio-balken",
-      title: "Duo-/Trio-Balken®",
-      description:
-        "Durch ihre Schichtbauweise stabil, sind ideal für Decken und Dächer.",
-      details: (
-        <div>
-          <ul className="list-disc pl-6">
-            <li>Ausschließlich aus güteüberwachter Produktion</li>
-            <li>Für Stabilität und Ästhetik</li>
-          </ul>
-          <p className="my-6">
-            <h3 className="text-xl font-bold">Duo-/Trio-Balken® NSi</h3>
-            für <span className="font-bold">n</span>icht{" "}
-            <span className="font-bold">si</span>chtbare Verwendung
-          </p>
-          <p className="my-6">
-            <h3 className="text-xl font-bold">Duo-/Trio-Balken® Si</h3>
-            für <span className="font-bold">si</span>chtbare Verwendung
-          </p>
-        </div>
-      ),
-      image: "/static/produkte/duo.webp",
-    },
-    {
-      id: "brettschichtholz",
-      title: "Brettschichtholz",
-      description:
-        "Stark und formstabil, eignet sich für anspruchsvolle Tragstrukturen",
-      details: (
-        <div>
-          <ul className="list-disc pl-10">
-            <li>Gerade Binder</li>
-            <li>Bogenbinder</li>
-            <li>Brettschichtelemente aus Brettschichtholz</li>
-          </ul>
-        </div>
-      ),
-      image: "/static/produkte/bsh.webp",
-    },
-    {
-      id: "ecobox",
-      title: "EGGER EcoBox",
-      description:
-        "Die ressourcenschonende Stütze für den modernen Holzbau",
-      image: "/static/produkte/ecobox.webp",
-      details: (
-        <div>
-          <ul className="list-disc pl-10">
-            <li>verringert den Holzverbrauch bis zu 38%</li>
-            <li>reduziert die Wärmebrücken</li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      id: "schnittholz",
-      title: "Schnittholz",
-      description:
-        "Stammt überwiegend von Schwarzwälder Sägewerken und ist vielseitig einsetzbar",
-      details: (
-        <div>
-          <p className="mb-4">In verschiedenen Qualitäten:</p>
-          <ul className="list-disc pl-10">
-            <li>Dachlatten</li>
-            <li>Konterlatten</li>
-            <li>Bretter</li>
-            <li>Dielen</li>
-            <li>Traufkeile</li>
-          </ul>
-        </div>
-      ),
-      image: "/static/produkte/schnittholz.webp",
-    },
+const productDetails: Record<string, ReactNode> = {
+  konstruktionsvollholz: (
+    <div>
+      <ul className="list-disc pl-6">
+        <li>Ausschließlich aus güteüberwachter Produktion</li>
+        <li>Individuell und vielseitig einsetzbar</li>
+      </ul>
+      <div className="my-6">
+        <h3 className="text-xl font-bold">KVH® NSi</h3>
+        für <span className="font-bold">n</span>icht{" "}
+        <span className="font-bold">si</span>chtbare Verwendung
+      </div>
+      <div className="my-6">
+        <h3 className="text-xl font-bold">KVH® Si</h3>
+        für <span className="font-bold">si</span>chtbare Verwendung
+      </div>
+    </div>
+  ),
+  osbplatten: (
+    <div>
+      <div className="my-6">
+        <h3 className="text-xl font-bold">EGGER OSB 3 Top</h3>
+        Bietet drei wichtige Funktionen: Luftdichtheit, Dampfbremse,
+        Aussteifung
+      </div>
+      <div className="my-6">
+        <h3 className="text-xl font-bold">EGGER OSB Flammex</h3>
+        Innovative Brandschutzlösung für vielseitige Anwendungen
+      </div>
+      <div className="my-6">
+        <h3 className="text-xl font-bold">EGGER DHF Platte</h3>
+        Kann als Außenbeplankung eingesetzt werden
+      </div>
+    </div>
+  ),
+  "duo-trio-balken": (
+    <div>
+      <ul className="list-disc pl-6">
+        <li>Ausschließlich aus güteüberwachter Produktion</li>
+        <li>Für Stabilität und Ästhetik</li>
+      </ul>
+      <div className="my-6">
+        <h3 className="text-xl font-bold">Duo-/Trio-Balken® NSi</h3>
+        für <span className="font-bold">n</span>icht{" "}
+        <span className="font-bold">si</span>chtbare Verwendung
+      </div>
+      <div className="my-6">
+        <h3 className="text-xl font-bold">Duo-/Trio-Balken® Si</h3>
+        für <span className="font-bold">si</span>chtbare Verwendung
+      </div>
+    </div>
+  ),
+  brettschichtholz: (
+    <div>
+      <ul className="list-disc pl-10">
+        <li>Gerade Binder</li>
+        <li>Bogenbinder</li>
+        <li>Brettschichtelemente aus Brettschichtholz</li>
+      </ul>
+    </div>
+  ),
+  ecobox: (
+    <div>
+      <ul className="list-disc pl-10">
+        <li>verringert den Holzverbrauch bis zu 38%</li>
+        <li>reduziert die Wärmebrücken</li>
+      </ul>
+    </div>
+  ),
+  schnittholz: (
+    <div>
+      <p className="mb-4">In verschiedenen Qualitäten:</p>
+      <ul className="list-disc pl-10">
+        <li>Dachlatten</li>
+        <li>Konterlatten</li>
+        <li>Bretter</li>
+        <li>Dielen</li>
+        <li>Traufkeile</li>
+      </ul>
+    </div>
+  ),
+  rauspund: (
+    <div>
+      <p className="mb-4">Verschiedene Stärken am Lager</p>
+      <ul className="list-disc pl-10">
+        <li>21,0 x 146 mm in 5,00 m Länge</li>
+        <li>23,5 x 146 mm in 5,00 m Länge</li>
+        <li>27,0 x 156 mm in 5,00 m Länge</li>
+        <li>Sonderstärken auf Anfrage möglich</li>
+      </ul>
+    </div>
+  ),
+  profilbretter: (
+    <div>
+      <p className="mb-4">In verschiedenen Qualitäten und Holzarten:</p>
+      <ul className="list-disc pl-10">
+        <li>Fasebretter</li>
+        <li>Rundprofilbretter</li>
+        <li>Glattkantbretter</li>
+        <li>Fußbodenbretter</li>
+        <li>Stülpschalung</li>
+        <li>Sonderprofile</li>
+      </ul>
+    </div>
+  ),
+  pellets: (
+    <div>
+      <p className="mb-4">Premiumpellets nach DINplus + ENplus</p>
+      <ul className="list-disc pl-10">
+        <li>Lose Ware</li>
+        <li>Sackware (15kg)</li>
+      </ul>
+    </div>
+  ),
+};
 
-    {
-      id: "rauspund",
-      title: "Rauspund",
-      description: "Diffussionsoffene Beplankungen in Wänden und auf Böden",
-      details: (
-        <div>
-          <p className="mb-4">Verschiedene Stärken am Lager</p>
-          <ul className="list-disc pl-10">
-            <li>21,0 x 146 mm in 5,00 m Länge</li>
-            <li>23,5 x 146 mm in 5,00 m Länge</li>
-            <li>27,0 x 156 mm in 5,00 m Länge</li>
-            <li>Sonderstärken auf Anfrage möglich</li>
-          </ul>
-        </div>
-      ),
-      image: "/static/produkte/rauspund.webp",
-    },
-    {
-      id: "profilbretter",
-      title: "Profilbretter",
-      description:
-        "Mit oder ohne Farbbehandlung. Vielseitig einsetzbar in Fassaden, Decken und Fußböden",
-      details: (
-        <div>
-          <p className="mb-4">In verschiedenen Qualitäten und Holzarten:</p>
-          <ul className="list-disc pl-10">
-            <li>Fasebretter</li>
-            <li>Rundprofilbretter</li>
-            <li>Glattkantbretter</li>
-            <li>Fußbodenbretter</li>
-            <li>Stülpschalung</li>
-            <li>Sonderprofile</li>
-          </ul>
-        </div>
-      ),
-      image: "/static/produkte/profilbretter.webp",
-    },
-
-    {
-      id: "pellets",
-      title: "Pellets aus Baden-Württemberg",
-      description: "Dienen als nachhaltige Energiequelle",
-      details: (
-        <div>
-          <p className="mb-4">Premiumpellets nach DINplus + ENplus</p>
-          <ul className="list-disc pl-10">
-            <li>Lose Ware</li>
-            <li>Sackware (15kg)</li>
-          </ul>
-        </div>
-      ),
-      image: "/static/produkte/pellets.webp",
-    },
-  ];
+export function generateStaticParams() {
+  return products.map((product) => ({ id: product.id }));
 }
 
-export default async function Galerie({
-  params: { id: id },
+export default function Produkt({
+  params: { id },
 }: {
   params: { id: string };
 }) {
-  const produkte = await generateStaticParams();
-
-  const produkt = produkte.find((produkt) => produkt.id === id);
+  const produkt = products.find((p) => p.id === id);
+  const details = productDetails[id];
 
   return (
     <div className="w-full py-12 md:py-24 lg:py-32">
@@ -212,40 +145,14 @@ export default async function Galerie({
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-6">
                 {produkt?.title}
               </h1>
-              <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 mb-20">
+              <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mb-20">
                 {produkt?.description}
               </p>
-              {produkt?.details}
+              {details}
             </div>
           </div>
         </div>
       </div>
-      {/* <div className="max-[800px] mx-auto">
-        <b>NSi</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ohne Sichtansprüche
-        <br />
-        <b> Si</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sichtqualität
-        <br />
-        <b>WiGa</b>&nbsp;&nbsp;&nbsp; -
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wintergartenqualität (ähnlich
-        Fensterqualität)
-        <br />
-        <br />
-        <b>Sortierklassen </b>
-        <ul style={{ listStyleType: "square" }}>
-          <li>GL 24 (BS 11)</li> <pre></pre>
-          <li>GL 28 (BS 14)</li> <pre></pre>
-          <li>GL 32 (BS 16)</li> <pre></pre>
-          <li>GL 36 (BS 18)</li>
-        </ul>
-        <b>Sonderformen </b>
-        <ul style={{ listStyleType: "square" }}>
-          <li> rund oder rechteckig</li> <pre></pre>
-          <li>gebogen oder gerade</li> <pre></pre>
-          <li>mit oder ohne Abbund und Verbindungsteilen</li> <pre></pre>
-        </ul>
-      </div> */}
     </div>
   );
 }

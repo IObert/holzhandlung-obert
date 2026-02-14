@@ -1,9 +1,4 @@
-import {
-  ArrowUpToLineIcon,
-  MailIcon,
-  PhoneIcon,
-  PrinterIcon,
-} from "lucide-react";
+import { MailIcon, PhoneIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function ContactBar() {

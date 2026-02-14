@@ -3,7 +3,7 @@ import Link from "next/link";
 import { MailIcon, PhoneIcon, TreePineIcon, Truck } from "lucide-react";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 
-export default function Impressum() {
+export default function Team() {
   return (
     <div className="w-10/12 mx-auto">
       <div className="space-y-6">
@@ -45,7 +45,6 @@ export default function Impressum() {
               <CardTitle>Wolf Roth</CardTitle>
             </CardHeader>
             <CardContent>
-              {""}
               {
                 <>
                   <div className="flex mt-4">

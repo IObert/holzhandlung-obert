@@ -12,7 +12,7 @@ export default function Partner() {
         </div>
         <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <a href="https://haeussermann.de/" target="_blank">
+            <a href="https://haeussermann.de/" target="_blank" rel="noopener noreferrer">
               <img
                 alt="haeussermann Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
@@ -23,7 +23,7 @@ export default function Partner() {
             </a>
           </div>
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <a href="https://www.pavatex.de/" target="_blank">
+            <a href="https://www.pavatex.de/" target="_blank" rel="noopener noreferrer">
               <img
                 alt="Pavatex Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
@@ -34,7 +34,7 @@ export default function Partner() {
             </a>
           </div>
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <a href="https://www.egger.com/de/" target="_blank">
+            <a href="https://www.egger.com/de/" target="_blank" rel="noopener noreferrer">
               <img
                 alt="Egger Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
@@ -47,7 +47,7 @@ export default function Partner() {
         </div>
         <div className="grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3">
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <a href="https://www.mocopinus.com/de/" target="_blank">
+            <a href="https://www.mocopinus.com/de/" target="_blank" rel="noopener noreferrer">
               <img
                 alt="Mocopinus Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
@@ -58,7 +58,7 @@ export default function Partner() {
             </a>
           </div>
           <div className="mx-auto flex w-full items-center justify-center p-8">
-            <a href="https://www.mm-holz.com/" target="_blank">
+            <a href="https://www.mm-holz.com/" target="_blank" rel="noopener noreferrer">
               <img
                 alt="MM Holz Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
@@ -69,7 +69,7 @@ export default function Partner() {
             </a>
           </div>
           <div className="mx-auto flex w-full items-center justify-center p-4 sm:p-8">
-            <a href="https://hwpan.de/" target="_blank">
+            <a href="https://hwpan.de/" target="_blank" rel="noopener noreferrer">
               <img
                 alt="Holzwerke Pfarrkirchen Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
@@ -85,6 +85,7 @@ export default function Partner() {
             <a
               href="https://www.storaenso.com/de-de/products/wood-products/sawn-and-planed-wood"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 alt="Stora Enso Logo"

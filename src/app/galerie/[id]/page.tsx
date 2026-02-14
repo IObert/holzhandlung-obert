@@ -1,26 +1,22 @@
-export async function generateStaticParams() {
-  const images = JSON.parse(process.env.images || "[]") as [];
-  return images.map((image: any) => ({
+import { galleryImages } from "@/lib/data";
+
+export function generateStaticParams() {
+  return galleryImages.map((image) => ({
     id: image.path.replace("/static/galerie/", "").split(".")[0],
-    filename: image.path.replace("/static/galerie/", ""),
-    alt: image.alt,
   }));
 }
 
 export default function Galerie({
-  params: { id: id },
+  params: { id },
 }: {
   params: { id: string };
 }) {
-  const images = JSON.parse(process.env.images || "[]") as [];
-  // @ts-ignore
-  const alt = images.find((image: any) => image.path.includes(id))?.alt;
-  // @ts-ignore
-  const filename = images.find((image: any) => image.path.includes(id))?.path;
+  const image = galleryImages.find((img) => img.path.includes(id));
+
   return (
     <img
-      src={`${filename}`}
-      alt={alt}
+      src={image?.path}
+      alt={image?.alt ?? id}
       className="w-10/12 md:mx-2 md:w-full mx-auto rounded-lg"
     />
   );

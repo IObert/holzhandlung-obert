@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Inter } from "next/font/google";
 import { TreePineIcon } from "lucide-react";
 import "./globals.css";
-import { generateStaticParams } from "./produkte/[id]/page";
+import { products } from "@/lib/data";
 import {
   Popover,
   PopoverContent,
@@ -17,23 +17,29 @@ export const metadata: Metadata = {
   description: "Holzhandlung Obert - Qualität gibt Sicherheit",
   keywords:
     "Holzhandlung Obert, Holz, Holzhandlung, Obert, Regional, Schwarzwald, Pellets, Familienunternehmen, Qualität, Sicherheit",
+  openGraph: {
+    title: "Holzhandlung Obert",
+    description: "Holzhandlung Obert - Qualität gibt Sicherheit",
+    url: "https://holzhandlung-obert.de",
+    siteName: "Holzhandlung Obert",
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const produkte = (await generateStaticParams()) as any[];
-
-  const produktLinks = produkte.map((produkt: any) => (
-    <div key={produkt.id} className="">
+  const produktLinks = products.map((produkt) => (
+    <div key={produkt.id}>
       <Link
         className="text-xs hover:underline underline-offset-4"
         href={`/produkte/${produkt.id}`}
       >
         <div className="space-y-2">
-          <h4 className=""> {produkt.title}</h4>
+          <h4>{produkt.title}</h4>
         </div>
       </Link>
     </div>
@@ -41,8 +47,14 @@ export default async function RootLayout({
 
   return (
     <html lang="de" className="w-full overflow-x-hidden">
-      <body className={inter.className + "w-full overflow-x-hidden"}>
+      <body className={`${inter.className} w-full overflow-x-hidden`}>
         <div className="flex flex-col min-h-screen">
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black"
+          >
+            Zum Hauptinhalt springen
+          </a>
           <header className="px-2 top-0 pt-2 h-14 flex items-center w-screen fixed bg-white z-10">
             <Link className="flex items-center justify-center" href="/">
               <TreePineIcon className="h-6 w-6 mr-2" />
@@ -95,7 +107,7 @@ export default async function RootLayout({
               </Link>
             </nav>
           </header>
-          <main className="flex items-center flex-1 mt-14">{children}</main>
+          <main id="main-content" className="flex items-center flex-1 mt-14">{children}</main>
           <footer className="flex flex-col sm:flex-row pb-6 w-full shrink-0 items-center px-4 gap-2 md:px-6 border-t">
             <nav className="text-gray-600 flex-1 pt-6 mt-auto flex-wrap flex gap-0.5 mx-auto justify-items-center md:gap-4">
               <Link

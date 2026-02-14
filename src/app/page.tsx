@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Section from "@/components/section";
-import { generateStaticParams } from "./produkte/[id]/page";
+import { products, galleryImages } from "@/lib/data";
 
 import {
   Carousel,
@@ -12,10 +12,7 @@ import {
 import ImageFlipCard from "@/components/image-flip-card";
 import ContactBar from "@/components/contact-bar";
 
-export default async function Home() {
-  const images = JSON.parse(process.env.images || "[]") as [];
-
-  const produkte = (await generateStaticParams()) as any[];
+export default function Home() {
 
   return (
     <main className="flex-1">
@@ -88,7 +85,7 @@ export default async function Home() {
         subtitle="Klicken Sie auf das jeweilige Produkt um mehr zu erfahren"
       >
         <div className="mx-auto grid w-full grid-cols-1  md:grid-cols-2 lg:grid-cols-3  items-stretch justify-center gap-4">
-          {produkte.map((produkt: any) => (
+          {products.map((produkt) => (
             <ImageFlipCard
               key={produkt.id}
               title={produkt.title}
@@ -107,7 +104,7 @@ export default async function Home() {
       >
         <Carousel className="mx-auto w-8/12 md:w-full">
           <CarouselContent>
-            {images.map((image: any, index) => (
+            {galleryImages.map((image, index) => (
               <CarouselItem key={index}>
                 <Link
                   href={image.path.replace("/static", "").split(".")[0]}
