@@ -97,6 +97,7 @@ const productDetails: Record<string, ReactNode> = {
         <li>Konterlatten</li>
         <li>Bretter</li>
         <li>Dielen</li>
+        <li>Verpackungshölzer (auch mit IPPC-Zertifikat)</li>
         <li>Traufkeile</li>
       </ul>
     </div>
