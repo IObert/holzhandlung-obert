@@ -18,10 +18,11 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
     if (!open) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    dialog.current?.showModal();
+    const modal = dialog.current;
+    modal?.showModal();
     return () => {
       document.body.style.overflow = previousOverflow;
-      dialog.current?.close();
+      modal?.close();
     };
   }, [open]);
 

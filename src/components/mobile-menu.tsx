@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { Product } from "@/lib/data";
 export default function MobileMenu({ products }: { products: Product[] }) {
   return (
@@ -15,19 +16,19 @@ export default function MobileMenu({ products }: { products: Product[] }) {
           }
         }}
       >
-        <a href="/#lieferprogramm">Lieferprogramm</a>
+        <Link href="/#lieferprogramm">Lieferprogramm</Link>
         <div className="mobile-products">
           {products.map((p) => (
-            <a key={p.id} href={`/produkte/${p.id}/`}>
+            <Link key={p.id} href={`/produkte/${p.id}/`}>
               {p.title}
-            </a>
+            </Link>
           ))}
         </div>
-        <a href="/#umwelt">Umwelt</a>
-        <a href="/#regional">Regional</a>
-        <a href="/#holzarten">Holzarten</a>
-        <a href="/#galerie">Galerie</a>
-        <a href="/#kontakt">Kontakt</a>
+        <Link href="/#umwelt">Umwelt</Link>
+        <Link href="/#regional">Regional</Link>
+        <Link href="/#holzarten">Holzarten</Link>
+        <Link href="/#galerie">Galerie</Link>
+        <Link href="/#kontakt">Kontakt</Link>
       </nav>
     </details>
   );
