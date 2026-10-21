@@ -2,16 +2,12 @@ import { products } from "@/lib/data";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 
-export async function generateMetadata(
-  props: {
-    params: Promise<{ id: string }>;
-  }
-): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
   const params = await props.params;
 
-  const {
-    id
-  } = params;
+  const { id } = params;
 
   const produkt = products.find((p) => p.id === id);
   return {
@@ -42,15 +38,14 @@ const productDetails: Record<string, ReactNode> = {
     <div>
       <div className="my-6">
         <h3 className="text-xl font-bold">EGGER OSB 3 Top</h3>
-        Bietet drei wichtige Funktionen: Luftdichtheit, Dampfbremse,
-        Aussteifung
+        Bietet drei wichtige Funktionen: Luftdichtheit, Dampfbremse, Aussteifung
       </div>
       <div className="my-6">
         <h3 className="text-xl font-bold">EGGER OSB Flammex</h3>
         Innovative Brandschutzlösung für vielseitige Anwendungen
       </div>
       <div className="my-6">
-        <h3 className="text-xl font-bold">EGGER DHF Platte</h3>
+        <h3 className="text-xl font-bold">EGGER DHF-Platte</h3>
         Kann als Außenbeplankung eingesetzt werden
       </div>
     </div>
@@ -84,8 +79,8 @@ const productDetails: Record<string, ReactNode> = {
   ecobox: (
     <div>
       <ul className="list-disc pl-10">
-        <li>verringert den Holzverbrauch bis zu 38%</li>
-        <li>reduziert die Wärmebrücken</li>
+        <li>Verringert den Holzverbrauch um bis zu 38 %</li>
+        <li>Reduziert die Wärmebrücken</li>
       </ul>
     </div>
   ),
@@ -131,7 +126,7 @@ const productDetails: Record<string, ReactNode> = {
       <p className="mb-4">Premiumpellets nach DINplus + ENplus</p>
       <ul className="list-disc pl-10">
         <li>Lose Ware</li>
-        <li>Sackware (15kg)</li>
+        <li>Sackware (15 kg)</li>
       </ul>
     </div>
   ),
@@ -141,16 +136,12 @@ export function generateStaticParams() {
   return products.map((product) => ({ id: product.id }));
 }
 
-export default async function Produkt(
-  props: {
-    params: Promise<{ id: string }>;
-  }
-) {
+export default async function Produkt(props: {
+  params: Promise<{ id: string }>;
+}) {
   const params = await props.params;
 
-  const {
-    id
-  } = params;
+  const { id } = params;
 
   const produkt = products.find((p) => p.id === id);
   const details = productDetails[id];

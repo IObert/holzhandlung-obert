@@ -26,7 +26,7 @@ export default function AGB() {
             Ergänzend gelten - sofern sie unseren Bedingungen nicht
             widersprechen - die Gebräuche im holzwirtschaftlichen Verkehr,
             insbesondere die &quot;Tegernseer Gebräuche&quot; in der jeweils
-            gültigen Fasssung mit ihren Anlagen und ihrem Anhang.
+            gültigen Fassung mit ihren Anlagen und ihrem Anhang.
           </li>
           <li>
             Abweichende Vereinbarungen und Bedingungen, insbesondere
@@ -35,7 +35,7 @@ export default function AGB() {
           </li>
           <li>
             Kreuzen sich zwei Bestätigungsschreiben, die abweichende
-            Bestimmungen erhalten, gilt das des Verkäufers.
+            Bestimmungen enthalten, gilt das des Verkäufers.
           </li>
           <li>
             Der Verkäufer ist berechtigt, im Rahmen der vertraglichen
@@ -58,7 +58,7 @@ export default function AGB() {
             schriftlichen Bestätigung.
           </li>
           <li>
-            Lieferfristen gelten vorbehalten richtiger sowie rechtzeitiger
+            Lieferfristen gelten vorbehaltlich richtiger sowie rechtzeitiger
             Selbstbelieferung, es sei denn, dass der Verkäufer die unrichtige
             oder verspätete Selbstbelieferung zu vertreten hat oder verbindliche
             Lieferfristen schriftlich zusagt.
@@ -85,7 +85,7 @@ export default function AGB() {
           </li>
           <li>
             Lieferung frei Baustelle oder frei Lager bedeutet Anlieferung ohne
-            Abladen und unter der Vorraussetzung einer mit schwerem Lastzug
+            Abladen und unter der Voraussetzung einer mit schwerem Lastzug
             befahrbaren Anfuhrstraße. Verlässt das Lieferfahrzeug auf Weisung
             des Käufers die befahrbare Anfuhrstraße, so haftet dieser für
             auftretende Schäden. Das Abladen hat unverzüglich und sachgemäß
@@ -94,7 +94,7 @@ export default function AGB() {
           </li>
           <li>
             Die Nichteinhaltung von Lieferungsterminen und -fristen durch den
-            Verkäufer berechtig den Käufer zur Geltendmachung der ihm
+            Verkäufer berechtigt den Käufer zur Geltendmachung der ihm
             zustehenden Rechte erst, wenn er dem Verkäufer eine angemessene,
             mindestens acht Werktage betragende Nachfrist gesetzt hat.
           </li>
@@ -107,7 +107,7 @@ export default function AGB() {
           <li>
             Bei Leistungsverzug oder einer vom Verkäufer zu vertretenden
             Unmöglichkeit der Leistung kann der Käufer unter angemessener
-            Nachfrist vom Vertrag zurücktreten. Im übrigen beschränkt sich der
+            Nachfrist vom Vertrag zurücktreten. Im Übrigen beschränkt sich der
             Anspruch des Käufers auf den Ersatz nachgewiesener Mehrkosten
             (Deckungskauf). Dieser setzt voraus, dass dem Verkäufer dies unter
             Wahrung einer angemessenen Frist - vom Zeitpunkt des Verzuges oder
@@ -153,7 +153,7 @@ export default function AGB() {
             Rechnungsregulierung durch Scheck oder Wechsel erfolgt
             zahlungshalber und bedarf der Zustimmung des Verkäufers; Diskont,
             Wechselspesen und Kosten trägt der Käufer, sofern nichts anderes
-            vereinbart. Rückwechsel werden grundsätzlich nicht ausgestellt.
+            vereinbart ist. Rückwechsel werden grundsätzlich nicht ausgestellt.
             Sollte dies ausnahmsweise in einzelnen Fällen geschehen, die jedoch
             ausdrücklich vereinbart sein müssen, so tritt eine befreiende
             Leistung erst dann ein, wenn der Verkäufer den Kaufpreis erhält und
@@ -168,7 +168,7 @@ export default function AGB() {
             berechnen; die Geltendmachung weiteren Schadens bleibt vorbehalten.
           </li>
           <li>
-            Bei Zahlungsverzug, Scheck- oder Wechselprotest, ist der Verkäufer
+            Bei Zahlungsverzug, Scheck- oder Wechselprotest ist der Verkäufer
             berechtigt, weitere Lieferungen nur gegen Vorauskasse auszuführen,
             alle offenstehenden Rechnungsbeträge sofort fällig zu stellen und
             gegen Rückgabe zahlungshalber hereingenommener Wechsel Barzahlung
@@ -176,9 +176,9 @@ export default function AGB() {
           </li>
           <li>
             Die vertraglichen Zahlungstermine sind auch dann einzuhalten, wenn
-            sich eine Mängelrüge in einem gemäß § 459 Abs.1 Satz 2 BGB als
+            sich eine Mängelrüge in einem gemäß § 459 Abs. 1 Satz 2 BGB als
             unerheblich zu bezeichnenden Umfange als berechtigt erweist. Im
-            übrigen darf der Käufer im Falle einer fristgerechtigt erhobenen,
+            Übrigen darf der Käufer im Falle einer fristgerecht erhobenen,
             berechtigten Mängelrüge fehlerhafter Ware im Sinne von § 459 Abs. 1
             BGB nur den Teil der Kaufsumme vorläufig einbehalten, der dem
             Rechnungsbetrag des ordnungsgemäß gerügten Teils der Lieferung
@@ -200,7 +200,7 @@ export default function AGB() {
         Abweichungen und Merkmale sind daher stets zu beachten. Insbesondere hat
         der Käufer seine biologischen, physikalischen und chemischen
         Eigenschaften beim Kauf und der Verwendung zu berücksichtigen.
-        Gegebenfalls hat er fachgerechten Rat einzuholen.
+        Gegebenenfalls hat er fachgerechten Rat einzuholen.
         <ol start={1} type="1">
           <li>
             Offensichtliche Mängel sind in jedem Falle unverzüglich, spätestens
@@ -224,7 +224,7 @@ export default function AGB() {
           </li>
           <li>
             Ergänzend gilt, dass zugesicherte Eigenschaften im Sinne von § 459
-            Abs.2 des Bürgerlichen Gesetzbuches als Zusicherung ausdrücklich zu
+            Abs. 2 des Bürgerlichen Gesetzbuches als Zusicherung ausdrücklich zu
             kennzeichnen sind. Eine Bezugnahme auf DIN-Normen beinhaltet
             grundsätzlich nur die Normgerechtigkeit des Erzeugnisses und
             begründet keine Zusicherung durch den Verkäufer, es sei denn, dass
@@ -280,7 +280,7 @@ export default function AGB() {
             gehörender Ware erwirbt der Verkäufer Miteigentum an der neuen Sache
             nach dem Verhältnis des Wertes der Vorbehaltsware zu der anderen
             Ware zur Zeit der Verarbeitung. Wird Vorbehaltsware mit nicht dem
-            Verkäufer gehörenden Ware gemäß §§ 947, 948 des Bürgerlichen
+            Verkäufer gehörender Ware gemäß §§ 947, 948 des Bürgerlichen
             Gesetzbuches verbunden, vermischt oder vermengt, so wird der
             Verkäufer Miteigentümer entsprechend den gesetzlichen Bestimmungen.
             Erwirbt der Käufer durch Verbindung, Vermischung oder Vermengung
@@ -288,9 +288,8 @@ export default function AGB() {
             Miteigentum nach dem Verhältnis des Wertes der Vorbehaltsware zu der
             anderen Ware zur Zeit der Verbindung, Vermischung oder Vermengung.
             Der Käufer hat in diesen Fällen die im Eigentum oder Miteigentum des
-            Verkäufers stehenden Sache, die ebenfalls als Vorbehaltsware im
-            Sinne der nachfolgenden Bestimmungen gilt, unentgeltlich zu
-            verwahren.
+            Verkäufers stehende Sache, die ebenfalls als Vorbehaltsware im Sinne
+            der nachfolgenden Bestimmungen gilt, unentgeltlich zu verwahren.
           </li>
           <li>
             Wird Vorbehaltsware vom Käufer, allein oder zusammen mit nicht dem
@@ -300,10 +299,10 @@ export default function AGB() {
             dem Rest ab; der Verkäufer nimmt die Abtretung an. Wenn die
             weiterveräußerte Vorbehaltsware im Miteigentum des Verkäufers steht,
             so erstreckt sich die Abtretung der Forderungen auf den Betrag, der
-            dem Anteilswert des Verkäufers am Miteigentum entspricht. Abs.1 Satz
-            2 gilt entsprechend für den verlängerten Eigentumsvorbehalt; die
-            Vorausabtretung gemäß Abs. 3 Satz 1 und 3 erstreckt sich auch auf
-            die Saldoforderung.
+            dem Anteilswert des Verkäufers am Miteigentum entspricht. Abs. 1
+            Satz 2 gilt entsprechend für den verlängerten Eigentumsvorbehalt;
+            die Vorausabtretung gemäß Abs. 3 Satz 1 und 3 erstreckt sich auch
+            auf die Saldoforderung.
           </li>
           <li>
             Wird Vorbehaltsware vom Käufer als wesentlicher Bestandteil in das
@@ -312,13 +311,13 @@ export default function AGB() {
             Forderungen auf Vergütung in Höhe des Wertes der Vorbehaltsware mit
             allen Nebenrechten einschließlich eines solchen auf Einräumung einer
             Sicherungshypothek, mit Rang vor dem Rest ab; der Verkäufer nimmt
-            die Abtretung an. Abs.3 Satz 2 und 3 gelten entsprechend.
+            die Abtretung an. Abs. 3 Satz 2 und 3 gelten entsprechend.
           </li>
           <li>
             Wird Vorbehaltsware vom Käufer als wesentlicher Bestandteil in das
             Grundstück des Käufers eingebaut, so tritt der Käufer schon jetzt
             die aus der gewerbsmäßigen Veräußerung des Grundstücks oder von
-            Grundstücksrechten, entstehenden Forderungen in Höhe des Wertes der
+            Grundstücksrechten entstehenden Forderungen in Höhe des Wertes der
             Vorbehaltsware mit allen Nebenrechten und mit Rang vor dem Rest ab;
             der Verkäufer nimmt die Abtretung an. Abs. 3 Satz 2 und 3 gelten
             entsprechend.
@@ -334,9 +333,9 @@ export default function AGB() {
           </li>
           <li>
             Der Verkäufer ermächtigt den Käufer unter Vorbehalt des Widerrufs
-            zur Einbeziehung der gemäß Abs. 3, 4 und 5 abgetretenen Forderungen.
+            zur Einziehung der gemäß Abs. 3, 4 und 5 abgetretenen Forderungen.
             Der Verkäufer wird von der eigenen Einziehungsbefugnis keinen
-            Gebrauch machen, solange der Käufer seien Zahlungsverpflichtungen,
+            Gebrauch machen, solange der Käufer seinen Zahlungsverpflichtungen,
             auch gegenüber Dritten, nachkommt. Auf Verlangen des Verkäufers hat
             der Käufer die Schuldner der abgetretenen Forderungen zu benennen
             und diesen die Abtretung anzuzeigen; der Verkäufer ist ermächtigt,
@@ -354,14 +353,14 @@ export default function AGB() {
             erlöschen das Recht zur Weiterveräußerung, zur Verwendung oder zum
             Einbau der Vorbehaltsware und die Ermächtigung zum Einzug der
             abgetretenen Forderungen: bei einem Scheck- oder Wechselprotest
-            erlischt die Einzugsermäßigung ebenfalls.
+            erlischt die Einzugsermächtigung ebenfalls.
           </li>
           <li>
             Übersteigt der Wert der eingeräumten Sicherheiten die Forderungen um
             mehr als 20 %, so ist der Verkäufer insoweit zur Rückübertragung
             oder Freigabe nach seiner Wahl verpflichtet. Mit Tilgung aller
             Forderungen des Verkäufers aus der Geschäftsverbindung gehen das
-            Eigentum an der Vorbehalsware und die abgetretenen Forderungen an
+            Eigentum an der Vorbehaltsware und die abgetretenen Forderungen an
             den Käufer über.
           </li>
         </ol>
@@ -388,12 +387,12 @@ export default function AGB() {
         <Link href="#Schlussbestimmungen">
           <h2 className="text-lg my-4">§ 8 Schlussbestimmungen</h2>
         </Link>
-        Sollte eine oder mehrere dieser Bedingungen gegen ein gesetzliches
+        Sollten eine oder mehrere dieser Bedingungen gegen ein gesetzliches
         Verbot verstoßen oder aus anderen Gründen rechtsunwirksam sein, so wird
         dadurch die Gültigkeit der übrigen Bestimmungen nicht berührt.
         Vertragspartner verpflichten sich für diesen Fall, eine Ersatzregelung
         zu treffen, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung
-        möglichst nahe kommt. Anzuwenden ist ausschließlich deutsches Recht
+        möglichst nahe kommt. Anzuwenden ist ausschließlich deutsches Recht,
         soweit nicht im Einzelfall ausdrücklich eine abweichende schriftliche
         Vereinbarung getroffen worden ist.
         <NavUpIcon />

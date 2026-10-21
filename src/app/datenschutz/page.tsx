@@ -44,7 +44,7 @@ export default function Datenschutz() {
         Verantwortlicher zahlreiche technische und organisatorische Maßnahmen
         umgesetzt, um einen möglichst lückenlosen Schutz der über diese
         Internetseite verarbeiteten personenbezogenen Daten sicherzustellen.
-        Dennoch können Internetbasierte Datenübertragungen grundsätzlich
+        Dennoch können internetbasierte Datenübertragungen grundsätzlich
         Sicherheitslücken aufweisen, sodass ein absoluter Schutz nicht
         gewährleistet werden kann. Aus diesem Grund steht es jeder betroffenen
         Person frei, personenbezogene Daten auch auf alternativen Wegen,
@@ -57,7 +57,7 @@ export default function Datenschutz() {
         <ol start={1} type="1">
           <li>
             Die Datenschutzerklärung der Holzhandlung Heidi Obert beruht auf den
-            Begrifflichkeiten, die durch den Europäischen Richtlinien- und
+            Begrifflichkeiten, die durch den europäischen Richtlinien- und
             Verordnungsgeber beim Erlass der Datenschutz-Grundverordnung
             (DS-GVO) verwendet wurden. Unsere Datenschutzerklärung soll sowohl
             für die Öffentlichkeit als auch für unsere Kunden und
@@ -263,7 +263,7 @@ export default function Datenschutz() {
             Der für die Verarbeitung Verantwortliche verarbeitet und speichert
             personenbezogene Daten der betroffenen Person nur für den Zeitraum,
             der zur Erreichung des Speicherungszwecks erforderlich ist oder
-            sofern dies durch den Europäischen Richtlinien- und Verordnungsgeber
+            sofern dies durch den europäischen Richtlinien- und Verordnungsgeber
             oder einen anderen Gesetzgeber in Gesetzen oder Vorschriften,
             welchen der für die Verarbeitung Verantwortliche unterliegt,
             vorgesehen wurde.
@@ -285,7 +285,7 @@ export default function Datenschutz() {
         <ol style={{ listStyleType: "lower-latin" }}>
           <li>Recht auf Bestätigung</li>
           <p className="my-2">
-            Jede betroffene Person hat das vom Europäischen Richtlinien- und
+            Jede betroffene Person hat das vom europäischen Richtlinien- und
             Verordnungsgeber eingeräumte Recht, von dem für die Verarbeitung
             Verantwortlichen eine Bestätigung darüber zu verlangen, ob sie
             betreffende personenbezogene Daten verarbeitet werden. Möchte eine
@@ -296,34 +296,52 @@ export default function Datenschutz() {
           <li>Recht auf Auskunft</li>
           <p className="my-2">
             Jede von der Verarbeitung personenbezogener Daten betroffene Person
-            hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte
+            hat das vom europäischen Richtlinien- und Verordnungsgeber gewährte
             Recht, jederzeit von dem für die Verarbeitung Verantwortlichen
-            unentgeltliche Auskunft über die zu seiner Person gespeicherten
+            unentgeltliche Auskunft über die zu ihrer Person gespeicherten
             personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten.
-            Ferner hat der Europäische Richtlinien- und Verordnungsgeber der
+            Ferner hat der europäische Richtlinien- und Verordnungsgeber der
             betroffenen Person Auskunft über folgende Informationen zugestanden:
           </p>
-          <p className="my-2">
-            die Verarbeitungszwecke die Kategorien personenbezogener Daten, die
-            verarbeitet werden die Empfänger oder Kategorien von Empfängern,
-            gegenüber denen die personenbezogenen Daten offengelegt worden sind
-            oder noch offengelegt werden, insbesondere bei Empfängern in
-            Drittländern oder bei internationalen Organisationen falls möglich
-            die geplante Dauer, für die die personenbezogenen Daten gespeichert
-            werden, oder, falls dies nicht möglich ist, die Kriterien für die
-            Festlegung dieser Dauer das Bestehen eines Rechts auf Berichtigung
-            oder Löschung der sie betreffenden personenbezogenen Daten oder auf
-            Einschränkung der Verarbeitung durch den Verantwortlichen oder eines
-            Widerspruchsrechts gegen diese Verarbeitung das Bestehen eines
-            Beschwerderechts bei einer Aufsichtsbehörde wenn die
-            personenbezogenen Daten nicht bei der betroffenen Person erhoben
-            werden: Alle verfügbaren Informationen über die Herkunft der Daten
-            das Bestehen einer automatisierten Entscheidungsfindung
-            einschließlich Profiling gemäß Artikel 22 Abs.1 und 4 DS-GVO und —
-            zumindest in diesen Fällen — aussagekräftige Informationen über die
-            involvierte Logik sowie die Tragweite und die angestrebten
-            Auswirkungen einer derartigen Verarbeitung für die betroffene Person
-          </p>
+          <ul className="list-disc space-y-3 pl-6">
+            <li>die Verarbeitungszwecke;</li>
+            <li>
+              die Kategorien personenbezogener Daten, die verarbeitet werden;
+            </li>
+            <li>
+              die Empfänger oder Kategorien von Empfängern, gegenüber denen die
+              personenbezogenen Daten offengelegt worden sind oder noch
+              offengelegt werden, insbesondere bei Empfängern in Drittländern
+              oder bei internationalen Organisationen;
+            </li>
+            <li>
+              falls möglich, die geplante Dauer, für die die personenbezogenen
+              Daten gespeichert werden, oder, falls dies nicht möglich ist, die
+              Kriterien für die Festlegung dieser Dauer;
+            </li>
+            <li>
+              das Bestehen eines Rechts auf Berichtigung oder Löschung der sie
+              betreffenden personenbezogenen Daten oder auf Einschränkung der
+              Verarbeitung durch den Verantwortlichen oder eines
+              Widerspruchsrechts gegen diese Verarbeitung;
+            </li>
+            <li>
+              das Bestehen eines Beschwerderechts bei einer Aufsichtsbehörde;
+            </li>
+            <li>
+              wenn die personenbezogenen Daten nicht bei der betroffenen Person
+              erhoben werden: alle verfügbaren Informationen über die Herkunft
+              der Daten;
+            </li>
+            <li>
+              das Bestehen einer automatisierten Entscheidungsfindung
+              einschließlich Profiling gemäß Artikel 22 Abs. 1 und 4 DS-GVO und
+              — zumindest in diesen Fällen — aussagekräftige Informationen über
+              die involvierte Logik sowie die Tragweite und die angestrebten
+              Auswirkungen einer derartigen Verarbeitung für die betroffene
+              Person.
+            </li>
+          </ul>
           <p className="my-2">
             Ferner steht der betroffenen Person ein Auskunftsrecht darüber zu,
             ob personenbezogene Daten an ein Drittland oder an eine
@@ -341,7 +359,7 @@ export default function Datenschutz() {
           <li>Recht auf Berichtigung</li>
           <p className="my-2">
             Jede von der Verarbeitung personenbezogener Daten betroffene Person
-            hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte
+            hat das vom europäischen Richtlinien- und Verordnungsgeber gewährte
             Recht, die unverzügliche Berichtigung sie betreffender unrichtiger
             personenbezogener Daten zu verlangen. Ferner steht der betroffenen
             Person das Recht zu, unter Berücksichtigung der Zwecke der
@@ -355,10 +373,10 @@ export default function Datenschutz() {
             die Verarbeitung Verantwortlichen wenden.
           </p>
 
-          <li>Recht auf Löschung (Recht auf Vergessen werden)</li>
+          <li>Recht auf Löschung (Recht auf Vergessenwerden)</li>
           <p className="my-2">
             Jede von der Verarbeitung personenbezogener Daten betroffene Person
-            hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte
+            hat das vom europäischen Richtlinien- und Verordnungsgeber gewährte
             Recht, von dem Verantwortlichen zu verlangen, dass die sie
             betreffenden personenbezogenen Daten unverzüglich gelöscht werden,
             sofern einer der folgenden Gründe zutrifft und soweit die
@@ -412,7 +430,7 @@ export default function Datenschutz() {
           <li>Recht auf Einschränkung der Verarbeitung</li>
           <p className="my-2">
             Jede von der Verarbeitung personenbezogener Daten betroffene Person
-            hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte
+            hat das vom europäischen Richtlinien- und Verordnungsgeber gewährte
             Recht, von dem Verantwortlichen die Einschränkung der Verarbeitung
             zu verlangen, wenn eine der folgenden Voraussetzungen gegeben ist:
           </p>
@@ -442,42 +460,10 @@ export default function Datenschutz() {
             veranlassen.
           </p>
 
-          <li> Recht auf Einschränkung der Verarbeitung</li>
-          <p className="my-2">
-            Jede von der Verarbeitung personenbezogener Daten betroffene Person
-            hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte
-            Recht, von dem Verantwortlichen die Einschränkung der Verarbeitung
-            zu verlangen, wenn eine der folgenden Voraussetzungen gegeben ist:
-          </p>
-          <p className="my-2">
-            Die Richtigkeit der personenbezogenen Daten wird von der betroffenen
-            Person bestritten, und zwar für eine Dauer, die es dem
-            Verantwortlichen ermöglicht, die Richtigkeit der personenbezogenen
-            Daten zu überprüfen. Die Verarbeitung ist unrechtmäßig, die
-            betroffene Person lehnt die Löschung der personenbezogenen Daten ab
-            und verlangt stattdessen die Einschränkung der Nutzung der
-            personenbezogenen Daten. Der Verantwortliche benötigt die
-            personenbezogenen Daten für die Zwecke der Verarbeitung nicht
-            länger, die betroffene Person benötigt sie jedoch zur
-            Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen. Die
-            betroffene Person hat Widerspruch gegen die Verarbeitung gem. Art.
-            21 Abs. 1 DS-GVO eingelegt und es steht noch nicht fest, ob die
-            berechtigten Gründe des Verantwortlichen gegenüber denen der
-            betroffenen Person überwiegen.
-          </p>
-          <p className="my-2">
-            Sofern eine der oben genannten Voraussetzungen gegeben ist und eine
-            betroffene Person die Einschränkung von personenbezogenen Daten, die
-            bei der Holzhandlung Heidi Obert gespeichert sind, verlangen möchte,
-            kann sie sich hierzu jederzeit an einen Mitarbeiter des für die
-            Verarbeitung Verantwortlichen wenden. Der Mitarbeiter der
-            Holzhandlung Heidi Obert wird die Einschränkung der Verarbeitung
-            veranlassen.
-          </p>
           <li>Recht auf Datenübertragbarkeit</li>
           <p className="my-2">
             Jede von der Verarbeitung personenbezogener Daten betroffene Person
-            hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte
+            hat das vom europäischen Richtlinien- und Verordnungsgeber gewährte
             Recht, die sie betreffenden personenbezogenen Daten, welche durch
             die betroffene Person einem Verantwortlichen bereitgestellt wurden,
             in einem strukturierten, gängigen und maschinenlesbaren Format zu
@@ -511,7 +497,7 @@ export default function Datenschutz() {
           <li>Recht auf Widerspruch</li>
           <p className="my-2">
             Jede von der Verarbeitung personenbezogener Daten betroffene Person
-            hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte
+            hat das vom europäischen Richtlinien- und Verordnungsgeber gewährte
             Recht, aus Gründen, die sich aus ihrer besonderen Situation ergeben,
             jederzeit gegen die Verarbeitung sie betreffender personenbezogener
             Daten, die aufgrund von Art. 6 Abs. 1 Buchstaben e oder f DS-GVO
@@ -551,7 +537,7 @@ export default function Datenschutz() {
 
           <p className="my-2">
             Zur Ausübung des Rechts auf Widerspruch kann sich die betroffene
-            Person direkt jeden Mitarbeiter der Holzhandlung Heidi Obert oder
+            Person direkt an jeden Mitarbeiter der Holzhandlung Heidi Obert oder
             einen anderen Mitarbeiter wenden. Der betroffenen Person steht es
             ferner frei, im Zusammenhang mit der Nutzung von Diensten der
             Informationsgesellschaft, ungeachtet der Richtlinie 2002/58/EG, ihr
@@ -564,14 +550,14 @@ export default function Datenschutz() {
           </li>
           <p className="my-2">
             Jede von der Verarbeitung personenbezogener Daten betroffene Person
-            hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte
+            hat das vom europäischen Richtlinien- und Verordnungsgeber gewährte
             Recht, nicht einer ausschließlich auf einer automatisierten
             Verarbeitung — einschließlich Profiling — beruhenden Entscheidung
             unterworfen zu werden, die ihr gegenüber rechtliche Wirkung
             entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt,
             sofern die Entscheidung (1) nicht für den Abschluss oder die
             Erfüllung eines Vertrags zwischen der betroffenen Person und dem
-            Verantwortlichen erforderlich ist, oder (2) aufgrund von
+            Verantwortlichen erforderlich ist oder (2) aufgrund von
             Rechtsvorschriften der Union oder der Mitgliedstaaten, denen der
             Verantwortliche unterliegt, zulässig ist und diese
             Rechtsvorschriften angemessene Maßnahmen zur Wahrung der Rechte und
@@ -598,9 +584,6 @@ export default function Datenschutz() {
           </p>
           <li>Recht auf Widerruf einer datenschutzrechtlichen Einwilligung</li>
           <p className="my-2">
-            Recht auf Widerruf einer datenschutzrechtlichen Einwilligung
-          </p>
-          <p className="my-2">
             Möchte die betroffene Person ihr Recht auf Widerruf einer
             Einwilligung geltend machen, kann sie sich hierzu jederzeit an einen
             Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.
@@ -623,10 +606,10 @@ export default function Datenschutz() {
             Lieferung von Waren oder die Erbringung einer sonstigen Leistung
             oder Gegenleistung notwendig sind, so beruht die Verarbeitung auf
             Art. 6 I lit. b DS-GVO. Gleiches gilt für solche
-            Verarbeitungsvorgänge die zur Durchführung vorvertraglicher
-            Maßnahmen erforderlich sind, etwa in Fällen von Anfragen zur unseren
+            Verarbeitungsvorgänge, die zur Durchführung vorvertraglicher
+            Maßnahmen erforderlich sind, etwa in Fällen von Anfragen zu unseren
             Produkten oder Leistungen. Unterliegt unser Unternehmen einer
-            rechtlichen Verpflichtung durch welche eine Verarbeitung von
+            rechtlichen Verpflichtung, durch welche eine Verarbeitung von
             personenbezogenen Daten erforderlich wird, wie beispielsweise zur
             Erfüllung steuerlicher Pflichten, so basiert die Verarbeitung auf
             Art. 6 I lit. c DS-GVO. In seltenen Fällen könnte die Verarbeitung
@@ -645,7 +628,7 @@ export default function Datenschutz() {
             eines Dritten erforderlich ist, sofern die Interessen, Grundrechte
             und Grundfreiheiten des Betroffenen nicht überwiegen. Solche
             Verarbeitungsvorgänge sind uns insbesondere deshalb gestattet, weil
-            sie durch den Europäischen Gesetzgeber besonders erwähnt wurden. Er
+            sie durch den europäischen Gesetzgeber besonders erwähnt wurden. Er
             vertrat insoweit die Auffassung, dass ein berechtigtes Interesse
             anzunehmen sein könnte, wenn die betroffene Person ein Kunde des
             Verantwortlichen ist (Erwägungsgrund 47 Satz 2 DS-GVO).
@@ -663,7 +646,7 @@ export default function Datenschutz() {
         <ol start={1} type="1">
           <li>
             Basiert die Verarbeitung personenbezogener Daten auf Artikel 6 I
-            lit. f DS-GVO ist unser berechtigtes Interesse die Durchführung
+            lit. f DS-GVO, ist unser berechtigtes Interesse die Durchführung
             unserer Geschäftstätigkeit zugunsten des Wohlergehens all unserer
             Mitarbeiter und unserer Anteilseigner.
           </li>
@@ -699,13 +682,13 @@ export default function Datenschutz() {
         <ol start={1} type="1">
           <li>
             Wir klären Sie darüber auf, dass die Bereitstellung
-            personenbezogener Daten zum Teil gesetzlich vorgeschrieben ist (z.B.
-            Steuervorschriften) oder sich auch aus vertraglichen Regelungen
-            (z.B. Angaben zum Vertragspartner) ergeben kann. Mitunter kann es zu
-            einem Vertragsschluss erforderlich sein, dass eine betroffene Person
-            uns personenbezogene Daten zur Verfügung stellt, die in der Folge
-            durch uns verarbeitet werden müssen. Die betroffene Person ist
-            beispielsweise verpflichtet uns personenbezogene Daten
+            personenbezogener Daten zum Teil gesetzlich vorgeschrieben ist (z.
+            B. Steuervorschriften) oder sich auch aus vertraglichen Regelungen
+            (z. B. Angaben zum Vertragspartner) ergeben kann. Mitunter kann es
+            zu einem Vertragsschluss erforderlich sein, dass eine betroffene
+            Person uns personenbezogene Daten zur Verfügung stellt, die in der
+            Folge durch uns verarbeitet werden müssen. Die betroffene Person ist
+            beispielsweise verpflichtet, uns personenbezogene Daten
             bereitzustellen, wenn unser Unternehmen mit ihr einen Vertrag
             abschließt. Eine Nichtbereitstellung der personenbezogenen Daten
             hätte zur Folge, dass der Vertrag mit dem Betroffenen nicht
@@ -741,20 +724,20 @@ export default function Datenschutz() {
       <p className="text-small">
         Diese Datenschutzerklärung wurde durch den
         Datenschutzerklärungs-Generator der DGD Deutsche Gesellschaft für
-        Datenschutz GmbH, die als
+        Datenschutz GmbH, die als{" "}
         <a
           href="https://dg-datenschutz.de/datenschutz-dienstleistungen/externer-datenschutzbeauftragter/"
           rel="nofollow"
         >
-          Externer Datenschutzbeauftragter Ingolstadt
-        </a>
-        tätig ist, in Kooperation mit dem
+          externer Datenschutzbeauftragter in Ingolstadt
+        </a>{" "}
+        tätig ist, in Kooperation mit dem{" "}
         <a
           href="https://www.wbs-law.de/it-recht/datenschutzrecht"
           rel="nofollow"
         >
-          IT- und Datenschutzrecht Anwalt Christian Solmecke
-        </a>
+          Anwalt für IT- und Datenschutzrecht Christian Solmecke
+        </a>{" "}
         erstellt.
       </p>
       <br />

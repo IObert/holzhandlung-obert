@@ -27,7 +27,7 @@ export default function Impressum() {
           </Link>
         </p>
 
-        <p className="">Ust.-IdNr.: DE 156642409</p>
+        <p className="">USt-IdNr.: DE 156642409</p>
 
         <p className="text-xs text-gray-400">
           Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:

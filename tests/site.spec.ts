@@ -17,7 +17,7 @@ test("Galerie blättert, schließt und gibt den Fokus zurück", async ({
     .getByRole("button", { name: "Nächstes Bild", exact: true })
     .click();
   await expect(dialog.locator(".gallery-caption")).toHaveText(
-    "Halle Hinten4 / 7",
+    "Halle hinten4 / 7",
   );
   await page.keyboard.press("ArrowLeft");
   await expect(dialog.locator(".gallery-caption")).toHaveText("Regale3 / 7");

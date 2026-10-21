@@ -22,7 +22,7 @@ export const galleryImages: GalleryImage[] = [
   { path: "/static/galerie/Weit.webp", alt: "Gesamtansicht" },
   { path: "/static/galerie/Straßenansicht.webp", alt: "Straßenansicht" },
   { path: "/static/galerie/Regale.webp", alt: "Regale" },
-  { path: "/static/galerie/Hinten.webp", alt: "Halle Hinten" },
+  { path: "/static/galerie/Hinten.webp", alt: "Halle hinten" },
   { path: "/static/galerie/Stapler.webp", alt: "Stapler" },
   { path: "/static/galerie/Außen.webp", alt: "Außenseite" },
   { path: "/static/galerie/Pavatex.webp", alt: "Pavatex" },
@@ -45,7 +45,7 @@ export const products: Product[] = [
   },
   {
     id: "daemmstoffe",
-    title: "PAVATEX Dämmplatten aus Holzweichfasern",
+    title: "PAVATEX-Dämmplatten aus Holzweichfasern",
     description:
       "Dämmplatten bieten ökologische Wärmedämmung, hervorragenden sommerlichen Hitze- und Schallschutz, sind diffusionsoffen und speichern Feuchtigkeit und Wärme",
     image: "/static/produkte/daemm.webp",
@@ -54,7 +54,7 @@ export const products: Product[] = [
     id: "duo-trio-balken",
     title: "Duo-/Trio-Balken®",
     description:
-      "Durch ihre Schichtbauweise stabil, sind ideal für Decken und Dächer.",
+      "Durch ihre Schichtbauweise sind sie stabil und ideal für Decken und Dächer.",
     image: "/static/produkte/duo.webp",
   },
   {
@@ -80,7 +80,7 @@ export const products: Product[] = [
   {
     id: "rauspund",
     title: "Rauspund",
-    description: "Diffussionsoffene Beplankungen in Wänden und auf Böden",
+    description: "Diffusionsoffene Beplankungen in Wänden und auf Böden",
     image: "/static/produkte/rauspund.webp",
   },
   {
@@ -106,7 +106,7 @@ export const woodTypes: WoodType[] = [
     image: "/static/holz/Fichtenholz.webp",
   },
   {
-    title: "Weisstanne",
+    title: "Weißtanne",
     description:
       "Die Tanne, ideal für Konstruktionshölzer und Innenausbauten, findet Anwendung im Saunabau und Fensterbau.",
     image: "/static/holz/weisstanne.webp",
@@ -114,7 +114,7 @@ export const woodTypes: WoodType[] = [
   {
     title: "Douglasie",
     description:
-      "Die Douglasie, beliebt für Fassaden, Balkone und sichtbare Konstruktionen.",
+      "Die Douglasie ist beliebt für Fassaden, Balkone und sichtbare Konstruktionen.",
     image: "/static/holz/douglasienholz.webp",
   },
   {
@@ -125,8 +125,7 @@ export const woodTypes: WoodType[] = [
   },
   {
     title: "Kiefer",
-    description:
-      "Kiefer eignet sich für Konstruktionshölzer und Fenster.",
+    description: "Kiefer eignet sich für Konstruktionshölzer und Fenster.",
     image: "/static/holz/Kiefernholz.webp",
   },
   {

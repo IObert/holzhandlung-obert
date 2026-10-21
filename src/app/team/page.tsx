@@ -38,7 +38,7 @@ export default function Team() {
                     className="flex mt-2 hover:underline"
                   >
                     <MailIcon className="text-xl mr-4" />
-                    Email schreiben
+                    E-Mail schreiben
                   </Link>
                 </>
               }
@@ -68,7 +68,7 @@ export default function Team() {
                     className="flex mt-2 hover:underline"
                   >
                     <MailIcon className="text-xl mr-4" />
-                    Email schreiben
+                    E-Mail schreiben
                   </Link>
                 </>
               }
@@ -82,7 +82,7 @@ export default function Team() {
             <CardContent>
               <div className="flex mt-4">
                 <Truck className="text-xl mr-4" />
-                LKW Fahrer
+                Lkw-Fahrer
               </div>
               <Link
                 href="tel:+491702840017"

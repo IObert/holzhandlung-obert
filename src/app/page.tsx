@@ -50,12 +50,12 @@ export default function Home() {
           </p>
           <p>Darüber hinaus profitieren Sie von:</p>
           <ul className="regional-benefits">
-            <li>Unserem gut sortiertem Lager</li>
+            <li>Unserem gut sortierten Lager</li>
             <li>Kommissionierung</li>
             <li>Kurzen Lieferzeiten</li>
-            <li>Hoher Flexibilität durch eigenen LKW</li>
-            <li>Lange Geschäftszeiten</li>
-            <li>Überdurchschnittlich gute Erreichbarkeit</li>
+            <li>Hoher Flexibilität durch einen eigenen Lkw</li>
+            <li>Langen Geschäftszeiten</li>
+            <li>Überdurchschnittlich guter Erreichbarkeit</li>
           </ul>
         </div>
       </section>
@@ -65,7 +65,7 @@ export default function Home() {
             <div>
               <h2>Unser Lieferprogramm</h2>
             </div>
-            <p>Klicken Sie auf das jeweilige Produkt um mehr zu erfahren</p>
+            <p>Klicken Sie auf das jeweilige Produkt, um mehr zu erfahren</p>
           </div>
           <div className="product-grid">
             {products.map((product) => (
