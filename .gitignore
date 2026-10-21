@@ -37,3 +37,7 @@ next-env.d.ts
 
 # local package cache
 /.pnpm-store/
+
+# browser test output
+/playwright-report/
+/test-results/
