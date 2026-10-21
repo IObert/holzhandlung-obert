@@ -94,3 +94,10 @@ test("every exported page has working local links, images, assets and anchors", 
   }
   assert.deepEqual(failures, [], "Broken local export targets");
 });
+
+test("exported .htaccess matches the version-controlled hosting rules exactly", async () => {
+  assert.deepEqual(
+    await readFile(resolve(root, ".htaccess")),
+    await readFile(resolve("tk_hosting_files/.htaccess")),
+  );
+});
