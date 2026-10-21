@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Inter } from "next/font/google";
-import { TreePineIcon } from "lucide-react";
-import "./globals.css";
-import { products } from "@/lib/data";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import MobileMenu from "@/components/mobile-menu";
 
-const inter = Inter({ subsets: ["latin"] });
+import { TreePineIcon, Phone } from "lucide-react";
+import "./globals.css";
+import MobileMenu from "@/components/mobile-menu";
+import { products } from "@/lib/data";
 
 const footerLinks = [
   { href: "/#kontakt", label: "Kontakt" },
@@ -46,22 +39,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const produktLinks = products.map((produkt) => (
-    <div key={produkt.id}>
-      <Link
-        className="text-xs hover:underline underline-offset-4"
-        href={`/produkte/${produkt.id}`}
-      >
-        <div className="space-y-2">
-          <h4>{produkt.title}</h4>
-        </div>
-      </Link>
-    </div>
-  ));
-
   return (
     <html lang="de" className="w-full overflow-x-hidden">
-      <body className={`${inter.className} w-full overflow-x-hidden`}>
+      <body className="site-body">
         <div className="flex flex-col min-h-screen">
           <a
             href="#main-content"
@@ -69,83 +49,58 @@ export default function RootLayout({
           >
             Zum Hauptinhalt springen
           </a>
-          <header className="px-2 top-0 pt-2 h-14 flex items-center w-screen fixed bg-white z-10">
-            <Link className="flex items-center justify-center" href="/">
-              <TreePineIcon className="h-6 w-6 mr-2" />
-              <span className="text-lg font-semibold hidden md:block">
-                Holzhandlung Obert
-              </span>
-            </Link>
-            <div className="ml-auto">
-              <nav className="hidden md:flex text-sm font-semibold gap-6">
-                <Link
-                  className="hover:underline underline-offset-4"
-                  href="/#umwelt"
-                >
-                  Umwelt
-                </Link>
-                <Link
-                  className="hover:underline underline-offset-4"
-                  href="/#regional"
-                >
-                  Regional
-                </Link>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <Link
-                      className="hover:underline underline-offset-4"
-                      href="/#lieferprogramm"
-                    >
-                      Lieferprogramm
-                    </Link>
-                  </PopoverTrigger>
-                  <PopoverContent align="start" className="w-80">
-                    <div className="grid grid-cols-2 gap-2 md:gap-6">
-                      {produktLinks}
-                    </div>
-                  </PopoverContent>
-                </Popover>
-                <Link
-                  className="hover:underline underline-offset-4"
-                  href="/#galerie"
-                >
-                  Galerie
-                </Link>
-                <Link
-                  className="hover:underline underline-offset-4"
-                  href="/#holzarten"
-                >
-                  Holzarten
-                </Link>
+          <header className="site-header">
+            <div className="site-width header-inner">
+              <Link
+                className="brand"
+                href="/"
+                aria-label="Holzhandlung Obert – Startseite"
+              >
+                <TreePineIcon size={37} strokeWidth={1.5} />
+                <span>
+                  <strong>Holzhandlung Obert</strong>
+                </span>
+              </Link>
+              <nav className="desktop-nav" aria-label="Hauptnavigation">
+                <Link href="/#lieferprogramm">Lieferprogramm</Link>
+                <Link href="/#umwelt">Umwelt</Link>
+                <Link href="/#regional">Regional</Link>
+                <Link href="/#holzarten">Holzarten</Link>
+                <Link href="/#galerie">Galerie</Link>
               </nav>
+              <Link className="header-contact" href="/#kontakt">
+                <Phone size={16} /> Kontakt
+              </Link>
               <MobileMenu products={products} />
             </div>
           </header>
-          <main id="main-content" className="flex items-center flex-1 mt-14">
+          <main id="main-content" className="site-main">
             {children}
           </main>
-          <footer className="flex flex-col sm:flex-row pb-6 w-full shrink-0 items-center px-4 gap-2 md:px-6 border-t">
-            <nav className="text-gray-600 flex-1 pt-6 mt-auto flex-wrap flex gap-0.5 mx-auto justify-items-center md:gap-4">
-              {footerLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  className="text-sm hover:underline underline-offset-4 flex-1 mx-0.5 text-center md:mx-0 md:text-left md:flex-none"
-                  href={link.href}
-                >
-                  {link.label}
+          <footer className="site-footer">
+            <div className="site-width">
+              <div className="footer-top">
+                <Link className="brand" href="/">
+                  <TreePineIcon size={34} strokeWidth={1.5} />
+                  <span>
+                    <strong>Holzhandlung Obert</strong>
+                  </span>
                 </Link>
-              ))}
-            </nav>
-            <div className="flex flex-col">
-              <img
-                src="/static/holzhandlung-obert.png"
-                alt="Holzhandlung Obert"
-                className="h-20 my-4 object-contain"
-              />
-              <p className="text-sm text-center text-gray-400">
-                © 2026 Holzhandlung Obert. <br />
-                Alle Rechte vorbehalten.
-              </p>
+              </div>
+              <div className="footer-bottom">
+                <p>
+                  © 2026 Holzhandlung Obert.
+                  <br />
+                  Alle Rechte vorbehalten.
+                </p>
+                <nav aria-label="Weitere Seiten">
+                  {footerLinks.map((link) => (
+                    <Link key={link.href} href={link.href}>
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+              </div>
             </div>
           </footer>
         </div>

@@ -19,7 +19,9 @@ Open [http://localhost:3000](http://localhost:3000).
 pnpm build
 ```
 
-Static files are generated in the `out/` directory, ready for deployment.
+Static files are generated in the `out/` directory, ready for deployment. Upload the **contents** of `out/` (including `_next/`, `static/`, all page folders, and `.htaccess`) to the FTP document root. No Node.js server, API, or image optimization service is required. The site uses local images and system fonts.
+
+To preview the actual export locally, run `python3 -m http.server 4173 -d out` and open http://localhost:4173. `next start` is not used for static exports.
 
 ## Project Structure
 

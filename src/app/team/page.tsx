@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Team() {
   return (
-    <div className="w-10/12 mx-auto">
+    <div className="subpage team-page">
       <div className="space-y-6">
         <h1 className="text-2xl mb-12">Team</h1>
         <div className="mx-auto grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch justify-center gap-4">

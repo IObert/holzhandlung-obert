@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Haftungsausschluss() {
   return (
-    <div id="top" className="max-w-xs md:max-w-xl mx-auto">
+    <div id="top" className="subpage reading-page">
       <h1 className="text-2xl mb-12">Disclaimer - Rechtliche Hinweise</h1>
 
       <section id="Haftungsbeschränkung" className="my-6">

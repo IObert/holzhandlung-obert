@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Partner() {
   return (
-    <section className="flex justify-center w-full h-full py-6 md:py-12 lg:py-24">
+    <section className="subpage partners-page">
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
         <div className="space-y-3">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
