@@ -187,11 +187,23 @@ svg {
   letter-spacing: -0.055em;
 }
 .hero-copy {
-  font-size: 18px;
-  line-height: 1.7;
-  max-width: 460px;
+  max-width: 570px;
   color: #edf0e7;
-  margin-top: 28px;
+  margin-top: 30px;
+}
+.hero-lead {
+  max-width: 43ch;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+.hero-support {
+  max-width: 57ch;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #dbe3d8;
+  text-wrap: pretty;
 }
 .hero-actions {
   display: flex;
@@ -1095,14 +1107,11 @@ svg {
 
 /* Original content in the new visual layout. */
 .hero-copy p + p {
-  margin-top: 12px;
+  margin-top: 20px;
 }
 .hero h1 {
   max-width: 850px;
   font-size: clamp(48px, 6.2vw, 88px);
-}
-.hero-copy {
-  max-width: 570px;
 }
 .hero {
   height: auto;
@@ -1359,5 +1368,23 @@ svg {
   .site-main > section.partners-page {
     width: calc(100% - 40px);
     padding: 42px 0 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-copy {
+    margin-top: 24px;
+    max-width: 35ch;
+  }
+  .hero-lead {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+  .hero-support {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .hero-copy p + p {
+    margin-top: 16px;
   }
 }

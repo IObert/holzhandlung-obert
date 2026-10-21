@@ -18,17 +18,14 @@ export default function Home() {
         <div className="site-width hero-content">
           <h1>Qualität gibt Sicherheit!</h1>
           <div className="hero-copy">
-            <p>
+            <p className="hero-lead">
               Wir haben uns auf den Vertrieb von ökologischen Baumaterialien
               spezialisiert.
             </p>
-            <p>
+            <p className="hero-support">
               Die Mehrheit unserer Kunden sind Holzbaubetriebe, Dachdeckereien
-              und Heimwerker.
-            </p>
-            <p>
-              Erstklassiger Service und innovative Produkte machen uns zu einem
-              attraktiven Partner.
+              und Heimwerker. Erstklassiger Service und innovative Produkte
+              machen uns zu einem attraktiven Partner.
             </p>
           </div>
           <div className="hero-actions">
