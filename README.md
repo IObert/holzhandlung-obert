@@ -8,6 +8,8 @@ Built with **Next.js**, **Tailwind CSS**, and **TypeScript**. Statically exporte
 
 Use Node.js 24 and pnpm 11.1.3 (the version recorded in `packageManager`).
 
+Dependency compatibility (checked 2026-10-22): keep `@types/node` on Node 24, matching the runtime. TypeScript 7 currently breaks the `typescript-eslint` integration used by `eslint-config-next`, and its React/import/accessibility plugins declare support through ESLint 9 only. Keep TypeScript 6.0.3 and ESLint 9.39.5 until that tooling supports the newer majors; all other direct dependencies use the latest stable releases checked on that date.
+
 ```bash
 pnpm install
 pnpm dev
