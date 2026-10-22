@@ -114,3 +114,47 @@ for (const [name, path] of [
     await expect(page).toHaveScreenshot(`${name}.png`, { fullPage: true });
   });
 }
+
+test("Bilder nutzen kleine Varianten und die Galerie lädt große Ansichten erst beim Öffnen", async ({
+  page,
+}) => {
+  const requested = new Set<string>();
+  page.on("request", (request) => {
+    if (request.resourceType() === "image") requested.add(request.url());
+  });
+  await page.goto("/");
+  const hero = page.locator(".hero-photo");
+  await hero.evaluate(async (image) => {
+    await (image as HTMLImageElement).decode();
+  });
+  const current = await hero.evaluate(
+    (image) => (image as HTMLImageElement).currentSrc,
+  );
+  expect(current).toContain("/generated-images/");
+  expect((await (await page.request.get(current)).body()).length).toBeLessThan(
+    350_000,
+  );
+  expect([...requested].some((url) => /pavatex-.*-1920\.webp/.test(url))).toBe(
+    false,
+  );
+  await page
+    .getByRole("button", { name: "Pavatex in der Galerie öffnen" })
+    .click();
+  const large = page.locator(".gallery-stage > img");
+  await large.evaluate(async (image) => {
+    await (image as HTMLImageElement).decode();
+  });
+  expect(
+    await large.evaluate((image) => (image as HTMLImageElement).currentSrc),
+  ).toContain("/generated-images/");
+  const widths = await page
+    .locator(".gallery-thumbnails img")
+    .evaluateAll((images) =>
+      images.map((image) => image.getAttribute("srcset")),
+    );
+  expect(widths).toHaveLength(7);
+  for (const srcSet of widths) expect(srcSet).toMatch(/-160\.webp 160w$/);
+  expect(
+    [...requested].filter((url) => /\/static\/.*\.(webp|png|jpe?g)/i.test(url)),
+  ).toEqual([]);
+});

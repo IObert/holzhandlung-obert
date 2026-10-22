@@ -41,3 +41,7 @@ next-env.d.ts
 # browser test output
 /playwright-report/
 /test-results/
+
+# Reproducible responsive image output
+/public/generated-images/
+/src/lib/generated-images.json

@@ -1,3 +1,4 @@
+import ResponsiveImage from "@/components/responsive-image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,12 +25,14 @@ export default function Partner() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <ResponsiveImage
                 alt="Häussermann-Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
                 height="70"
                 src="/static/partner/haeussermann.jpg"
                 width="140"
+                maxWidth={540}
+                sizes="(max-width: 700px) calc((100vw - 112px) / 2), 180px"
               />
             </a>
           </div>
@@ -39,12 +42,14 @@ export default function Partner() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <ResponsiveImage
                 alt="PAVATEX-Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
                 height="70"
                 src="/static/partner/pavatex.jpg"
                 width="140"
+                maxWidth={540}
+                sizes="(max-width: 700px) calc((100vw - 112px) / 2), 180px"
               />
             </a>
           </div>
@@ -54,12 +59,14 @@ export default function Partner() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <ResponsiveImage
                 alt="EGGER-Logo"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
                 height="70"
                 src="/static/partner/egger.svg"
                 width="140"
+                maxWidth={540}
+                sizes="(max-width: 700px) calc((100vw - 112px) / 2), 180px"
               />
             </a>
           </div>
@@ -69,12 +76,14 @@ export default function Partner() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <ResponsiveImage
                 alt="Logo von MM Holz"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
                 height="70"
                 src="/static/partner/mm-holz.png"
                 width="140"
+                maxWidth={540}
+                sizes="(max-width: 700px) calc((100vw - 112px) / 2), 180px"
               />
             </a>
           </div>
@@ -84,12 +93,14 @@ export default function Partner() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <ResponsiveImage
                 alt="Logo der Holzwerke Pfarrkirchen"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
                 height="70"
                 src="/static/partner/HP-Logo.png"
                 width="140"
+                maxWidth={540}
+                sizes="(max-width: 700px) calc((100vw - 112px) / 2), 180px"
               />
             </a>
           </div>
@@ -99,12 +110,14 @@ export default function Partner() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <ResponsiveImage
                 alt="Logo von Stora Enso"
                 className="aspect-[2/1] overflow-hidden rounded-lg object-contain object-center"
                 height="70"
                 src="/static/partner/storaenso.png"
                 width="140"
+                maxWidth={540}
+                sizes="(max-width: 700px) calc((100vw - 112px) / 2), 180px"
               />
             </a>
           </div>

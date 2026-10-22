@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFile, readdir, stat } from "node:fs/promises";
 import { resolve, relative, sep } from "node:path";
 import { parse } from "parse5";
+import sharp from "sharp";
 
 const root = resolve("out");
 async function htmlFiles(directory) {
@@ -61,8 +62,18 @@ test("every exported page has working local links, images, assets and anchors", 
   const failures = [];
   for (const [file, { nodes }] of documents) {
     for (const element of nodes) {
-      for (const name of ["href", "src"]) {
-        const value = attribute(element, name);
+      const targets = ["href", "src"].map((name) => ({
+        name,
+        value: attribute(element, name),
+      }));
+      for (const name of ["srcset", "imagesrcset"]) {
+        for (const candidate of (attribute(element, name) || "")
+          .split(",")
+          .filter(Boolean)) {
+          targets.push({ name, value: candidate.trim().split(/\s+/)[0] });
+        }
+      }
+      for (const { name, value } of targets) {
         if (!value) continue;
         const url = new URL(value, urlFor(file));
         if (url.origin !== "http://export.test") continue;
@@ -100,4 +111,47 @@ test("exported .htaccess matches the version-controlled hosting rules exactly", 
     await readFile(resolve(root, ".htaccess")),
     await readFile(resolve("tk_hosting_files/.htaccess")),
   );
+});
+
+test("responsive image variants exist with correct dimensions and bounded preview sizes", async () => {
+  const manifest = JSON.parse(
+    await readFile("src/lib/generated-images.json", "utf8"),
+  );
+  for (const [source, image] of Object.entries(manifest)) {
+    assert.ok(image.variants.length > 0, source);
+    for (const variant of image.variants) {
+      assert.ok(
+        variant.width <= image.width,
+        `Image must not be upscaled: ${source}`,
+      );
+      assert.match(
+        variant.src,
+        /^\/generated-images\/[^/]+-[a-f0-9]{12}-\d+\.webp$/,
+      );
+      const file = resolve(root, `.${variant.src}`);
+      const metadata = await sharp(file).metadata();
+      assert.equal(metadata.width, variant.width, source);
+      assert.equal(metadata.format, "webp", source);
+      assert.equal((await stat(file)).size, variant.bytes, source);
+      if (source.includes("/galerie/") && variant.width === 160)
+        assert.ok(
+          variant.bytes < 20_000,
+          `Gallery thumbnail too large: ${source}`,
+        );
+    }
+  }
+  const hero = manifest["/static/galerie/Regale.webp"].variants;
+  assert.ok(hero.at(-1).bytes < 350_000, "Hero budget exceeded");
+  const home = (await documentAt(resolve(root, "index.html"))).nodes;
+  for (const image of home.filter((node) => node.tagName === "img")) {
+    assert.match(
+      attribute(image, "src"),
+      /^\/generated-images\//,
+      "Home page must not fetch original photographs",
+    );
+    assert.ok(attribute(image, "srcset"));
+    assert.ok(attribute(image, "sizes"));
+    assert.ok(attribute(image, "width"));
+    assert.ok(attribute(image, "height"));
+  }
 });

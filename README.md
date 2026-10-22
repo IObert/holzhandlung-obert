@@ -21,9 +21,30 @@ Open [http://localhost:3000](http://localhost:3000).
 pnpm build
 ```
 
-Static files are generated in the `out/` directory, ready for deployment. Upload the **contents** of `out/` (including `_next/`, `static/`, all page folders, and `.htaccess`) to the FTP document root. No Node.js server, API, or image optimization service is required. The site uses local images and system fonts.
+Static files are generated in the `out/` directory, ready for deployment. Upload the **contents** of `out/` (including `_next/`, `static/`, `generated-images/`, all page folders, and `.htaccess`) to the FTP document root. No Node.js server, API, or image optimization service is required. The site uses local images and system fonts.
 
 To preview the actual export locally, run `pnpm preview` and open http://127.0.0.1:4174. `next start` is not used for static exports.
+
+## Responsive images
+
+`pnpm dev` and `pnpm build` automatically run `pnpm images:generate`. Sharp creates responsive WebP variants before Next.js starts; the FTP server serves ordinary files with no image API, external service, or Node.js runtime.
+
+- Originals stay in `public/static/`; SVG logos stay as vectors.
+- Generated variants live in `public/generated-images/`, with a matching manifest in `src/lib/generated-images.json`. Both are ignored by Git and recreated from the source images. Lint/typecheck also generate them for a clean checkout.
+- Photographs use compressed WebP; resized logos use lossless WebP. Images are never upscaled. Unchanged variants are reused between builds.
+- `<img srcset sizes>` selects the appropriate width for the viewport and screen density. Sizes account for `object-fit: cover` crops, rather than undersizing tall image frames.
+- Gallery overview images and 160-pixel thumbnails do not load the large overlay versions. Larger gallery views load when the overlay is opened or navigated.
+- Filenames contain a content/encoder hash. The `.htaccess` cache rule gives only these versioned WebP files a one-year immutable cache lifetime, when Apache's `mod_headers` is available. Changing an original or encoder setting creates new URLs.
+
+Upload **all** of `out/`, including `generated-images/` and `.htaccess`. Existing `pnpm deploy` handles this automatically. Originals remain available at their old URLs for compatibility, but active pages request the optimized variants. This reduces browser downloads; total FTP artifact size includes the retained originals and multiple sizes.
+
+To regenerate manually:
+
+```bash
+pnpm images:generate
+```
+
+On 2026-10-22 the hero variants measured 145–258 KB instead of the 1.27 MB original. All home-page images together were measured locally at about 0.7–1.72 MB depending on viewport and pixel density, versus 21.31 MB for the former set of originals. These are image-byte measurements, not promised network timings.
 
 ## FTP deployment
 
@@ -66,7 +87,7 @@ When the settings are ready, run this yourself to publish:
 pnpm deploy
 ```
 
-Both commands build and check the static export first. Deployment uploads only the contents of `out/`, including `.htaccess`, with assets before HTML and hosting rules last. It requires the destination directory to exist, overwrites matching files, and checks every uploaded file size before reporting success. It never deletes remote files. This also means old hashed assets and removed pages remain on the server until you remove them separately. Required hidden files such as `.htaccess` and `.well-known/` are included; desktop junk (`.DS_Store`, `Thumbs.db`) and Vercel project metadata are excluded. The export tests require the generated `.htaccess` to match `tk_hosting_files/.htaccess` exactly. The remote hosting rules matched this source during inspection and were kept unchanged.
+Both commands build and check the static export first. Deployment uploads only the contents of `out/`, including `.htaccess`, with assets before HTML and hosting rules last. It requires the destination directory to exist, overwrites matching files, and checks every uploaded file size before reporting success. It never deletes remote files. This also means old hashed assets and removed pages remain on the server until you remove them separately. Required hidden files such as `.htaccess` and `.well-known/` are included; desktop junk (`.DS_Store`, `Thumbs.db`) and Vercel project metadata are excluded. The export tests require the generated `.htaccess` to match `tk_hosting_files/.htaccess` exactly. The original rewrite rules were preserved. A later rule adds caching only for content-hashed image filenames.
 
 Deployment is not atomic: an interrupted upload can be partial; rerun the command after fixing the connection. FTP debug logging is disabled, and failures do not print credentials or raw server responses.
 
@@ -88,10 +109,10 @@ pnpm typecheck
 pnpm test
 ```
 
-`pnpm test` builds a fresh static export, runs three Node.js export checks and six deployment checks, and runs ten Playwright checks against the exported files. The test server uses port 4174 and returns a real 404 for missing files, with no Next.js runtime or home-page fallback.
+`pnpm test` builds a fresh static export, runs four Node.js export checks and six deployment checks, and runs twelve Playwright checks against the exported files. The test server uses port 4174 and returns a real 404 for missing files, with no Next.js runtime or home-page fallback.
 
-- Export checks verify required pages, sitemap, `.htaccess`, and every local link, image, asset, and anchor in the HTML.
-- Browser checks cover gallery navigation, thumbnails, wraparound, closing, keyboard focus, and navigation from a subpage to the contact section.
+- Export checks verify required pages, sitemap, `.htaccess`, and every local link, image, asset, and anchor in the HTML, including `srcset` and responsive preloads. Image checks verify WebP dimensions, thumbnail sizes, and a hero image size budget.
+- Browser checks cover gallery navigation, thumbnails, wraparound, closing, keyboard focus, navigation from a subpage to the contact section, and loading optimized image variants rather than original photographs.
 - Responsive checks cover the home page and all six footer pages from 320 to 1440 pixels.
 - Four screenshot comparisons cover the home page and AGB page on desktop and mobile.
 

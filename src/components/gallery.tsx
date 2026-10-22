@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight, X } from "lucide-react";
+import ResponsiveImage from "@/components/responsive-image";
 import type { GalleryImage } from "@/lib/data";
 
 export default function Gallery({ images }: { images: GalleryImage[] }) {
@@ -40,7 +41,17 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
               setOpen(true);
             }}
           >
-            <img src={image.path} alt={image.alt} loading="lazy" />
+            <ResponsiveImage
+              src={image.path}
+              alt={image.alt}
+              loading="lazy"
+              maxWidth={imageIndex === 0 ? 1280 : 768}
+              sizes={
+                imageIndex === 0
+                  ? "(max-width: 700px) calc(100vw - 40px), (max-width: 1336px) 64vw, 820px"
+                  : "(max-width: 700px) calc((100vw - 56px) / 2), (max-width: 1336px) 32vw, 400px"
+              }
+            />
             <span>
               {image.alt}
               <ArrowUpRight size={18} />
@@ -104,7 +115,13 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
               >
                 <ChevronLeft />
               </button>
-              <img src={images[index].path} alt={images[index].alt} />
+              <ResponsiveImage
+                key={images[index].path}
+                src={images[index].path}
+                alt={images[index].alt}
+                maxWidth={1920}
+                sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1164px) calc(100vw - 112px), 1050px"
+              />
               <button
                 type="button"
                 className="gallery-control gallery-next"
@@ -129,7 +146,13 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
                   aria-pressed={index === imageIndex}
                   onClick={() => setIndex(imageIndex)}
                 >
-                  <img src={image.path} alt="" loading="lazy" />
+                  <ResponsiveImage
+                    src={image.path}
+                    alt=""
+                    loading="lazy"
+                    maxWidth={160}
+                    sizes="76px"
+                  />
                 </button>
               ))}
             </div>

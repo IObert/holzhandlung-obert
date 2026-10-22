@@ -2,17 +2,22 @@ import Link from "next/link";
 import { ArrowUpRight, Trees } from "lucide-react";
 import { products, galleryImages, woodTypes } from "@/lib/data";
 import Gallery from "@/components/gallery";
+import ResponsiveImage, {
+  imageWidthAtHeight,
+} from "@/components/responsive-image";
 import ContactBar from "@/components/contact-bar";
 
 export default function Home() {
   return (
     <div className="home">
       <section className="hero">
-        <img
+        <ResponsiveImage
           className="hero-photo"
           src="/static/galerie/Regale.webp"
           alt="Bauholz in unserem Holzlager in Oberwolfach"
           fetchPriority="high"
+          sizes="(max-width: 700px) 960px, (max-width: 987px) 987px, 100vw"
+          maxWidth={1920}
         />
         <div className="hero-shade" />
         <div className="site-width hero-content">
@@ -75,7 +80,13 @@ export default function Home() {
                 href={`/produkte/${product.id}/`}
               >
                 <div className="product-image">
-                  <img src={product.image} alt={product.title} loading="lazy" />
+                  <ResponsiveImage
+                    src={product.image}
+                    alt={product.title}
+                    loading="lazy"
+                    maxWidth={768}
+                    sizes={`(max-width: 700px) max(calc((100vw - 56px) / 2), ${imageWidthAtHeight(product.image, 160)}px), (max-width: 1000px) max(32vw, ${imageWidthAtHeight(product.image, 190)}px), (max-width: 1336px) max(32vw, ${imageWidthAtHeight(product.image, 238)}px), max(400px, ${imageWidthAtHeight(product.image, 238)}px)`}
+                  />
                 </div>
                 <div className="product-title">
                   <h3>{product.title}</h3>
@@ -89,9 +100,11 @@ export default function Home() {
       </section>
       <section className="environment-section" id="umwelt">
         <div className="environment-image">
-          <img
+          <ResponsiveImage
             src="/static/galerie/Weit.webp"
             alt="Unser Holzlager vor dem bewaldeten Hang in Oberwolfach"
+            maxWidth={1280}
+            sizes="(max-width: 700px) 100vw, (max-width: 1440px) 720px, 50vw"
             loading="lazy"
           />
         </div>
@@ -115,9 +128,11 @@ export default function Home() {
           {woodTypes.map((wood) => (
             <details className="wood-sample" key={wood.title}>
               <summary>
-                <img
+                <ResponsiveImage
                   src={wood.image}
                   alt={`Maserung ${wood.title}`}
+                  maxWidth={768}
+                  sizes={`(max-width: 700px) max(calc((100vw - 60px) / 2), ${imageWidthAtHeight(wood.image, 205)}px), (max-width: 1000px) max(30vw, ${imageWidthAtHeight(wood.image, 220)}px), max(190px, ${imageWidthAtHeight(wood.image, 200)}px)`}
                   loading="lazy"
                 />
                 <span>
@@ -148,9 +163,11 @@ export default function Home() {
           <ContactBar />
         </div>
         <div className="contact-logo">
-          <img
+          <ResponsiveImage
             src="/static/holzhandlung-obert.png"
             alt="Holzhandlung Heidi Obert"
+            maxWidth={960}
+            sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1336px) 40vw, 500px"
             loading="lazy"
           />
         </div>

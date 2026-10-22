@@ -1,3 +1,6 @@
+import ResponsiveImage, {
+  imageWidthAtHeight,
+} from "@/components/responsive-image";
 import { products } from "@/lib/data";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
@@ -145,17 +148,20 @@ export default async function Produkt(props: {
 
   const produkt = products.find((p) => p.id === id);
   const details = productDetails[id];
+  if (!produkt) return null;
 
   return (
     <div className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <img
+          <ResponsiveImage
             alt={produkt?.title}
             className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
             height="550"
-            src={produkt?.image}
+            src={produkt.image}
             width="550"
+            maxWidth={1280}
+            sizes={`(max-width: 1023px) max(calc(100vw - 40px), ${imageWidthAtHeight(produkt.image, 550)}px), (max-width: 1279px) max(400px, ${imageWidthAtHeight(produkt.image, 550)}px), max(600px, ${imageWidthAtHeight(produkt.image, 550)}px)`}
           />
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
